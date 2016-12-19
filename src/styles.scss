@@ -1,0 +1,482 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles that affect global*/
+
+/* Global color styles*/
+$background: #F2F2F2; // background gray
+// Colors for app
+$red: #F04C4B; // mostly for buttons
+$blue: #607D8B; // mostly for divs
+$green: #9FBA91; // mostly for navigation and text
+$darkBlue: #4A626B; // mostly if blue is already used
+$text: #4D4D4D; // used for copy text
+$subHeading: #595959; // used for subheadings
+$white: #ffffff; //white
+$black: #000000; //black
+
+body{
+	background: $background;
+	padding: 0;
+	margin: 0;
+}
+
+//fonts defaults
+@font-face{
+	src: url(./assets/fonts/AlfaSlabOne-Regular.ttf);
+	font-family: Headings;
+}
+
+@font-face{
+	src: url(./assets/fonts/JosefinSlab-Regular.ttf);
+	font-family: subHeadings;
+}
+
+// get the titles specs (font name, size, font color, letter spacing)
+@mixin titles($font, $size, $color, $letterSpacing){
+	font-family: $font, sans-serif;
+	font-size: $size;
+	color: $color;
+	letter-spacing: $letterSpacing;
+}
+
+// buttons styles
+@mixin buttonStyles($w, $h, $color, $radius, $border, $font){
+	width: $w;
+	height: $h;
+	background: $color;
+	border-radius: $radius;
+	border: 1px solid $border;
+	font-family: $font;
+	font-size: 1.7em;
+	color: $white;
+}
+
+// large main titles
+h1{
+	@include titles(Headings, 1.5em, $blue, 2px);
+}
+
+// large main titles
+h3{
+	@include titles(subHeadings, 1.4em, $subHeading, 0px);
+}
+
+// copy text
+p, span, ul li{
+	@include titles(sans-serif, 0.9em, $text, 0px);
+}
+
+//print text
+.text{
+	@include titles(sans-serif, 1.1em, $text, 0px);
+	font-weight: lighter;
+}
+
+// circle navigation buttons
+.circle{
+	@include buttonStyles(60px, 60px, $green, 100px, $green, subHeadings);
+	cursor: pointer;
+	text-align: center;
+	font-size: 2.3em;
+	font-weight: lighter;
+}
+
+.circle:hover{
+	background: $red;
+	border: 1px solid $red;
+}
+
+.specialCircle{
+	@include buttonStyles(50px, 50px, $red, 100px, $red, subHeadings);
+	cursor: default;
+	text-align: center;
+	color: $white;
+}
+
+// circle navigation buttons
+.smallcircle{
+	@include buttonStyles(40px, 40px, $green, 200px, $green, subHeadings);
+	text-align: center;
+	font-size: 1.3em !important;
+}
+
+// circle symbol
+.symbol{
+	@include buttonStyles(80px, 80px, $red, 100px, $red, subHeadings);
+	text-align: center;
+	font-size: 4.4em;
+}
+
+// regular sized buttons
+.normal{
+	@include buttonStyles(10%, 55%, $darkBlue, 10px, $darkBlue, subHeadings);
+	padding: 15px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.normal:hover{
+	background: $blue;
+	border: 1px solid $blue;
+}
+
+// our main wrapper
+#container{
+	width: 1024px;
+	min-height: 100px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+.heading{
+	background: $blue !important;
+	padding: 10px 5px 10px 5px;
+}
+
+.padding-left{
+	padding-left: 10px;
+}
+
+.padding-right{
+	padding-right: 10px;
+}
+// clear both
+.clear{
+	clear: both;
+}
+
+// title Area from nav component
+#titleArea{
+	background: $white;
+}
+
+// title of assignment
+.sub{
+	font-size: 2.5em !important;
+}
+
+// info box
+.box{
+	background: rgba(255,255,255,1);
+//	width: 80%;
+	min-height: 100px;
+	height: auto;
+	margin-top: 40px;
+//	margin: 15px auto;
+//	position: relative;
+	padding: 15px;
+	z-index: 100;
+	margin-bottom: 40px;
+	// box-shadow: 3px 3px 5px #333333;
+}
+
+.activityTitle{
+	font-weight: bold;
+	font-size: 3.1em !important;
+	margin-top: 40px !important;
+	color: $blue !important;
+	text-align: left !important;
+	margin-bottom: 40px;
+}
+
+.navArea{
+	background: $blue;
+	padding: 10px;
+}
+
+.tooltip{
+	width: 13%;
+	height: 25px;
+	position: absolute;
+	top: 750px;
+	background: $white;
+	padding: 5px;
+	font-family: sans-serif;
+	text-align: center;
+	box-shadow: 3px 3px 4px #333333;
+	z-index: 4000;
+
+}
+
+.tooltip:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 43%;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 15px solid $white;
+	border-right: 10px solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 10px solid transparent;
+}
+
+.titles{
+	font-family: subHeadings, sans-serif;
+	font-weight: bold;
+	color: $darkBlue;
+}
+
+.btn-primary{
+	background: $blue !important;
+	border: 1px solid $blue !important;
+}
+
+.btn-primary:hover{
+	background: $red !important;
+	border: 1px solid $red !important;
+}
+
+.highlight{
+	background: $red;
+	border: 1px solid $red;
+}
+
+#line{
+	border-bottom: 1px solid $white;
+}
+
+.lines{
+	border-left: 1px solid $blue;
+}
+
+.select{
+	background: $darkBlue;
+	color: $white;
+	font-family: subHeadings;
+	font-size: 1.5em;
+	width: 45%;
+	height: 20%;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.select:hover{
+//	background: $blue;
+}
+
+.selections{
+	background: $darkBlue;
+	color: $white;
+	font-family: subHeadings;
+	font-size: 1.5em;
+	width: 15%;
+	min-height: 3%;
+	height: auto;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 100000;
+}
+
+.errorselections{
+	background: $darkBlue;
+	color: $white;
+	font-family: subHeadings;
+	font-size: 1.5em;
+	width: 50%;
+	min-height: 3%;
+	height: auto;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 100000;
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+hr{
+	color: $blue;
+	opacity: 0.4;
+}
+
+#prev, #next{
+	color: $red;
+	font-size: 5em;
+	background: none;
+	border: none;
+	position: relative;
+	top: 300px;
+}
+
+#prev{
+	left: 0px;
+}
+
+#next{
+	right: 0px;
+}
+
+#prev:hover, #next:hover{
+	color: $blue;
+}
+
+/*#prev{
+	border-right: 60px solid $red;
+	border-left: 60px solid transparent;
+	cursor: pointer;
+}
+
+#next{
+	border-left: 60px solid $red;
+	border-right: 60px solid transparent;
+	cursor: pointer;
+}
+
+#prev:hover{
+	border-right: 60px solid $blue;
+	border-left: 60px solid transparent;
+	border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+#next:hover{
+	border-left: 60px solid $blue;
+	border-right: 60px solid transparent;
+	border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}*/
+
+.yes{
+	background: $darkBlue;
+}
+
+.no{
+	background: $red;
+}
+
+.selectedTask{
+	color: $green;
+	transition: color 0.2s linear;
+}
+
+.print{
+	background: $white;
+}
+
+.aside{
+  background: $green;
+	color: $white;
+	padding: 6px;
+	float: right;
+	margin-left: 5px;
+	border-radius: 5px;
+	font-family: subHeadings;
+	letter-spacing: 3px;
+}
+
+.h{
+  font-family: subHeadings;
+}
+
+.t{
+	width: 900px;
+	float: left;
+	margin-left: 17px;
+}
+
+.blockDiv{
+	background: #F2F2F2;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width:23.5%;
+	height: 100%;
+	z-index: 2000000;
+}
+
+.green{
+	color: $green;
+}
+
+.titled{
+  font-family: subHeadings;
+}
+
+ul li{
+	list-style: none;
+	font-weight: bold;
+}
+
+.loading{
+	position: relative;
+	width: 50px;
+	margin: 20% auto;
+	height: 100%;
+}
+
+.loading i{
+	text-align: center;
+	color: $text;
+	opacity: 0.6;
+}
+
+.printTitle{
+	color: $blue;
+	font-family: subHeadings, sans-serif;
+}
+
+.errorMessageArea{
+	background: $white;
+}
+
+.savedMessageArea{
+	background: $white;
+}
+
+.close{
+	position: absolute;
+	top:0px;
+	right: 0px;
+	border: none;
+	background: transparent;
+	color: $text;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+.taskOne{
+	width: 100%;
+}
+
+.courseTitle{
+	color: $white;
+	font-size: 1.9em !important;
+}
+
+.topHeadingArea{
+	background: $white;
+	padding: 10px;
+}
+
+.circleArea{
+	background: $red;
+	color: $white;
+	font-family: subHeadings;
+	box-shadow: 2px 2px 3px $text;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.glow{
+	background: $blue;
+}
+
+.leftMenu{
+	background: $text;
+}
+
+.leftMenu h1{
+	color: $white;
+}

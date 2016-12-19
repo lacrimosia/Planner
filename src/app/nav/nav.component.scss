@@ -1,0 +1,180 @@
+p,
+b {
+    font-family: sans-serif;
+}
+
+.buttonList{
+  margin-left: 35px;
+}
+
+.numButtons {
+    float: left;
+    margin-right: 5%;
+    z-index: 1000;
+    margin: 7px 15px 0px 0px;
+}
+
+.resize {
+    width: 7%;
+    float: left;
+}
+
+#line {
+    width: 97%;
+    margin: 38px 0px 0px 5px;
+    height: 1px;
+}
+
+.lines{
+  height: 97%;
+  width: 1px;
+  position: absolute;
+  margin: 60px 0px 0px 25px;
+  z-index: 0;
+}
+
+.twoTasks {
+    width: 100%;
+}
+
+.options {
+    float: left;
+    width: 47%;
+    // background: #F2F2F2;
+    padding: 10px;
+}
+
+
+button{
+	float: right;
+//	margin: 7px 15px 0px 0px;
+}
+
+.contentAreaPrint{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 4000;
+}
+
+// ONLY FOR SPECIAL CUSTOM ICONS
+$imageTop: 136px; // top pos
+$imageWidth: 15%; // image width
+$taskA_left: 268px; // first group A pos
+$taskB_left: 701px; // second group B pos
+$space: 68; // space between images
+
+// DEFAULT ICONS Settings
+$mainTopA: -30px; // main top for default 1 icon
+$mainTopB: -25px; // main top for default 1 icon
+$mainLeft: 700px; // default pos left for default icon 1
+$mainWidth: 22%; // default width
+$mainSpace: 90; // space between images
+// these are the default icons
+.taskImage1{
+  position: absolute;
+  top: $mainTopA;
+  left: $mainLeft;
+  width: $mainWidth;
+  height: auto;
+}
+
+// Special icons for custom
+.taskImage1A{
+  position: absolute;
+  top: $imageTop;
+  left: $taskA_left;
+  width: $imageWidth;
+  height: auto;
+}
+
+.taskImage3B{
+  position: absolute;
+  top: $imageTop;
+  left: $taskB_left;
+  width: $imageWidth;
+  height: auto;
+}
+
+.taskImage4B{
+  position: absolute;
+  top: $imageTop;
+  left: $taskB_left + $space;
+  width: $imageWidth;
+  height: auto;
+}
+
+.floatingTasks{
+  float: left;
+  width: 100%;
+}
+
+#hidePrint{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#addCalendar{
+  position: absolute;
+  top: 85px;
+  right: 0px;
+}
+
+.outputs{
+  width: 85%;
+  float: left;
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+.verticalPath{
+  position: absolute;
+  float: left;
+  width: 40px;
+  height: auto;
+}
+
+.vertCircles{
+  position: absolute;
+}
+
+.helpImage{
+  position: absolute;
+  z-index: 1232323232323;
+}
+
+.helpImage img{
+ height: 100%;
+ cursor: pointer;
+}
+
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.size{
+  width: 20%;
+}
+
+.ae, .be{
+  width: 47%;
+  float: left;
+  padding: 5px;
+}
+
+.aed, .bed{
+  width: 100%;
+  float: left;
+  padding: 5px;
+}
+
+.pics{
+  width:100%;
+  float: left;
+}
