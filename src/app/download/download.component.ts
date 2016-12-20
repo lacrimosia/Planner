@@ -37,29 +37,12 @@ export class DownloadComponent implements OnInit {
   }
 
 
-getImageData(url, doc) {
-    var image = new Image();
-   image.onload = function () {
-        var canvas = document.createElement('canvas');
-        canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
-        canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
-
-       canvas.getContext('2d').drawImage(this, 0, 0);
-
-        // ... or get as Data URI
-       let datas = canvas.toDataURL('image/jpeg');
-      // console.log("datas-- ", datas);
-       doc.addImage(datas, 20, 20, 30, 30);
-       doc.save('TestingDocs.pdf');
-      // doc.output('datauri');
-  };
-    image.src = url;
+svgtoBase64(url, callback) {
 
 }
 
 printPdf(){
-  let doc = new jsPDF('portrait');
-  this.getImageData("assets/images/11-5-04.jpg", doc);
+  
 }
 
 }
