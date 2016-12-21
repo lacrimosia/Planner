@@ -1,0 +1,6 @@
+<div class="dateArea" [ngStyle]="{'background-image': 'url('+ 'assets/images/' + assignments[value].due_date + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat'}">
+<!--  <img *ngIf="value>0 && value < amount-2" [src]="imageSrc(this.assignments[value].due_date)" class="img-responsive imageSize visible-sm visible-xs"/> -->
+  <h3 class="month">{{ getMonth() }}</h3>
+  <h2> {{ getDay() }}</h2>
+  <h2> {{ getPercentage() }}</h2>
+</div>

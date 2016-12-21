@@ -1,0 +1,21 @@
+.dateArea{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.imageSize{
+	width: 75%;
+	height: auto;
+  position: relative;
+  top: 0px;
+  left: 0px;
+	//top: -40px;
+}
+
+.month{
+  position: absolute;
+  z-index: 40;
+  top: 0px;
+  left: 0px;
+}

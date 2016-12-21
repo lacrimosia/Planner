@@ -29,6 +29,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { CourseNameComponent } from './course-name/course-name.component';
 import { CalendarAppComponent } from './calendar-app/calendar-app.component';
 import { CustomComponent } from './custom/custom.component';
+import { CustomDateComponent } from './custom-date/custom-date.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CustomComponent } from './custom/custom.component';
     TooltipComponent,
     CourseNameComponent,
     CalendarAppComponent,
-    CustomComponent
+    CustomComponent,
+    CustomDateComponent
   ],
   imports: [
     BrowserModule,
