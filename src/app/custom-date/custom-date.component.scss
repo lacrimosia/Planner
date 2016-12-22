@@ -17,15 +17,28 @@
   position: absolute;
   width: 34%;
   height: auto;
+  padding: 0px;
   z-index: 40;
   top: -13px;
   border: 1px solid red;
 }
 
 .month h3{
+  text-align: center;
+  font-size: 100%;
+}
+
+.day{
   position: absolute;
+  width: 34%;
+  height: auto;
+  padding: 0px;
+  z-index: 40;
   top: 0px;
-  left: 0px;
+  border: 1px solid red;
+}
+
+.day h3{
   text-align: center;
   font-size: 100%;
 }
