@@ -2,7 +2,6 @@
   width: 100%;
   height: 100px;
   position: relative;
-  border: 1px solid red;
 }
 
 .imageSize{
@@ -26,19 +25,41 @@
 .month h3{
   text-align: center;
   font-size: 100%;
+  font-weight: bold !important;
+  color: #ffffff;
 }
 
 .day{
   position: absolute;
   width: 34%;
-  height: 30px;
+  height: 50px;
   padding: 0px;
   z-index: 40;
-  top: 0px;
-  border: 1px solid red;
+  top: 26px;
+  left: 17px;
 }
 
-.day h3{
+.day h2{
   text-align: center;
-  font-size: 100%;
+  font-size: 300%;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.percent{
+  position: absolute;
+  width: 37%;
+  height: 50px;
+  padding: 0px;
+  z-index: 40;
+  top: 45px;
+  left: 110px;
+ // border: 1px solid red;
+}
+
+.percent h2{
+  text-align: center;
+  font-size: 230%;
+  color: #ffffff;
+  margin-top: 2px;
 }
