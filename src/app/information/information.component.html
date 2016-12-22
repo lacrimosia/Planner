@@ -7,9 +7,9 @@
 <!-- progress bar on each question -->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 <div class="progress">
-		<div class="progress-bar" [ngClass]="colors()" role="progressbar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount-2" [ngStyle]="{'width': progress()+'%'}">
+		<div class="progress-bar" [ngClass]="colors()" role="progressbar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount" [ngStyle]="{'width': progress()+'%'}">
 		</div>
 </div>
-<span class="circleArea" [ngStyle]="{'left': ((progress()/2.6)+ 5)+'%', 'transition': 'left 0.3s'}"> {{ this.counter-1 }}  / {{ this.amount-3 }} </span>
+<span class="circleArea" [ngStyle]="{'left': ((progress()/2.6)+ 5)+'%', 'transition': 'left 0.3s'}"> {{ this.counter-1 }}  / {{ this.amount }} </span>
 </div>
 <hr />

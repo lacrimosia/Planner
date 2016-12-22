@@ -16,6 +16,7 @@ export class HeadingComponent implements OnInit {
   @Input() assignments;
   @Input() value;
   @Input() valueChanged;
+  @Input() amount;
   title:string;
   symbol:any;
 
@@ -24,6 +25,18 @@ export class HeadingComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+// Output the symbol if first value and the last value
+// Otherwise output the number of the value
+  headingOutput(i, symbol){
+    let name = 0;
+    if(i==0 || i==this.amount-1){
+      name = symbol;
+    }else{
+      name = i;
+    }
+    return name;
   }
 
 }

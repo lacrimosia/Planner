@@ -79,6 +79,19 @@ export class NavComponent implements OnInit {
     }
   }
 
+
+// Output the symbol if first value and the last value
+// Otherwise output the number of the value
+  navOutput(i, symbol){
+    let name = 0;
+    if(i==0 || i==this.amount-1){
+      name = symbol;
+    }else{
+      name = i;
+    }
+    return name;
+  }
+
   // show the correct picture
   imageSrc(picture){
   	return "assets/images/" + picture;
@@ -90,7 +103,7 @@ printContent(){
   // If they user selects all the assignments, then the print area becomes visible
   // loop goes through 1-7
   // It only checks types that have two answers
-  for(let x=1; x<=this.data.assignments.length-2; x++){
+  for(let x=1; x<this.data.assignments.length; x++){
     // check if category type is the two choices
     if(this.data.assignments[x].type=="two"){
       // then check if both selectA and selectB is false
