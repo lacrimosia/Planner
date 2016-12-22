@@ -74,7 +74,7 @@
 						<app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
 
 					<!-- assignment Info title -->
-					<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>0">
+					<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>0 && data.value < amount-1">
 						<h2 class="titles pull-left"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
 						<h2 class="titles pull-right"><i class="fa fa-pie-chart"></i> Date &amp; Percentage</h2>
 					</div>
