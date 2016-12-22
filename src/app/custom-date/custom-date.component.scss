@@ -5,7 +5,7 @@
 }
 
 .imageSize{
-	width: 75%;
+	width: 100%;
 	height: auto;
   position: relative;
   top: 0px;
@@ -15,7 +15,17 @@
 
 .month{
   position: absolute;
+  width: 34%;
+  height: auto;
   z-index: 40;
+  top: -13px;
+  border: 1px solid red;
+}
+
+.month h3{
+  position: absolute;
   top: 0px;
   left: 0px;
+  text-align: center;
+  font-size: 100%;
 }
