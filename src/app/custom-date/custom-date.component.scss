@@ -1,7 +1,8 @@
 .dateArea{
   width: 100%;
-  height: auto;
+  height: 100px;
   position: relative;
+  border: 1px solid red;
 }
 
 .imageSize{
@@ -16,11 +17,10 @@
 .month{
   position: absolute;
   width: 34%;
-  height: auto;
+  height: 25px;
   padding: 0px;
   z-index: 40;
   top: -13px;
-  border: 1px solid red;
 }
 
 .month h3{
@@ -31,7 +31,7 @@
 .day{
   position: absolute;
   width: 34%;
-  height: auto;
+  height: 30px;
   padding: 0px;
   z-index: 40;
   top: 0px;
