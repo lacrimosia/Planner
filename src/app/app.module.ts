@@ -30,6 +30,7 @@ import { CourseNameComponent } from './course-name/course-name.component';
 import { CalendarAppComponent } from './calendar-app/calendar-app.component';
 import { CustomComponent } from './custom/custom.component';
 import { CustomDateComponent } from './custom-date/custom-date.component';
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { CustomDateComponent } from './custom-date/custom-date.component';
     CourseNameComponent,
     CalendarAppComponent,
     CustomComponent,
-    CustomDateComponent
+    CustomDateComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<!-- progress bar on each question -->
+<div class="progression" *ngFor="let d of assignments | keys; let i = index">
+<div class="progress" *ngIf="i==data.value">
+		<div class="progress-bar" [ngClass]="colors()" role="progressbar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount" [ngStyle]="{'width': progress()+'%'}" >
+		</div>
+</div>
+<span class="circleArea" [ngStyle]="{'left': ((progress()/2.6)+ 5)+'%', 'transition': 'left 0.3s'}" *ngIf="i==data.value"> {{ counter-1 }}  / {{ total }} </span>
+</div>

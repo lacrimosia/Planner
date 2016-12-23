@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { DataService} from './data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from './keys.pipe';
@@ -20,6 +20,7 @@ export class AppComponent implements OnInit{
  value:number = 0;
  instructions:string;
  showCalendar:boolean = false;
+ total:number = 0;
 
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
@@ -42,10 +43,22 @@ export class AppComponent implements OnInit{
         () => console.log('app component data loaded')
 
      );
+
+    // this.getTotal();
  }
 
  imageSrc(picture){
    return "assets/images/" + picture;
  }
+
+  getTotal(){
+    for(var i=0; i<this.amount-1; i++){
+      if(this.assignments[i].type=="two"){
+        this.total += 1;
+      }
+    }
+    console.log("total", this.total);
+    return this.total;
+  }
 
 }
