@@ -35,19 +35,16 @@ export class SelectComponent implements OnInit {
 
   // toggle buttons for selection
   selectionClick(){
-    this.d.select++;
-
-    for(var i=0; i<this.d.value.tasks.length; i++){
-      
+    this.d.value.selected++;
+    for(var i=0; i<this.d.value.tasks.length; i++){   
       if(i==this.index){
         this.d.value.tasks[i].select = true;
       }else{
         this.d.value.tasks[i].select = false;
       }
-     // console.log("selected", this.index);
     }
 
-    if(this.d.select == 1){
+    if(this.d.value.selected == 1){
       this.data.progress++;
     }
     return;
