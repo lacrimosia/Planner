@@ -4,8 +4,8 @@ import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import * as jsPDF from 'jspdf';
-import { ButtonAComponent } from '../button-a/button-a.component';
-import { ButtonBComponent } from '../button-b/button-b.component';
+//import { ButtonAComponent } from '../button-a/button-a.component';
+//import { ButtonBComponent } from '../button-b/button-b.component';
 import { TasksComponent } from '../tasks/tasks.component';
 
 @Component({
