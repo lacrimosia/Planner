@@ -40,9 +40,9 @@ export class ProgressComponent implements OnInit {
   }
 
 // shows the colors for the progress bar
-  colors(){
+ /* colors(){
     // red zone
-    /*if(this.progress() >= 0 && this.progress() < 15){
+    if(this.progress() >= 0 && this.progress() < 15){
       return "progress-bar-danger animated fadeInLeft";
     }
     else if(this.progress() > 15 && this.progress() < 30){
@@ -53,8 +53,8 @@ export class ProgressComponent implements OnInit {
     }else if(this.progress() > 70){
       return "progress-bar-success";
     }
+    return "glow";
   }*/
-  return "glow";
+  
 }
 
-}

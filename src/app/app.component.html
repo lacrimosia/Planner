@@ -81,7 +81,7 @@
                     <!-- Progress bar -->
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>0 && data.value < amount-1">
                     	<h2 class="titles"><i class="fa fa-pie-chart"></i> Assignment Progress</h2>
-                    	<p><app-progress [data]="data" [value]="value" [amount]="amount" [assignments]="assignments" [total]="total"></app-progress></p>
+                    	<p><app-progress [data]="data" [value]="value" [amount]="amount" [assignments]="assignments" [total]="getTotal()"></app-progress></p>
                     </div>
 
                     <!-- calendar button

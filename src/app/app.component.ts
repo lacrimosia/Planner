@@ -21,6 +21,7 @@ export class AppComponent implements OnInit{
  instructions:string;
  showCalendar:boolean = false;
  total:number = 0;
+ taskLimit:number;
 
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService){
@@ -37,14 +38,13 @@ export class AppComponent implements OnInit{
          this.alert = this.data.alert;
          this.instructions = this.assignments[0].instructions;
          this.showCalendar = this.data.showCalendar;
+         this.taskLimit = this.data.totalTasks;
         // console.log("the data alert", this.value);
         },
         err => console.error(err),
         () => console.log('app component data loaded')
 
      );
-
-    // this.getTotal();
  }
 
  imageSrc(picture){
@@ -52,6 +52,7 @@ export class AppComponent implements OnInit{
  }
 
   getTotal(){
+    this.total = this.taskLimit;
     for(var i=0; i<this.amount-1; i++){
       if(this.assignments[i].type=="two"){
         this.total += 1;
