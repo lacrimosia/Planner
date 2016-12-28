@@ -1,0 +1,8 @@
+<div *ngFor="let d of assignments | keys; let i = index">
+    <div class="twoTasks" *ngIf="d.value.type=='two' && i==data.value">
+        <div *ngFor="let t of d.value.tasks | keys" class="taskA col-md-6 col-lg-6 col-sm-12 col-xs-12">
+            <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="t.value.name" [information]="t.value.information"></app-tasks>
+            <app-button-a [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [d]="t"></app-button-a>
+        </div>
+    </div>
+</div>

@@ -58,7 +58,7 @@ export class AppComponent implements OnInit{
         this.total += 1;
       }
     }
-    console.log("total", this.total);
+   // console.log("total", this.total);
     return this.total;
   }
 

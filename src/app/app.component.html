@@ -98,8 +98,8 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <app-one-task [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-one-task>
                     </div>
-                    <!-- two tasks -->
-                    <app-two-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-two-tasks>
+                    <!-- Multi tasks -->
+                    <app-multi-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-multi-tasks>
                     <!-- custom tasks -->
                     <app-custom *ngIf="data.value>0" [data]="data" [assignments]="assignments" [amount]="amount"></app-custom>
                     <!-- print area -->

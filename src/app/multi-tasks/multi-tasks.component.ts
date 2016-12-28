@@ -5,12 +5,12 @@ import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 
 @Component({
-  selector: 'app-two-tasks',
-  templateUrl: './two-tasks.component.html',
-  styleUrls: ['./two-tasks.component.scss'],
+  selector: 'app-multi-tasks',
+  templateUrl: './multi-tasks.component.html',
+  styleUrls: ['./multi-tasks.component.scss'],
   providers: [DataService, HotkeysService]
 })
-export class TwoTasksComponent implements OnInit {
+export class MultiTasksComponent implements OnInit {
 
   @Input() data;
   @Input() assignments;
@@ -18,6 +18,7 @@ export class TwoTasksComponent implements OnInit {
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+  	
   }
 
 }

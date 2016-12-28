@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { TwoTasksComponent } from './two-tasks.component';
+import { MultiTasksComponent } from './multi-tasks.component';
 
-describe('Component: TwoTasks', () => {
+describe('Component: MultiTasks', () => {
   it('should create an instance', () => {
-    let component = new TwoTasksComponent();
+    let component = new MultiTasksComponent();
     expect(component).toBeTruthy();
   });
 });

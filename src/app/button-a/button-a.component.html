@@ -1,1 +1,1 @@
-<button class="select" (click)="buttonOneClick(value)" [ngClass]="{'yes': d.value.taskA.selectA, 'no': !d.value.taskA.selectA}"><i class="fa fa-times" *ngIf="!d.value.taskA.selectA"></i> <i class="fa fa-check" *ngIf="d.value.taskA.selectA"></i> {{ d.value.taskA.selectA ? "Selected" : "Unselected" }}</button>
+<button class="select" (click)="buttonOneClick(value)" [ngClass]="{'yes': d.select, 'no': !d.select}"><i class="fa fa-times" *ngIf="!d.select"></i> <i class="fa fa-check" *ngIf="d.value.select"></i> {{ d.select ? "Selected" : "Unselected" }}</button>

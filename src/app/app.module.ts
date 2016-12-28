@@ -15,9 +15,8 @@ import { DownloadComponent } from './download/download.component';
 import { ErrorComponent } from './error/error.component';
 import { SavedComponent } from './saved/saved.component';
 import { ButtonAComponent } from './button-a/button-a.component';
-import { ButtonBComponent } from './button-b/button-b.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { TwoTasksComponent } from './two-tasks/two-tasks.component';
+import { MultiTasksComponent } from './multi-tasks/multi-tasks.component';
 import { OneTaskComponent } from './one-task/one-task.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { InformationComponent } from './information/information.component';
@@ -43,9 +42,8 @@ import { ProgressComponent } from './progress/progress.component';
     ErrorComponent,
     SavedComponent,
     ButtonAComponent,
-    ButtonBComponent,
     TasksComponent,
-    TwoTasksComponent,
+    MultiTasksComponent,
     OneTaskComponent,
     InstructionsComponent,
     InformationComponent,
