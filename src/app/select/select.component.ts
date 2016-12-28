@@ -16,6 +16,8 @@ export class SelectComponent implements OnInit {
   @Input() amount;
   @Input() value;
   @Input() d;
+  @Input() t;
+  @Input() index;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   }
@@ -24,7 +26,7 @@ export class SelectComponent implements OnInit {
     // select A for the option A task
     this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
         if(this.d.value.type=="two"){
-            this.buttonOneClick();
+            this.selectionClick();
             return;
         }
         return false; // Prevent bubbling
@@ -32,12 +34,20 @@ export class SelectComponent implements OnInit {
   }
 
   // toggle buttons for selection
-  buttonOneClick(){
-  //  console.log("value A", this.d);
-    this.d.value.selected++;
-    this.d.value.taskA.selectA = true;
-    this.d.value.taskB.selectB= false;
-    if(this.d.value.selected == 1){
+  selectionClick(){
+    this.d.select++;
+
+    for(var i=0; i<this.d.value.tasks.length; i++){
+      
+      if(i==this.index){
+        this.d.value.tasks[i].select = true;
+      }else{
+        this.d.value.tasks[i].select = false;
+      }
+     // console.log("selected", this.index);
+    }
+
+    if(this.d.select == 1){
       this.data.progress++;
     }
     return;
