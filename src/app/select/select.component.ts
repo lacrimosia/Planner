@@ -33,7 +33,9 @@ export class SelectComponent implements OnInit {
     }));
   }
 
-  // toggle buttons for selection
+  // toggle buttons for selection on each task
+  // d is the outer loop
+  // t is the inner loop
   selectionClick(){
     this.d.value.selected++;
     for(var i=0; i<this.d.value.tasks.length; i++){   
