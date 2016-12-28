@@ -67,15 +67,16 @@
                     <!-- assignment Info title -->
                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>0 && data.value < amount-1">
                         <h2 class="titles pull-left"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
-                        <h2 class="titles pull-right"><i class="fa fa-calendar-o"></i> Date &amp; Percentage</h2>
+                        <h2 class="titles pull-right"><i class="fa fa-calendar"></i> Date &amp; Percentage</h2>
                     </div>
                     <!-- assignment information -->
                     <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value>0 && data.value < amount-1">
                         <app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value"></app-information>
                     </div>
+
                     <!-- due date image -->
                     <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>0 && data.value<amount-1">
-                        <app-custom-date [value]="data.value" [amount]="amount" [assignments]="assignments" *ngIf="assignments[data.value].type != 'custom'"></app-custom-date>
+                        <app-custom-date [value]="data.value" [amount]="amount" [assignments]="assignments"></app-custom-date>
                     </div>
 
                     <!-- Progress bar -->
@@ -98,12 +99,13 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <app-one-task [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-one-task>
                     </div>
+
                     <!-- Multi tasks -->
                     <app-multi-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-multi-tasks>
 
                     <!-- custom tasks -->
                     <app-custom *ngIf="data.value>0" [data]="data" [assignments]="assignments" [amount]="amount"></app-custom>
-                    
+
                     <!-- print area -->
                     <div class="printArea" *ngIf="data.print==true">
                         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">

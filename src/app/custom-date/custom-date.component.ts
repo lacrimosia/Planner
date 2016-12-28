@@ -15,6 +15,7 @@ export class CustomDateComponent implements OnInit {
   @Input() value;
   @Input() amount;
   @Input() assignments;
+  // @Input() d;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   }
@@ -26,17 +27,4 @@ export class CustomDateComponent implements OnInit {
   imageSrc(picture){
     return "assets/images/" + picture;
   }
-
-  getMonth(){
-    return this.assignments[this.value].due.month;
-  }
-
-  getDay(){
-    return this.assignments[this.value].due.day;
-  }
-
-  getPercentage(){
-    return this.assignments[this.value].due.percentage;
-  }
-
 }

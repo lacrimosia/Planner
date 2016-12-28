@@ -1,12 +1,12 @@
-<div class="dateArea" [ngStyle]="{'background-image': 'url('+ 'assets/images/' + assignments[value].due_date + ')', 'background-size': 'contain', 'background-repeat': 'no-repeat'}">
+<div class="dateArea" *ngFor="let t of assignments[value].due_date | keys" [ngStyle]="{'background-image': 'url('+ 'assets/images/' + t.value.image + ')', 'background-size': 'contain', 'background-repeat': 'no-repeat'}">
     <!--  <img *ngIf="value>0 && value < amount-2" [src]="imageSrc(this.assignments[value].due_date)" class="img-responsive imageSize visible-sm visible-xs"/> -->
-</div>
 <div class="month">
-    <h3>{{ getMonth() }}</h3>
+    <h3>{{ t.value.month }}</h3>
 </div>
 <div class="day">
-    <h2> {{ getDay() }}</h2>
+    <h2> {{ t.value.day }}</h2>
 </div>
 <div class="percent">
-	<h2> {{ getPercentage() }}% </h2>
+	<h2> {{ t.value.percentage }}% </h2>
+</div>
 </div>

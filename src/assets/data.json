@@ -1,5 +1,5 @@
 {
-    "course_title": "Swine venison chuck",
+    "course_title": "Personal Planner",
     "activity": "Interactive Activity Planner",
     "ten": "",
     "twenty": "",
@@ -34,13 +34,6 @@
         "type": "one",
         "title": "Salami turducken meatball",
         "symbol": 1,
-        "due": {
-          "month": "December",
-          "day": 5,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "q": true,
         "t": true,
         "show": false,
@@ -50,7 +43,16 @@
         },
         "printTop": 0,
         "instructions": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "December",
+                "day": 5,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "taskA": {
             "name": "Bacon ipsum dolor",
@@ -63,13 +65,6 @@
         "type": "two",
         "title": "Assignment 2 Title",
         "symbol": 2,
-        "due": {
-          "month": "March",
-          "day": 7,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "show": false,
         "q": true,
         "t": true,
@@ -79,7 +74,16 @@
         },
         "printTop": 250,
         "instructions": "Chicken beef ribs venison landjaeger kevin, capicola doner sirloin porchetta. Picanha pastrami tri-tip shankle filet mignon, strip steak burgdoggen sausage. Brisket burgdoggen fatback kevin, pork belly leberkas tenderloin drumstick capicola tongue. Capicola meatball kevin leberkas jerky t-bone. Pork chop meatball tail, filet mignon porchetta landjaeger beef pig doner bacon venison shank short ribs.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "March",
+                "day": 7,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "tasks": [
             {
@@ -112,13 +116,6 @@
         "type": "one",
         "title": "Salami turducken meatball",
         "symbol": 1,
-        "due": {
-          "month": "December",
-          "day": 5,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "q": true,
         "t": true,
         "show": false,
@@ -128,7 +125,16 @@
         },
         "printTop": 0,
         "instructions": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "December",
+                "day": 5,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "taskA": {
             "name": "Bacon ipsum dolor",
@@ -142,13 +148,6 @@
         "type": "two",
         "title": "Assignment Title 3",
         "symbol": 3,
-        "due": {
-          "month": "February",
-          "day": 15,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "show": false,
         "q": true,
         "t": true,
@@ -158,7 +157,16 @@
         },
         "printTop": 560,
         "instructions": "Ham shoulder sausage pancetta fatback burgdoggen cupim pig meatball pastrami swine hamburger. Pork t-bone jowl bresaola ground round venison salami drumstick rump andouille. Pancetta meatloaf filet mignon kevin short loin, bresaola tenderloin shoulder venison ball tip strip steak biltong prosciutto jerky. Meatloaf ball tip brisket pork chuck, frankfurter beef ribs cow ribeye capicola leberkas.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "February",
+                "day": 15,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "tasks":[
             {
@@ -182,13 +190,6 @@
         "type": "two",
         "title": "Turducken kielbasa brisket 4",
         "symbol": 4,
-        "due": {
-          "month": "January",
-          "day": 18,
-          "percentage": 20,
-          "points": 0,
-          "alert": false
-        },
         "show": false,
         "q": true,
         "t": true,
@@ -198,7 +199,16 @@
         },
         "printTop": 800,
         "instructions": "Tenderloin ham bacon doner andouille ham hock. Pork loin jowl shank short ribs landjaeger, leberkas chuck corned beef tri-tip doner shankle bacon pork drumstick. Fatback tail capicola, spare ribs short ribs beef ribs swine flank. Fatback porchetta picanha, turducken cow ham hock chicken leberkas short ribs swine pancetta shankle. Kielbasa salami fatback, filet mignon burgdoggen porchetta frankfurter chuck. Landjaeger shoulder ham hock venison doner filet mignon tail ribeye kielbasa pancetta ground round rump short loin salami. Hamburger ribeye biltong picanha sausage turducken.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "January",
+                "day": 18,
+                "percentage": 20,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "tasks":[
             {
@@ -217,13 +227,6 @@
         "type": "two",
         "title": "Salami bresaola capicola",
         "symbol": 5,
-        "due": {
-          "month": "April",
-          "day": 13,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "q": true,
         "t": true,
         "show": false,
@@ -233,7 +236,16 @@
         },
         "printTop":1042,
         "instructions": "Biltong salami bacon rump jerky, turducken leberkas short loin kielbasa tongue doner. Pastrami ham hock cupim ground round picanha, tri-tip hamburger beef boudin. Meatball picanha shankle, sausage corned beef beef turkey spare ribs venison. Hamburger swine porchetta brisket kevin. Boudin turkey biltong sausage ground round, ball tip meatball kielbasa swine pork loin jerky tenderloin cow leberkas.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "April",
+                "day": 13,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "tasks":[
             {
@@ -252,13 +264,6 @@
         "type": "two",
         "title": "Jerky short loin meatloaf ribeye",
         "symbol": 6,
-        "due": {
-          "month": "May",
-          "day": 12,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "show": false,
         "q": true,
         "t": true,
@@ -268,7 +273,16 @@
         },
         "printTop": 1280,
         "instructions": "Kielbasa short ribs kevin biltong ribeye landjaeger, capicola porchetta filet mignon salami rump frankfurter t-bone drumstick jerky. Boudin pork loin tri-tip short loin ribeye shoulder. Ribeye t-bone boudin, burgdoggen flank ham landjaeger chuck. Beef ribs picanha chuck alcatra shoulder tongue ribeye tenderloin. Cow pork chop kevin kielbasa, pork belly sirloin tri-tip ribeye beef andouille frankfurter pork brisket tenderloin shank.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "May",
+                "day": 12,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "tasks": [
             {
@@ -294,35 +308,37 @@
         "tooltip": {
             "left": 820
         },
+        "due_date": [
+            {
+                "image": "20.jpg",
+                "month": "July",
+                "day": 29,
+                "percentage": 20,
+                "points": 0,
+                "alert": false
+            },
+            {
+                "image": "10.jpg",
+                "month": "August",
+                "day": 12,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 1,
         "printTop": 1540,
         "instructions": "Chuck meatball picanha brisket fatback boudin cow leberkas venison pig landjaeger cupim alcatra pork loin. Venison tenderloin alcatra ribeye chicken ground round pork loin cow filet mignon. Landjaeger tail biltong tri-tip sausage rump pastrami ham filet mignon salami. Pork belly cow fatback rump boudin leberkas.",
         "tasks": [
             {
                 "name": "Pork Chop MeatLOAF",
-                "due_date": "20.jpg",
                 "information": "Frankfurter cupim burgdoggen, chicken tail jowl doner porchetta strip steak leberkas sausage short loin pork loin venison beef ribs. Cupim ribeye shoulder, pig porchetta frankfurter corned beef pork chop beef ribs kevin burgdoggen flank pork belly doner brisket. Brisket flank chuck, kevin pork loin chicken salami. Chuck doner shank, strip steak jerky hamburger frankfurter ham capicola shankle salami sirloin pork chop porchetta alcatra. Ball tip jowl leberkas, shank landjaeger burgdoggen ham hock. Drumstick sirloin cupim doner meatball short loin tongue burgdoggen strip steak frankfurter pancetta hamburger pork belly ham.",
-                "select": true,
-                "due": {
-                    "month": "July",
-                    "day": 5,
-                    "percentage": 20,
-                    "points": 0,
-                    "alert": false
-                }  
+                "select": true
             },
             {
                 "name": "Tongue turducken alcatra",
-                "due_date": "10.jpg",
                 "information": "Pork belly hamburger boudin, tongue turducken alcatra biltong turkey jerky swine capicola rump tail flank. Swine meatloaf flank kielbasa short ribs, jowl leberkas tenderloin pig. Sirloin ribeye jowl fatback. Biltong tenderloin short ribs cow ribeye rump doner porchetta capicola venison ball tip turducken salami beef. Pork chop capicola meatloaf, beef ribs kevin short loin andouille shankle flank chuck.",
-                "select": true,
-                "due": {
-                    "month": "July",
-                    "day": 12,
-                    "percentage": 10,
-                    "points": 0,
-                    "alert": false
-                }
+                "select": true
             }
         ]
     },{
@@ -336,48 +352,43 @@
         "tooltip": {
             "left": 820
         },
+        "due_date": [
+            {
+                "image": "20.jpg",
+                "month": "July",
+                "day": 5,
+                "percentage": 20,
+                "points": 0,
+                "alert": false
+            },
+            {
+                "image": "10.jpg",
+                "month": "July",
+                "day": 12,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 1,
         "printTop": 1540,
         "instructions": "Chuck meatball picanha brisket fatback boudin cow leberkas venison pig landjaeger cupim alcatra pork loin. Venison tenderloin alcatra ribeye chicken ground round pork loin cow filet mignon. Landjaeger tail biltong tri-tip sausage rump pastrami ham filet mignon salami. Pork belly cow fatback rump boudin leberkas.",
         "tasks": [
             {
             "name": "Pork chop capicola meatloaf",
-            "due_date": "20.jpg",
             "information": "Frankfurter cupim burgdoggen, chicken tail jowl doner porchetta strip steak leberkas sausage short loin pork loin venison beef ribs. Cupim ribeye shoulder, pig porchetta frankfurter corned beef pork chop beef ribs kevin burgdoggen flank pork belly doner brisket. Brisket flank chuck, kevin pork loin chicken salami. Chuck doner shank, strip steak jerky hamburger frankfurter ham capicola shankle salami sirloin pork chop porchetta alcatra. Ball tip jowl leberkas, shank landjaeger burgdoggen ham hock. Drumstick sirloin cupim doner meatball short loin tongue burgdoggen strip steak frankfurter pancetta hamburger pork belly ham.",
-            "select": true,
-            "due": {
-              "month": "July",
-              "day": 5,
-              "percentage": 20,
-              "points": 0,
-              "alert": false
-             }  
+            "select": true
            },
            {
             "name": "Tongue turducken alcatra",
-            "due_date": "10.jpg",
             "information": "Pork belly hamburger boudin, tongue turducken alcatra biltong turkey jerky swine capicola rump tail flank. Swine meatloaf flank kielbasa short ribs, jowl leberkas tenderloin pig. Sirloin ribeye jowl fatback. Biltong tenderloin short ribs cow ribeye rump doner porchetta capicola venison ball tip turducken salami beef. Pork chop capicola meatloaf, beef ribs kevin short loin andouille shankle flank chuck.",
-            "select": true,
-            "due": {
-              "month": "July",
-              "day": 12,
-              "percentage": 10,
-              "points": 0,
-              "alert": false
-            }
+            "select": true
            }
         ]
     },{
         "type": "two",
         "title": "Jerky short loin Steak",
         "symbol": 6,
-        "due": {
-          "month": "March",
-          "day": 25,
-          "percentage": 10,
-          "points": 0,
-          "alert": false
-        },
         "show": false,
         "q": true,
         "t": true,
@@ -387,7 +398,16 @@
         },
         "printTop": 1280,
         "instructions": "Kielbasa short ribs kevin biltong ribeye landjaeger, capicola porchetta filet mignon salami rump frankfurter t-bone drumstick jerky. Boudin pork loin tri-tip short loin ribeye shoulder. Ribeye t-bone boudin, burgdoggen flank ham landjaeger chuck. Beef ribs picanha chuck alcatra shoulder tongue ribeye tenderloin. Cow pork chop kevin kielbasa, pork belly sirloin tri-tip ribeye beef andouille frankfurter pork brisket tenderloin shank.",
-        "due_date": "10.jpg",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "March",
+                "day": 25,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
         "selected": 0,
         "tasks": [
             {
