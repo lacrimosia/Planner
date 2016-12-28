@@ -100,8 +100,10 @@
                     </div>
                     <!-- Multi tasks -->
                     <app-multi-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-multi-tasks>
+
                     <!-- custom tasks -->
                     <app-custom *ngIf="data.value>0" [data]="data" [assignments]="assignments" [amount]="amount"></app-custom>
+                    
                     <!-- print area -->
                     <div class="printArea" *ngIf="data.print==true">
                         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
