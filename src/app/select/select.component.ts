@@ -5,12 +5,12 @@ import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 
 @Component({
-  selector: 'app-button-a',
-  templateUrl: './button-a.component.html',
-  styleUrls: ['./button-a.component.scss'],
+  selector: 'app-select',
+  templateUrl: './select.component.html',
+  styleUrls: ['./select.component.scss'],
   providers: [DataService, HotkeysService]
 })
-export class ButtonAComponent implements OnInit {
+export class SelectComponent implements OnInit {
   @Input() assignments;
   @Input() data;
   @Input() amount;

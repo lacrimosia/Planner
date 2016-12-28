@@ -14,7 +14,7 @@ import { PrintComponent } from './print/print.component';
 import { DownloadComponent } from './download/download.component';
 import { ErrorComponent } from './error/error.component';
 import { SavedComponent } from './saved/saved.component';
-import { ButtonAComponent } from './button-a/button-a.component';
+import { SelectComponent } from './select/select.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { MultiTasksComponent } from './multi-tasks/multi-tasks.component';
 import { OneTaskComponent } from './one-task/one-task.component';
@@ -41,7 +41,7 @@ import { ProgressComponent } from './progress/progress.component';
     DownloadComponent,
     ErrorComponent,
     SavedComponent,
-    ButtonAComponent,
+    SelectComponent,
     TasksComponent,
     MultiTasksComponent,
     OneTaskComponent,

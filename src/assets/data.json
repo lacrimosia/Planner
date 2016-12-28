@@ -83,20 +83,29 @@
         "selected": 0,
         "tasks": [
             {
-                "title": "Shank rump alcatra",
                 "name": "Kielbasa shankle",
                 "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
                 "select": false,
                 "symbol": 2
             },
             {
-                "title": "Corned beef turkey tri-tip",
                 "name": "Ball tip pastrami turducken",
                 "information": "Corned beef turkey tri-tip andouille biltong filet mignon venison swine sausage meatball. Swine venison chuck meatball sausage fatback turducken kielbasa boudin. Corned beef picanha pancetta ham hock swine cupim andouille flank chicken ground round venison spare ribs ham. Chicken andouille turducken, bresaola shoulder cow beef cupim. Leberkas shankle landjaeger rump pork belly venison drumstick, frankfurter swine ribeye pancetta shoulder.",
                 "select": false,
                 "symbol": 2
+            },
+            {
+                "name": "Ball tip pastrami turducken",
+                "information": "Corned beef turkey tri-tip andouille biltong filet mignon venison swine sausage meatball. Swine venison chuck meatball sausage fatback turducken kielbasa boudin. Corned beef picanha pancetta ham hock swine cupim andouille flank chicken ground round venison spare ribs ham. Chicken andouille turducken, bresaola shoulder cow beef cupim. Leberkas shankle landjaeger rump pork belly venison drumstick, frankfurter swine ribeye pancetta shoulder.",
+                "select": false,
+                "symbol": 2
+            },
+            {
+                "name": "Ball tip pastrami Chicken",
+                "information": "Corned beef turkey tri-tip andouille biltong filet mignon venison swine sausage meatball. Swine venison chuck meatball sausage fatback turducken kielbasa boudin. Corned beef picanha pancetta ham hock swine cupim andouille flank chicken ground round venison spare ribs ham. Chicken andouille turducken, bresaola shoulder cow beef cupim. Leberkas shankle landjaeger rump pork belly venison drumstick, frankfurter swine ribeye pancetta shoulder.",
+                "select": false,
+                "symbol": 2
             }
-
         ]
     },
     {
@@ -153,13 +162,11 @@
         "selected": 0,
         "tasks":[
             {
-                "title": "Kevin kielbasa pork meatball",
                 "name": "Bresaola jowl t-bone",
                 "information": "Meatball kevin shankle alcatra ground round brisket bacon short loin andouille sirloin hamburger boudin. Leberkas ground round bresaola, short ribs meatloaf beef frankfurter. Sausage shank pork loin t-bone tenderloin. Swine fatback hamburger meatball, turducken bresaola jowl t-bone shank pancetta. Brisket pig filet mignon pork.",
                 "select": false 
             },
             {
-                "title": "Alcatra ground round",
                 "name": "Meatloaf ball tip brisket",
                 "information": "Bacon ipsum dolor amet leberkas tongue bresaola pastrami, beef ribs tri-tip cupim pork chop venison hamburger turkey. Beef ribs chicken t-bone prosciutto boudin. Meatloaf ball tip cow fatback swine leberkas prosciutto, tongue strip steak pork loin hamburger frankfurter venison andouille turkey.",
                 "select": false
@@ -190,13 +197,11 @@
         "selected": 0,
         "tasks":[
             {
-                "title": "Tenderloin ham",
                 "name": "Spare ribs swine",
                 "information": "Turducken kielbasa brisket spare ribs rump. Short loin pastrami kielbasa, picanha beef fatback kevin strip steak. Biltong alcatra boudin brisket pork chop, rump shankle meatloaf swine tail tenderloin landjaeger capicola. Pork loin burgdoggen capicola tri-tip turkey spare ribs rump landjaeger. Brisket venison tail flank bresaola ham hock capicola sausage kevin.",
                 "select": false 
             },
             {
-                "title": "Tenderloin ham",
                 "name": "Bacon doner andouille ham hock",
                 "information": "Tenderloin ham bacon doner andouille ham hock. Pork loin jowl shank short ribs landjaeger, leberkas chuck corned beef tri-tip doner shankle bacon pork drumstick. Fatback tail capicola, spare ribs short ribs beef ribs swine flank. Fatback porchetta picanha, turducken cow ham hock chicken leberkas short ribs swine pancetta shankle. Kielbasa salami fatback, filet mignon burgdoggen porchetta frankfurter chuck.",
                 "select": false 
@@ -227,13 +232,11 @@
         "selected": 0,
         "tasks":[
             {
-                "title": "Brisket sirloin pork chop",
                 "name": "Beef pancetta jerky sirloin",
                 "information": "Shankle salami swine spare ribs fatback pork belly shoulder. Salami bresaola capicola ball tip, meatloaf pastrami pork loin fatback t-bone short loin tenderloin cow leberkas. Jowl meatball corned beef pancetta jerky sirloin leberkas short loin. Capicola corned beef ground round shoulder shank tenderloin burgdoggen alcatra pork belly. Beef alcatra pancetta short loin landjaeger, kielbasa boudin ball tip tongue pig. Pancetta beef tail chicken capicola.",
                 "select": false
             },
             {
-                "title": "Ham filet mignon",
                 "name": "Capicola corned beef",
                 "information": " Tenderloin porchetta pancetta sausage burgdoggen. Tri-tip salami strip steak bacon, meatball fatback picanha filet mignon capicola short ribs short loin pork belly swine pancetta. Ham jowl kielbasa alcatra pork belly jerky burgdoggen, short loin corned beef sirloin swine turducken rump tongue. Doner tongue shank andouille frankfurter drumstick.",
                 "selectB": false  
@@ -264,13 +267,11 @@
         "selected": 0,
         "tasks": [
             {
-                "title": "Chuck meatball picanha",
                 "name": "Ribeye t-bone boudin",
                 "information": "Bacon ipsum dolor amet pork loin flank prosciutto beef filet mignon pork chop turkey pancetta pig shoulder fatback. Kielbasa meatloaf turducken pastrami alcatra ball tip hamburger. Jerky short loin meatloaf ribeye fatback spare ribs alcatra brisket pig porchetta pork belly shoulder t-bone turducken. Venison meatloaf frankfurter shoulder.",
                 "selectA": false  
             },
             {
-                "title": "Filet mignon t-bone sausage",
                 "name": "Chuck ham hock",
                 "information": "Chuck meatball picanha brisket fatback boudin cow leberkas venison pig landjaeger cupim alcatra pork loin. Venison tenderloin alcatra ribeye chicken ground round pork loin cow filet mignon. Landjaeger tail biltong tri-tip sausage rump pastrami ham filet mignon salami. Pork belly cow fatback rump boudin leberkas.",
                 "selectB": false
@@ -383,18 +384,18 @@
         "instructions": "Kielbasa short ribs kevin biltong ribeye landjaeger, capicola porchetta filet mignon salami rump frankfurter t-bone drumstick jerky. Boudin pork loin tri-tip short loin ribeye shoulder. Ribeye t-bone boudin, burgdoggen flank ham landjaeger chuck. Beef ribs picanha chuck alcatra shoulder tongue ribeye tenderloin. Cow pork chop kevin kielbasa, pork belly sirloin tri-tip ribeye beef andouille frankfurter pork brisket tenderloin shank.",
         "due_date": "10.jpg",
         "selected": 0,
-        "taskA": {
-          "title": "Chuck meatball picanha",
-            "name": "Ribeye t-bone boudin",
-            "information": "Bacon ipsum dolor amet pork loin flank prosciutto beef filet mignon pork chop turkey pancetta pig shoulder fatback. Kielbasa meatloaf turducken pastrami alcatra ball tip hamburger. Jerky short loin meatloaf ribeye fatback spare ribs alcatra brisket pig porchetta pork belly shoulder t-bone turducken. Venison meatloaf frankfurter shoulder.",
-            "selectA": false
-        },
-        "taskB": {
-          "title": "Filet mignon t-bone sausage",
-            "name": "Chuck ham hock",
-            "information": "Chuck meatball picanha brisket fatback boudin cow leberkas venison pig landjaeger cupim alcatra pork loin. Venison tenderloin alcatra ribeye chicken ground round pork loin cow filet mignon. Landjaeger tail biltong tri-tip sausage rump pastrami ham filet mignon salami. Pork belly cow fatback rump boudin leberkas.",
-            "selectB": false
-        }
+        "tasks": [
+            {
+                "name": "Ribeye t-bone boudin",
+                "information": "Bacon ipsum dolor amet pork loin flank prosciutto beef filet mignon pork chop turkey pancetta pig shoulder fatback. Kielbasa meatloaf turducken pastrami alcatra ball tip hamburger. Jerky short loin meatloaf ribeye fatback spare ribs alcatra brisket pig porchetta pork belly shoulder t-bone turducken. Venison meatloaf frankfurter shoulder.",
+                "select": false
+            },
+            {
+                "name": "Chuck ham hock",
+                "information": "Chuck meatball picanha brisket fatback boudin cow leberkas venison pig landjaeger cupim alcatra pork loin. Venison tenderloin alcatra ribeye chicken ground round pork loin cow filet mignon. Landjaeger tail biltong tri-tip sausage rump pastrami ham filet mignon salami. Pork belly cow fatback rump boudin leberkas.",
+                "select": false
+            }
+        ]
     },{
         "type": "review",
         "title": "Review",
