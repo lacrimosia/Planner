@@ -6,7 +6,7 @@
       <div class="one col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='one'">
         <!--<img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />-->
         <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
-        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12">{{ d.value.taskA.name }}: {{ d.value.taskA.information }}</p>
+        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12"><b>{{ d.value.taskA.name }}</b>: {{ d.value.taskA.information }}</p>
       </div>
 
     <!-- multiple choices -->
@@ -14,15 +14,15 @@
        <!-- <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" /> -->
        <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
         <div *ngFor="let t of d.value.tasks | keys">
-        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="t.value.select==true">{{ t.value.name }}: {{ t.value.information }}</p>
+        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="t.value.select==true"><b>{{ t.value.name }}</b>: {{ t.value.information }}</p>
         </div>
       <!--  <p class="text" *ngIf="d.value.taskA.selectA==false && d.value.taskB.selectB==false">Please select an assignment.</p>-->
       </div>
 
       <div class="custom col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='custom'">
-        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let t of d.value.tasks | keys">
-          <img [src]="imageSrc(t.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />
-          <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="d.value.taskB.selectB==true">{{ t.value.name }}: {{ t.value.information }}</p>
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let p of d.value.due_date | keys">
+          <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
+          <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngFor="let t of d.value.tasks | keys"><b>{{ t.value.name }}</b>: {{ t.value.information }}</p>
         </div>
       </div>
     </li>

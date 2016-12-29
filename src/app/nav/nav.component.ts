@@ -108,7 +108,7 @@ printContent(){
     if(this.data.assignments[x].type=="two"){
       // then check if both selectA and selectB is false
       // this ensures they actually select something
-      if(this.data.assignments[x].taskA.selectA == false && this.data.assignments[x].taskB.selectB==false){
+      if(this.data.assignments[x].tasks == false){
         this.data.error.open = true;
         this.data.value = 2;
         this.hidePrintContent();
