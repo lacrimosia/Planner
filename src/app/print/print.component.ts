@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
@@ -16,7 +17,7 @@ export class PrintComponent implements OnInit {
   @Input() d;
   @Input() assignments;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private http: Http) { }
 
   ngOnInit() {
   }
@@ -59,5 +60,29 @@ export class PrintComponent implements OnInit {
   // hide the print area
   hidePrintContent(){
     this.data.print = false;
+  }
+
+ postData(title, textA, textB) {
+    let body = JSON.stringify({ title: title,  textA: textA, textB: textB });
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    console.log(body);
+    console.log(options);
+
+    return this.http.post('http://localhost:4500/', body, options)
+              .map(this.extractData)
+              .catch(this.handleError);
+  }
+
+  private extractData(res: Response) {
+    let body = res.json();
+    console.log(body);
+    return body.data || { };
+  }
+
+  private handleError (error: any) {
+    console.error(error);
+    return Observable.throw(error.json().error || 'Server error');
   }
 }
