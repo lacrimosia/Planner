@@ -17,6 +17,7 @@ export class HeadingComponent implements OnInit {
   @Input() value;
   @Input() valueChanged;
   @Input() amount;
+  @Input() ui;
   title:string;
   symbol:any;
 

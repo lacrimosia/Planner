@@ -39,12 +39,10 @@ body{
 }
 
 // buttons styles
-@mixin buttonStyles($w, $h, $color, $radius, $border, $font){
+@mixin buttonStyles($w, $h, $radius, $font){
 	width: $w;
 	height: $h;
-	background: $color;
 	border-radius: $radius;
-	border: 1px solid $border;
 	font-family: $font;
 	font-size: 1.7em;
 	color: $white;
@@ -73,7 +71,7 @@ p, span, ul li{
 
 // circle navigation buttons
 .circle{
-	@include buttonStyles(60px, 60px, $green, 100px, $green, subHeadings);
+	@include buttonStyles(60px, 60px,  100px, subHeadings);
 	cursor: pointer;
 	text-align: center;
 	font-size: 2.3em;
@@ -86,7 +84,7 @@ p, span, ul li{
 }
 
 .specialCircle{
-	@include buttonStyles(50px, 50px, $red, 100px, $red, subHeadings);
+	@include buttonStyles(50px, 50px, 100px, subHeadings);
 	cursor: default;
 	text-align: center;
 	color: $white;
@@ -94,21 +92,21 @@ p, span, ul li{
 
 // circle navigation buttons
 .smallcircle{
-	@include buttonStyles(40px, 40px, $green, 200px, $green, subHeadings);
+	@include buttonStyles(40px, 40px, 200px,  subHeadings);
 	text-align: center;
 	font-size: 1.3em !important;
 }
 
 // circle symbol
 .symbol{
-	@include buttonStyles(80px, 80px, $red, 100px, $red, subHeadings);
+	@include buttonStyles(80px, 80px,  100px,  subHeadings);
 	text-align: center;
 	font-size: 4.4em;
 }
 
 // regular sized buttons
 .normal{
-	@include buttonStyles(10%, 55%, $darkBlue, 10px, $darkBlue, subHeadings);
+	@include buttonStyles(10%, 55%, 10px,  subHeadings);
 	padding: 15px;
 	cursor: pointer;
 	text-align: center;

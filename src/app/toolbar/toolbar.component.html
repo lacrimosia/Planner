@@ -1,4 +1,15 @@
-<h2>Planner Editor</h2>
+<h2>Theme Editor</h2>
+
+<div class="panel panel-default">
+<div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
+<div class="panel-body">
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
+  <button class="backgroundchange btn btn-default btn-md" (click)="clearText('urlArea')"><i class="fa fa-times"></i></button>
+  <button class="backgroundchange btn btn-default btn-md" (click)="changeBackgroundImage('urlArea')">Save</button>
+</div>
+</div>
+</div>
 
 <div class="panel panel-default">
 <div class="panel-heading"><strong><i class="fa fa-list"></i> Text</strong></div>
@@ -18,10 +29,21 @@
 
 <p></p>
 
-<p><strong>Text Color</strong></p>
+<p></p>
+
+<p><strong>Headings Color</strong></p>
+<div class="btn-group" role="group" aria-label="...">
+  <button class="headingsColor jscolor btn btn-default btn-md" id="headingsColor"></button>
+  <button class="headingsSelection btn btn-default btn-md" id="headingsSelect" (click)="changeHeadingsColor('headingsColor')">Apply</button>
+</div>
+
+<p></p>
+
+
+<p><strong>Symbol Text Color</strong></p>
 <div class="btn-group" role="group" aria-label="...">
   <button class="textColor jscolor btn btn-default btn-md" id="textColor"></button>
-  <button class="textSelection btn btn-default btn-md" id="textSelect" (click)="changeTextColor('textColor')">Apply Text Color</button>
+  <button class="textSelection btn btn-default btn-md" id="textSelect" (click)="changeTextColor('textColor')">Apply</button>
 </div>
 
 </div>
@@ -35,7 +57,7 @@
 <p><strong>First Theme Color</strong></p>
 <div class="btn-group" role="group" aria-label="...">
   <button class="firstColor jscolor btn btn-default btn-md" id="firstColor"></button>
-  <button class="firstSelection btn btn-default btn-md" id="firstSelect" (click)="changeFirstColor('firstColor')">Apply First Color</button>
+  <button class="firstSelection btn btn-default btn-md" id="firstSelect" (click)="changeFirstColor('firstColor')">Apply</button>
 </div>
 
 <p></p>
@@ -43,7 +65,7 @@
 <p><strong>Second Theme Color</strong></p>
 <div class="btn-group" role="group" aria-label="...">
   <button class="secondColor jscolor btn btn-default btn-md" id="secondColor"></button>
-  <button class="secondSelection btn btn-default btn-md" id="secondSelect" (click)="changeSecondColor('secondColor')">Apply Second Color</button>
+  <button class="secondSelection btn btn-default btn-md" id="secondSelect" (click)="changeSecondColor('secondColor')">Apply</button>
 </div>
 
 <p></p>
@@ -51,7 +73,7 @@
 <p><strong>Third Theme Color</strong></p>
 <div class="btn-group" role="group" aria-label="...">
   <button class="thirdColor jscolor btn btn-default btn-md" id="thirdColor"></button>
-  <button class="thirdSelection btn btn-default btn-md" id="thirdSelect" (click)="changeThirdColor('thirdColor')">Apply Third Color</button>
+  <button class="thirdSelection btn btn-default btn-md" id="thirdSelect" (click)="changeThirdColor('thirdColor')">Apply</button>
 </div>
 
 </div>
