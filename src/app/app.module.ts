@@ -30,6 +30,7 @@ import { CalendarAppComponent } from './calendar-app/calendar-app.component';
 import { CustomComponent } from './custom/custom.component';
 import { CustomDateComponent } from './custom-date/custom-date.component';
 import { ProgressComponent } from './progress/progress.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ProgressComponent } from './progress/progress.component';
     CalendarAppComponent,
     CustomComponent,
     CustomDateComponent,
-    ProgressComponent
+    ProgressComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
