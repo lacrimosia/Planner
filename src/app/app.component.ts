@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Directive, ElementRef, Renderer} from '@angular/core';
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { DataService} from './data.service';
 import { RequestService} from './request.service';
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
  taskLimit:number;
  appTitle:string;
  postRequest: any;
-
+ ui: any;
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private http: Http, private requestService: RequestService){
  }
@@ -44,7 +44,8 @@ export class AppComponent implements OnInit{
          this.instructions = this.assignments[0].instructions;
          this.showCalendar = this.data.showCalendar;
          this.taskLimit = this.data.totalTasks;
-        // console.log("the data alert", this.value);
+         this.ui = this.data.style;
+         // console.log("the data alert", this.ui.image.url);
         },
         err => console.error(err),
         () => console.log('app component data loaded')

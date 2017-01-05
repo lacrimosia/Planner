@@ -19,14 +19,24 @@
       "message": "You did not select an assignment for each module. Please make the selections and return to the review section."
     },
     "style":{
+        "image":{
+            "url": "http://www.resortcollection.com/wp-content/themes/resortcollection/property-images/summit/summit-beach-resort-panama-city-beach-fl-beach-01.jpg",
+            "file": ""
+        },
         "colors": {
-            "main": "",
-            "sub": "",
-            "minor": ""
+            "first": "#ffffff",
+            "second": "",
+            "third": "",
+            "fourth": ""
+        },
+        "heading": {
+            "color": "#ffffff"
+        },
+        "subheadings":{
+            "color": ""
         },
         "text": {
-            "font": "",
-            "color": ""
+            "color": "#ffffff"
         }
     },
     "review_instructions": "Please review your selected tasks. Click the print button to save your custom planner.",
