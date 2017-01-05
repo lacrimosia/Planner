@@ -26,4 +26,14 @@ export class ToolbarComponent implements OnInit {
   	this.ui.colors.second = "#" + color;
   }
 
+  changeThirdColor(obj){
+  	let color = document.getElementById(obj).innerHTML;
+  	this.ui.colors.third = "#" + color;
+  }
+
+  changeTextColor(obj){
+  	let color = document.getElementById(obj).innerHTML;
+  	this.ui.text.color = "#" + color;
+  }
+
 }
