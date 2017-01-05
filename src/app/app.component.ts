@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, Directive, ElementRef, Renderer} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { DataService} from './data.service';
 import { RequestService} from './request.service';

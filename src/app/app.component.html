@@ -35,6 +35,10 @@
     <button class="btn btn-primary btn-lg" (click)="postData()">Post Title</button>
     <h1> Output: {{ postRequest }}</h1>-->
         <!-- top menu -->
+
+   <!-- ui toolbar - this is where the user can change the ui -->
+   <app-toolbar [ui]="ui"></app-toolbar>
+
         <div class="container">
             <div class="row">
                 <app-menu [data]="data" [courseName]="data.course_title" [ui]="ui"></app-menu>
