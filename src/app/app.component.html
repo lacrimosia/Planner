@@ -43,7 +43,7 @@
         <!-- heading with symbol and title -->
         <div class="titleArea container">
             <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 topHeadingArea">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 topHeadingArea" [ngStyle]="{'background': ui?.colors?.fourth}">
                     <app-heading [data]="data" [assignments]="assignments" [value]="value" [amount]="amount"></app-heading>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         <!-- when print is saved -->
         <app-saved [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-saved>
         <!-- the tasks  and instructions Area -->
-        <div class="workArea container">
+        <div class="workArea container" [ngStyle]="{'background-image': 'url(' + ui?.image?.url + ')'}">
             <!-- title of the interactive -->
             <div class="row">
                 <!-- added to center div-->

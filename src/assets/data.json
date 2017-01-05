@@ -24,16 +24,20 @@
             "file": ""
         },
         "colors": {
-            "first": "#ffffff",
-            "second": "",
-            "third": "",
-            "fourth": ""
+            "first": "#607D8B",
+            "second": "#9FBA91",
+            "third": "#F04C4B",
+            "fourth": "#ffffff"
+        },
+        "buttons": {
+            "color": "#9FBA91",
+            "hover": "orange"
         },
         "heading": {
             "color": "#ffffff"
         },
         "subheadings":{
-            "color": ""
+            "color": "#607D8B"
         },
         "text": {
             "color": "#ffffff"

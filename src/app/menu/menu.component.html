@@ -3,14 +3,14 @@
   Course Name, help(), reload()
 -->
 <!-- course name -->
-<div class="heading col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="heading col-lg-12 col-md-12 col-sm-12 col-xs-12" [ngStyle]="{'background': ui?.colors?.first}">
   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
     <h1 class="courseTitle" [ngStyle]="{'color': ui?.heading?.color}">{{ courseName }}</h1>
   </div>
 
   <!-- menu -->
   <div class="buttonMenu col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <button class="circle pull-right" (click)="reload()"><i class="fa fa-refresh"></i></button>
-    <button class="circle pull-right buttonSpace"  (click)="help();"><i class="fa fa-question"></i></button>
+    <button class="circle pull-right" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}" (click)="reload()"><i class="fa fa-refresh"></i></button>
+    <button class="circle pull-right buttonSpace"  (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-question"></i></button>
   </div>
 <div>
