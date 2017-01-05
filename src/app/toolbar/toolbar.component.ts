@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService} from '../data.service';
 
-
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
@@ -15,6 +14,16 @@ export class ToolbarComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+  }
+
+  changeFirstColor(obj){
+  	let color = document.getElementById(obj).innerHTML;
+  	this.ui.colors.first = "#" + color;
+  }
+
+  changeSecondColor(obj){
+  	let color = document.getElementById(obj).innerHTML;
+  	this.ui.colors.second = "#" + color;
   }
 
 }
