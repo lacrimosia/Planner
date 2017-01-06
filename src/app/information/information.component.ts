@@ -16,6 +16,7 @@ export class InformationComponent implements OnInit {
 	@Input() assignments;
   @Input() amount;
   @Input() value;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

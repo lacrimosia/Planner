@@ -2,7 +2,7 @@
 <div class="twoTasks" *ngIf="d.value.type=='custom' && i==data.value">
 
   <div class="taskA col-md-12 col-lg-6 col-sm-12 col-xs-12" *ngFor="let t of d.value.tasks | keys">
-    <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="t.value.name" [information]="t.value.information" [d]="d"></app-tasks>
+    <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="t.value.name" [information]="t.value.information" [d]="d" [ui]="ui"></app-tasks>
   </div>
 
 </div>

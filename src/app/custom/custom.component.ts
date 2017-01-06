@@ -15,6 +15,7 @@ export class CustomComponent implements OnInit {
   @Input() assignments;
   @Input() data;
   @Input() amount;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

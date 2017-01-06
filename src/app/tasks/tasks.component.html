@@ -1,4 +1,4 @@
 <div class="tasks">
-    <h2 class="titles"><i class="fa fa-tasks"></i> {{ title }}</h2>
-    <p>{{ information }}</p>
+    <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-tasks"></i> {{ title }}</h2>
+    <p [ngStyle]="{'color': ui?.text?.color}">{{ information }}</p>
 </div>

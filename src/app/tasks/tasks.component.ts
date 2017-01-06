@@ -18,6 +18,7 @@ export class TasksComponent implements OnInit {
   @Input() title;
   @Input() information;
   @Input() d;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

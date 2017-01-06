@@ -1,5 +1,5 @@
 <div class="tasks">
 <div *ngFor="let d of assignments | keys; let i = index">
-  <app-tasks class="taskOne" *ngIf="d.value.type=='one' && i==data.value" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information" [d]="d"></app-tasks>
+  <app-tasks class="taskOne" *ngIf="d.value.type=='one' && i==data.value" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="d.value.taskA.name" [information]="d.value.taskA.information" [d]="d" [ui]="ui"></app-tasks>
 </div>
 </div>

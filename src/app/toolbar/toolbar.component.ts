@@ -31,10 +31,10 @@ export class ToolbarComponent implements OnInit {
     this.ui.colors.third = this.monoColors[4];
     this.ui.colors.fourth = this.monoColors[3];
     this.ui.buttons.color = this.monoColors[4];
-    this.ui.buttons.hover = this.monoColors[3];
-    this.ui.symbol.color = tinycolor(this.monoColors[0]).lighten(500).toString();
+    this.ui.buttons.hover = tinycolor(this.monoColors[3]).darken(5).toString();
+    this.ui.symbol.color = tinycolor(this.monoColors[0]).lighten(100).toString();
     this.ui.text.color = tinycolor(this.monoColors[4]).greyscale().toString();
-    this.ui.subheadings.color = this.monoColors[4];
+    this.ui.subheadings.color = tinycolor(this.monoColors[4]).darken(50).toString();
   }
 
   changeTextColor(obj){
