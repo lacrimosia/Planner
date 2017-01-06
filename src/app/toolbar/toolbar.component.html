@@ -34,6 +34,7 @@
 <div class="panel-body">
 <p><strong>Monochromatic Color Palette</strong></p>
 <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">HEX #</span>
       <input type="text" class="firstColor jscolor form-control" value="FFFFFF" id="userColor">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getMonoColorPalette('userColor')">Apply</button>
@@ -42,6 +43,7 @@
 <p></p>
 
 <div class="input-group" *ngFor="let p of monoColors | keys; let i = index">
+    <span class="input-group-addon" id="basic-addon1">HEX #</span>
      <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="{{i}}" [ngStyle]="{'background': monoColors[i]}">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>

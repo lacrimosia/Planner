@@ -31,10 +31,9 @@ body{
 }
 
 // get the titles specs (font name, size, font color, letter spacing)
-@mixin titles($font, $size, $color, $letterSpacing){
+@mixin titles($font, $size, $letterSpacing){
 	font-family: $font, sans-serif;
 	font-size: $size;
-	color: $color;
 	letter-spacing: $letterSpacing;
 }
 
@@ -50,22 +49,23 @@ body{
 
 // large main titles
 h1{
-	@include titles(Headings, 1.5em, $blue, 2px);
+	@include titles(Headings, 1.5em, 2px);
 }
 
 // large main titles
 h3{
-	@include titles(subHeadings, 1.4em, $subHeading, 0px);
+	@include titles(subHeadings, 1.4em, 0px);
 }
 
 // copy text
 p, span, ul li{
-	@include titles(sans-serif, 0.9em, $text, 0px);
+	color: $text;
+	// @include titles(sans-serif, 0.9em, 0px);
 }
 
 //print text
 .text{
-	@include titles(sans-serif, 1.1em, $text, 0px);
+	@include titles(sans-serif, 1.1em, 0px);
 	font-weight: lighter;
 }
 
