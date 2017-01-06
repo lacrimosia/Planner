@@ -23,6 +23,11 @@ export class ToolbarComponent implements OnInit {
     let color = document.getElementById(obj).innerHTML;
    // let getColor = tinycolor('#' + color);
      this.ui.colors.first = "#" + color;
+    // let colors = tinycolor("#" + color).analogous();;
+    // let triadColors = colors.map(function(t) { return t.toHexString(); });
+    // console.log("triad", triadColors);
+
+    // this.ui.colors.first = triadColors[1];
    // let complementaryColor = getColor.complement().toHexString();
    // console.log("colors", complementaryColor);
    // this.ui.colors.first = complementaryColor;
