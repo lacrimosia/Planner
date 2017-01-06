@@ -18,6 +18,7 @@ export class SelectComponent implements OnInit {
   @Input() d;
   @Input() t;
   @Input() index;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   }

@@ -89,7 +89,7 @@
                     </div>
 
                     <!-- Multi tasks -->
-                    <app-multi-tasks [data]="data" *ngIf="data.value>0" [assignments]="assignments"></app-multi-tasks>
+                    <app-multi-tasks [data]="data" [ui]="ui" *ngIf="data.value>0" [assignments]="assignments"></app-multi-tasks>
 
                     <!-- custom tasks -->
                     <app-custom *ngIf="data.value>0" [data]="data" [assignments]="assignments" [amount]="amount"></app-custom>
