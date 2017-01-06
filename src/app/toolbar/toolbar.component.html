@@ -3,11 +3,20 @@
 <div class="panel panel-default">
 <div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
 <div class="panel-body">
-<div class="input-group">
+<p><strong>From Web</strong></p>
+<div class="input-group-btn">
   <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
   <button class="backgroundchange btn btn-default btn-md" (click)="clearText('urlArea')"><i class="fa fa-times"></i></button>
   <button class="backgroundchange btn btn-default btn-md" (click)="changeBackgroundImage('urlArea')">Save</button>
 </div>
+
+<p></p>
+
+<p><strong>File Upload</strong></p>
+<div class="form-group">
+    <input type="file" id="fileUpload" (change)="openBrowse($event)">
+  </div>
+
 </div>
 </div>
 

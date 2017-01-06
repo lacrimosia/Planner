@@ -22,6 +22,7 @@ export class NavComponent implements OnInit {
   @Input() amount;
   @Input() value;
   textSelected: string;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   	// this.dataService = dataService;
@@ -129,4 +130,11 @@ taskSelected(task){
   return task;
 }
 
+currentColor(i){
+  if(i == this.data.value){
+    return this.ui.buttons.hover;
+  }else{
+    return this.ui.buttons.color;
+  }
+}
 }
