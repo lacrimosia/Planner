@@ -1,13 +1,10 @@
 <!-- instructions area -->
 <div class="intro">
-    <h2 class="titles">Instructions</h2>
-    <p class="alert alert-info" contenteditable="true">{{ instructions }}</p>
-    <h2 class="titles"> Keyboard Shortcuts </h2>
-    <ul class="alert alert-warning">
-      <li><i class="fa fa-check green"></i> NEXT/PREV - <i class="fa fa-arrow-right green"></i> and <i class="fa fa-arrow-left green"></i></li>
-      <li><i class="fa fa-check green"></i> Help Menu - PRESS H</li>
-      <li><i class="fa fa-check green"></i> Reload Activity - PRESS R</li>
-      <li><i class="fa fa-check green"></i> PRINT Activity - PRESS P</li>
-    </ul>
+    <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}">Instructions</h2>
+    <p class="alert alert-info" [ngStyle]="{'background': '#F5F5F5', 'border-color': '#F5F5F5', 'color': ui?.text?.color}">{{ instructions }}</p>
+    <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}"> Keyboard Shortcuts </h2>
+    <p class="alert alert-warning" [ngStyle]="{'background': '#F5F5F5', 'border-color': '#F5F5F5', 'color': ui?.text?.color}">
+      Text will be here
+    </p>
     <button class="btn btn-primary btn-lg visible-sm visible-xs" (click)="data.value = 1">START</button>
 </div>

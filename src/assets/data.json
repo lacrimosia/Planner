@@ -39,8 +39,11 @@
         "subheadings":{
             "color": "#607D8B"
         },
+        "symbol":{
+            "color": "#fffffff"
+        },
         "text": {
-            "color": "#ffffff",
+            "color": "#333333",
             "dark": "#607D8B"
         }
     },
