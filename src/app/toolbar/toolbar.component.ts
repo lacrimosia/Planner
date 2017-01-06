@@ -21,7 +21,7 @@ export class ToolbarComponent implements OnInit {
 
 
   changeFirstColor(obj){
-    let color = document.getElementById(obj).innerHTML;
+    let color = (<HTMLInputElement>document.getElementById(obj)).value;
    // let getColor = tinycolor('#' + color);
      this.ui.colors.first = "#" + color;
     // let colors = tinycolor("#" + color).analogous();;

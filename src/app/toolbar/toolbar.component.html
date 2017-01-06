@@ -75,26 +75,12 @@
 <div class="panel panel-default">
 <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
 <div class="panel-body">
-<p><strong>First Theme Color</strong></p>
-<div class="btn-group" role="group" aria-label="...">
-  <button class="firstColor jscolor btn btn-default btn-md" id="firstColor"></button>
-  <button class="firstSelection btn btn-default btn-md" id="firstSelect" (click)="changeFirstColor('firstColor')">Apply</button>
-</div>
-
-<p></p>
-
-<p><strong>Second Theme Color</strong></p>
-<div class="btn-group" role="group" aria-label="...">
-  <button class="secondColor jscolor btn btn-default btn-md" id="secondColor"></button>
-  <button class="secondSelection btn btn-default btn-md" id="secondSelect" (click)="changeSecondColor('secondColor')">Apply</button>
-</div>
-
-<p></p>
-
-<p><strong>Third Theme Color</strong></p>
-<div class="btn-group" role="group" aria-label="...">
-  <button class="thirdColor jscolor btn btn-default btn-md" id="thirdColor"></button>
-  <button class="thirdSelection btn btn-default btn-md" id="thirdSelect" (click)="changeThirdColor('thirdColor')">Apply</button>
+<p><strong>Color Palette</strong></p>
+<div class="input-group">
+      <input type="text" class="firstColor jscolor form-control" value="FFFFFF" id="firstColor">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="changeFirstColor('firstColor')">Apply</button>
+      </span>
 </div>
 
 </div>
