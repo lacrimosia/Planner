@@ -19,6 +19,7 @@ export class ProgressComponent implements OnInit {
   	@Input() total;
   	count:number = 0;
   	counter:number = 0;
+    @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
