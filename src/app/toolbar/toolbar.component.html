@@ -4,10 +4,18 @@
 <div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
 <div class="panel-body">
 <p><strong>From Web</strong></p>
-<div class="input-group-btn">
-  <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
-  <button class="backgroundchange btn btn-default btn-md" (click)="clearText('urlArea')"><i class="fa fa-times"></i></button>
-  <button class="backgroundchange btn btn-default btn-md" (click)="changeBackgroundImage('urlArea')">Save</button>
+<div class="input-group">
+      <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
+      <span class="input-group-btn">
+        <button class="backgroundchange btn btn-default btn-md" (click)="clearText('urlArea')"><i class="fa fa-times"></i></button>
+        <button class="backgroundchange btn btn-default btn-md" (click)="changeBackgroundImage('urlArea')">Save</button>
+      </span>
+</div>
+<p></p>
+<!-- alert if there is an error -->
+<div class="alert alert-danger alert-dismissible animated fadeIn" role="alert" *ngIf="error==true">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>ERROR:</strong> Please enter a valid URL.
 </div>
 
 <p></p>
@@ -40,19 +48,23 @@
 
 <p></p>
 
-<p><strong>Headings Color</strong></p>
-<div class="btn-group" role="group" aria-label="...">
-  <button class="headingsColor jscolor btn btn-default btn-md" id="headingsColor"></button>
-  <button class="headingsSelection btn btn-default btn-md" id="headingsSelect" (click)="changeHeadingsColor('headingsColor')">Apply</button>
+<p><strong>Heading Title Color</strong></p>
+<div class="input-group">
+      <input type="text" class="headingsColor jscolor form-control" value="FFFFFF" id="headingsColor">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="changeHeadingsColor('headingsColor')">Apply</button>
+      </span>
 </div>
 
 <p></p>
 
 
 <p><strong>Symbol Text Color</strong></p>
-<div class="btn-group" role="group" aria-label="...">
-  <button class="textColor jscolor btn btn-default btn-md" id="textColor"></button>
-  <button class="textSelection btn btn-default btn-md" id="textSelect" (click)="changeTextColor('textColor')">Apply</button>
+<div class="input-group">
+      <input type="text" class="textColor jscolor form-control" value="FFFFFF" id="textColor">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="changeTextColor('textColor')">Apply</button>
+      </span>
 </div>
 
 </div>

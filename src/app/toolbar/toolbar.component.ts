@@ -12,6 +12,7 @@ export class ToolbarComponent implements OnInit {
 
   @Input() ui;
   file: any;
+  error:boolean = false;
 
   constructor(private dataService: DataService) { }
 
@@ -45,13 +46,18 @@ export class ToolbarComponent implements OnInit {
   }
 
   changeTextColor(obj){
-  	let color = document.getElementById(obj).innerHTML;
+  	let color = (<HTMLInputElement>document.getElementById(obj)).value;
   	this.ui.text.color = "#" + color;
   }
 
   changeBackgroundImage(obj){
     let img = (<HTMLInputElement>document.getElementById(obj)).value;
-    this.ui.image.url = img;
+    if(img == ""){
+      this.error = true;
+    }else{
+      this.error = false;
+      this.ui.image.url = img;
+    } 
   }
 
   clearText(obj){
@@ -67,5 +73,10 @@ export class ToolbarComponent implements OnInit {
    console.log(this.file.name);
    this.ui.image.url = this.file.name;
    //browser wont allow full path due to security issues
+  }
+
+  changeHeadingsColor(obj){
+    let headingColor = (<HTMLInputElement>document.getElementById(obj)).value;
+    this.ui.heading.color = "#" + headingColor;
   }
 }

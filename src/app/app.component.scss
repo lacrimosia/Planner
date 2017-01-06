@@ -37,15 +37,16 @@ h3 {
 
 // left menu
 .leftMenu{
-	min-width: 18%;
-	width: 19.5%;
+	min-width: 15%;
+	width: 18%;
 	min-height: 100px;
 	height: 100%;
+  overflow-y:scroll;
 	position: fixed;
 	left: 0px;
 	top: 0px;
 	padding: 15px;
-	z-index: 1000;
+	z-index: 0;
 }
 
 .Menu{
