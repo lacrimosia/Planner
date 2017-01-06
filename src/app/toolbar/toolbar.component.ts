@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DataService} from '../data.service';
+import { DataService} from '../data.service'; 
+let tinycolor = require("tinycolor2");
 
 @Component({
   selector: 'app-toolbar',
@@ -20,7 +21,11 @@ export class ToolbarComponent implements OnInit {
 
   changeFirstColor(obj){
     let color = document.getElementById(obj).innerHTML;
-    this.ui.colors.first = "#" + color;
+   // let getColor = tinycolor('#' + color);
+     this.ui.colors.first = "#" + color;
+   // let complementaryColor = getColor.complement().toHexString();
+   // console.log("colors", complementaryColor);
+   // this.ui.colors.first = complementaryColor;
   }
 
   changeSecondColor(obj){
@@ -58,5 +63,4 @@ export class ToolbarComponent implements OnInit {
    this.ui.image.url = this.file.name;
    //browser wont allow full path due to security issues
   }
-
 }
