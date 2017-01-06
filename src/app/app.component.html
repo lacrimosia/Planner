@@ -28,7 +28,7 @@
         <!-- heading with symbol and title -->
         <div class="titleArea container">
             <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 topHeadingArea" [ngStyle]="{'background': ui?.colors?.fourth}">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 topHeadingArea">
                     <app-heading [data]="data" [assignments]="assignments" [value]="value" [amount]="amount" [ui]="ui"></app-heading>
                 </div>
             </div>
@@ -46,9 +46,9 @@
                 <!-- added to center div-->
                 <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
                     <!-- previous button -->
-                    <app-previous [data]="data" [assignments]="assignments"></app-previous>
+                    <app-previous [data]="data" [assignments]="assignments" [ui]="ui"></app-previous>
                 </div>
-                <div class="animated fadeIn box col-md-10 col-lg-10 col-sm-12 col-xs-12" [ngStyle]="{'background': ui?.colors?.fourth}">
+                <div class="animated fadeIn box col-md-10 col-lg-10 col-sm-12 col-xs-12">
                     <!--instructions -->
                     <h3 class="animated fadeIn activityTitle" *ngIf="data.value==0"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
                     <app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions"></app-instructions>
@@ -79,9 +79,9 @@
 						</div> -->
                     <div class="col-sm-3 col-xs-3 visible-sm visible-xs" *ngIf="data.value>0">
                         <!-- previous button -->
-                        <app-previous [data]="data" [assignments]="assignments"></app-previous>
+                        <app-previous [data]="data" [assignments]="assignments" [ui]="ui"></app-previous>
                         <!-- next button -->
-                        <app-next [data]="data" [assignments]="assignments" [amount]="amount"></app-next>
+                        <app-next [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-next>
                     </div>
                     <!-- one task -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
                     <!-- next button -->
-                    <app-next [data]="data" [assignments]="assignments" [amount]="amount"></app-next>
+                    <app-next [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-next>
                 </div>
             </div>
         </div>

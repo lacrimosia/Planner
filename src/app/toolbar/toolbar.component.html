@@ -28,6 +28,29 @@
 </div>
 </div>
 
+<!-- colors -->
+<div class="panel panel-default">
+<div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
+<div class="panel-body">
+<p><strong>Monochromatic Color Palette</strong></p>
+<div class="input-group">
+      <input type="text" class="firstColor jscolor form-control" value="FFFFFF" id="userColor">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="getMonoColorPalette('userColor')">Apply</button>
+      </span>
+</div>
+<p></p>
+
+<div class="input-group" *ngFor="let p of monoColors | keys; let i = index">
+     <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="{{i}}" [ngStyle]="{'background': monoColors[i]}">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
+      </span>
+</div>
+</div>
+</div>
+
+<!--text -->
 <div class="panel panel-default">
 <div class="panel-heading"><strong><i class="fa fa-list"></i> Text</strong></div>
 <div class="panel-body">
@@ -72,16 +95,3 @@
 
 
 
-<div class="panel panel-default">
-<div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
-<div class="panel-body">
-<p><strong>Color Palette</strong></p>
-<div class="input-group">
-      <input type="text" class="firstColor jscolor form-control" value="FFFFFF" id="firstColor">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" (click)="changeFirstColor('firstColor')">Apply</button>
-      </span>
-</div>
-
-</div>
-</div>

@@ -301,7 +301,7 @@ hr{
 }
 
 #prev, #next{
-	color: $red;
+	// color: $red;
 	font-size: 5em;
 	background: none;
 	border: none;
@@ -315,10 +315,6 @@ hr{
 
 #next{
 	right: 0px;
-}
-
-#prev:hover, #next:hover{
-	color: $blue;
 }
 
 /*#prev{

@@ -14,6 +14,7 @@ export class PreviousComponent implements OnInit {
 
   @Input() data;
   @Input() assignments;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

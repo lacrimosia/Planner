@@ -15,6 +15,7 @@ export class NextComponent implements OnInit {
   @Input() data;
   @Input() assignments;
   @Input() amount;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

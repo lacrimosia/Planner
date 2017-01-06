@@ -13,6 +13,7 @@ export class ToolbarComponent implements OnInit {
   @Input() ui;
   file: any;
   error:boolean = false;
+  monoColors: any = [];
 
   constructor(private dataService: DataService) { }
 
@@ -20,29 +21,17 @@ export class ToolbarComponent implements OnInit {
   }
 
 
-  changeFirstColor(obj){
-    let color = (<HTMLInputElement>document.getElementById(obj)).value;
-   // let getColor = tinycolor('#' + color);
-     this.ui.colors.first = "#" + color;
-    // let colors = tinycolor("#" + color).analogous();;
-    // let triadColors = colors.map(function(t) { return t.toHexString(); });
-    // console.log("triad", triadColors);
-
-    // this.ui.colors.first = triadColors[1];
-   // let complementaryColor = getColor.complement().toHexString();
-   // console.log("colors", complementaryColor);
-   // this.ui.colors.first = complementaryColor;
-  }
-
-  changeSecondColor(obj){
-  	let color = document.getElementById(obj).innerHTML;
-  	this.ui.colors.second = "#" + color;
-  }
-
-  changeThirdColor(obj){
-  	let color = document.getElementById(obj).innerHTML;
-  	this.ui.colors.third = "#" + color;
-    console.log(this.ui.colors.third);
+  getMonoColorPalette(obj){
+    let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
+    let getColors = tinycolor('#' + userColor).monochromatic();
+    this.monoColors = getColors.map(function(t) { return t.toHexString(); });
+   // console.log(monoColors);
+    this.ui.colors.first = this.monoColors[1];
+    this.ui.colors.second = this.monoColors[0];
+    this.ui.colors.third = this.monoColors[4];
+    this.ui.colors.fourth = this.monoColors[3];
+    this.ui.buttons.color = this.monoColors[4];
+    this.ui.buttons.hover = this.monoColors[0];
   }
 
   changeTextColor(obj){
