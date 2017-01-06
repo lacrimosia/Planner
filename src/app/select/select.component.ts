@@ -53,4 +53,11 @@ export class SelectComponent implements OnInit {
     return;
   }
 
+  buttonColor(selection){
+      if(selection == true){
+        return this.ui.buttons.hover;
+    }else{
+        return this.ui.buttons.color;
+    }
+  }
 }
