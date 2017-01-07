@@ -16,6 +16,7 @@ export class MenuComponent implements OnInit {
   @Input() data;
   @Input() courseName;
   @Input() ui;
+  courseName: string;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
