@@ -20,12 +20,10 @@ export class RequestService {
  // do the post data test request
  postSomeData(){
  	let url = 'http://localhost/testingPHP/test.php';
- 	let text = JSON.stringify({
- 		name: "Shatilla"
- 	});
  	let headers = new Headers();
- 	headers.append('Content-Type', 'application/json; charset=utf-8');
- 	return this.http.post(url, text, headers)
+ 	let body = JSON.stringify({test: "candles"});
+ 	headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');
+ 	return this.http.post(url, body, headers)
  			.map(res => res.json());
  }
 
