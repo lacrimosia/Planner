@@ -15,6 +15,7 @@ export class PrintComponent implements OnInit {
   @Input() amount;
   @Input() d;
   @Input() assignments;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

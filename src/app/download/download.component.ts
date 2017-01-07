@@ -19,6 +19,7 @@ export class DownloadComponent implements OnInit {
   @Input() assignments;
   @Input() alert;
   downloaded:boolean = true;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   }

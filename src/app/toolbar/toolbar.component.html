@@ -43,12 +43,31 @@
 <p></p>
 
 <div class="input-group" *ngFor="let p of monoColors | keys; let i = index">
-    <span class="input-group-addon" id="basic-addon1">HEX #</span>
-     <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="{{i}}" [ngStyle]="{'background': monoColors[i]}">
+     <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="m{{i}}" [ngStyle]="{'background': monoColors[i]}">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
       </span>
 </div>
+
+<p></p>
+
+<p><strong>Analogous Color Palette</strong></p>
+<div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">HEX #</span>
+      <input type="text" class="analoColor jscolor form-control" value="FFFFFF" id="analoColor">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="getAnalogousColorPalette('analoColor')">Apply</button>
+      </span>
+</div>
+<p></p>
+
+<div class="input-group" *ngFor="let a of analoColors | keys; let i = index">
+     <input type="text" class="jscolor form-control" value="{{analoColors[i]}}" id="a{{i}}" [ngStyle]="{'background': analoColors[i]}">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
+      </span>
+</div>
+
 </div>
 </div>
 
@@ -67,29 +86,6 @@
     <li><a href="#">Arial</a></li>
     <li><a href="#">Verdana</a></li>
   </ul>
-</div>
-
-<p></p>
-
-<p></p>
-
-<p><strong>Heading Title Color</strong></p>
-<div class="input-group">
-      <input type="text" class="headingsColor jscolor form-control" value="FFFFFF" id="headingsColor">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" (click)="changeHeadingsColor('headingsColor')">Apply</button>
-      </span>
-</div>
-
-<p></p>
-
-
-<p><strong>Symbol Text Color</strong></p>
-<div class="input-group">
-      <input type="text" class="textColor jscolor form-control" value="FFFFFF" id="textColor">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" (click)="changeTextColor('textColor')">Apply</button>
-      </span>
 </div>
 
 </div>

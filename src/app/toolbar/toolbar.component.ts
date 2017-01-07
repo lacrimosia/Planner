@@ -14,6 +14,7 @@ export class ToolbarComponent implements OnInit {
   file: any;
   error:boolean = false;
   monoColors: any = [];
+  analoColors: any = [];
 
   constructor(private dataService: DataService) { }
 
@@ -37,10 +38,27 @@ export class ToolbarComponent implements OnInit {
     this.ui.subheadings.color = tinycolor(this.monoColors[4]).darken(50).toString();
   }
 
+  getAnalogousColorPalette(obj){
+    let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
+    let getColors = tinycolor('#' + userColor).monochromatic();
+    this.analoColors = getColors.map(function(t) { return t.toHexString(); });
+   // console.log(monoColors);
+    this.ui.colors.first = this.analoColors[1];
+    this.ui.colors.second = this.analoColors[0];
+    this.ui.colors.third = tinycolor(this.analoColors[3]).darken(10).toString();
+    this.ui.colors.fourth = this.analoColors[3];
+    this.ui.buttons.color = this.analoColors[4];
+    this.ui.buttons.hover = tinycolor(this.analoColors[3]).darken(10).toString();
+    this.ui.symbol.color = tinycolor(this.analoColors[0]).lighten(100).toString();
+    this.ui.text.color = tinycolor(this.analoColors[4]).greyscale().toString();
+    this.ui.subheadings.color = tinycolor(this.analoColors[4]).darken(50).toString();
+  }
+
   changeTextColor(obj){
   	let color = (<HTMLInputElement>document.getElementById(obj)).value;
   	this.ui.text.color = "#" + color;
   }
+
 
   changeBackgroundImage(obj){
     let img = (<HTMLInputElement>document.getElementById(obj)).value;
