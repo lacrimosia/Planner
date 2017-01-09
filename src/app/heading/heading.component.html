@@ -3,7 +3,7 @@
  -->
     <div class="header" *ngFor="let d of assignments | keys; let i = index">
 
-      <div class="symbol pull-left hidden-xs" *ngIf="i==data.value" [ngStyle]="{'background-color': ui?.colors?.third, 'color': ui?.symbol?.color}">{{ headingOutput(i, d.value.symbol) }}</div>
+      <div class="symbol pull-left hidden-xs" *ngIf="i==data.value" [ngStyle]="{'background-color': ui?.colors?.third, 'color': ui?.symbol?.color, 'border-color': ui?.colors?.third}">{{ headingOutput(i, d.value.symbol) }}</div>
 
       <h1 class="sub pull-left padding-left hidden-xs" *ngIf="i!=1 && i==data.value" [ngStyle]="{'color': ui?.colors?.fourth}">{{  d.value.title }}</h1>
       <!--show if short text -->

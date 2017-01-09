@@ -2,38 +2,49 @@
     <div class="container Menu">
         <div class="row">
             <!-- close button -->
-            <button class="btn btn-primary btn-md"><i class="fa fa-times"></i></button>
-            <div class="col-md-12 col-lg-12">
-                <h2>Theme Editor</h2>
-                <div class="panel panel-default">
-                    <div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
-                    <div class="panel-body">
-                        <p><strong>From Web</strong></p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
-                            <span class="input-group-btn">
+            <!--<button class="btn btn-primary btn-md"><i class="fa fa-times"></i></button> -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#Image" aria-controls="Image" role="tab" data-toggle="tab">Background Image</a></li>
+                <li role="presentation"><a href="#colors" aria-controls="colors" role="tab" data-toggle="tab">Theme Colors</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="Image">
+                    <h2>Edit Background</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
+                        <div class="panel-body">
+                            <p><strong>From Web</strong></p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
+                                <span class="input-group-btn">
         <button class="backgroundchange btn btn-default btn-md" (click)="clearText('urlArea')"><i class="fa fa-times"></i></button>
         <button class="backgroundchange btn btn-default btn-md" (click)="changeBackgroundImage('urlArea')">Save</button>
       </span>
-                        </div>
-                        <p></p>
-                        <!-- alert if there is an error -->
-                        <div class="alert alert-danger alert-dismissible animated fadeIn" role="alert" *ngIf="error==true">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <strong>ERROR:</strong> Please enter a valid URL.
-                        </div>
-                        <p></p>
-                        <p><strong>File Upload</strong></p>
-                        <div class="form-group">
-                            <input type="file" id="fileUpload" (change)="openBrowse($event)">
+                            </div>
+                            <p></p>
+                            <!-- alert if there is an error -->
+                            <div class="alert alert-danger alert-dismissible animated fadeIn" role="alert" *ngIf="error==true">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>ERROR:</strong> Please enter a valid URL.
+                            </div>
+                            <p></p>
+                            <p><strong>File Upload</strong></p>
+                            <div class="form-group">
+                                <input type="file" id="fileUpload" (change)="openBrowse($event)">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- colors -->
-                <div class="panel panel-default">
-                    <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
-                    <div class="panel-body">
-                        <!--<p><strong>Monochromatic Color Palette</strong></p>
+                <div role="tabpanel" class="tab-pane fade" id="colors">
+                    <!-- colors -->
+                    <h2>Edit Background</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
+                        <div class="panel-body">
+                            <!--<p><strong>Monochromatic Color Palette</strong></p>
 <div class="input-group">
       <span class="input-group-addon" id="basic-addon1">HEX #</span>
       <input type="text" class="firstColor jscolor form-control" value="FFFFFF" id="userColor">
@@ -42,55 +53,58 @@
       </span>
 </div>
 <p></p>-->
-                        <div class="input-group" *ngFor="let p of monoColors | keys; let i = index">
-                            <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="m{{i}}" [ngStyle]="{'background': monoColors[i]}">
-                            <span class="input-group-btn">
+                            <!--<div class="input-group" *ngFor="let p of monoColors | keys; let i = index">
+                                <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="m{{i}}" [ngStyle]="{'background': monoColors[i]}">
+                                <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
       </span>
-                        </div>
-                        <p></p>
-                        <p><strong>Generate Theme Colors</strong></p>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">Main Color</span>
-                            <input type="text" class="analoColor jscolor form-control" value="FFFFFF" id="analoColor">
-                            <span class="input-group-btn">
+                            </div>-->
+                            <p></p>
+                            <p><strong>Generate Theme Colors</strong></p>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Main Color</span>
+                                <input type="text" class="analoColor jscolor form-control" value="FFFFFF" id="analoColor">
+                                <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getAnalogousColorPalette('analoColor')">Apply</button>
       </span>
-                        </div>
-                        <p></p>
-                        <hr />
-                        <div class="colorsList animated fadeIn">
-                            <p><strong>Edit Custom Colors</strong></p>
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">Main</span>
-                                <input type="text" class="analoColor1 jscolor form-control" value="{{analoColors[1]}}" id="analoColor1" [ngStyle]="{'background': analoColors[1]}">
-                                <span class="input-group-btn">
+                            </div>
+                            <p></p>
+                            <hr />
+                            <div class="colorsList animated fadeIn">
+                                <p><strong>Edit Custom Colors</strong></p>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Main</span>
+                                    <input type="text" class="analoColor1 jscolor form-control" value="{{analoColors[1]}}" id="analoColor1" [ngStyle]="{'background': analoColors[1]}">
+                                    <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getIndividualColors('bar', 'analoColor1')">Apply</button>
       </span>
-                            </div>
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">Buttons</span>
-                                <input type="text" class="analoColor2 jscolor form-control" value="{{analoColors[0]}}" id="analoColor2" [ngStyle]="{'background': analoColors[0]}">
-                                <span class="input-group-btn">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Buttons</span>
+                                    <input type="text" class="analoColor2 jscolor form-control" value="{{analoColors[0]}}" id="analoColor2" [ngStyle]="{'background': analoColors[0]}">
+                                    <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getIndividualColors('buttons', 'analoColor2')">Apply</button>
       </span>
-                            </div>
-                            <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">Hover</span>
-                                <input type="text" class="analoColor3 jscolor form-control" value="{{analoColors[3]}}" id="analoColor3" [ngStyle]="{'background': analoColors[3]}">
-                                <span class="input-group-btn">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Hover</span>
+                                    <input type="text" class="analoColor3 jscolor form-control" value="{{analoColors[3]}}" id="analoColor3" [ngStyle]="{'background': analoColors[3]}">
+                                    <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getIndividualColors('hover', 'analoColor3')">Apply</button>
       </span>
+                                </div>
                             </div>
-                        </div>
-                        <!--<div class="input-group" *ngFor="let a of analoColors | keys; let i = index">
+                            <!--<div class="input-group" *ngFor="let a of analoColors | keys; let i = index">
      <input type="text" class="jscolor form-control" value="{{analoColors[i]}}" id="a{{i}}" [ngStyle]="{'background': analoColors[i]}">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
       </span>
 </div>-->
+                        </div>
                     </div>
                 </div>
+                <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
             </div>
         </div>
     </div>
