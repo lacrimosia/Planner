@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
 @Input() amount;
 appTitle: string;
 Symbol: string;
+QuestionTitle: string;
 
   constructor() { }
 
@@ -36,13 +37,18 @@ Symbol: string;
   	}
   }
 
-  getValue(i){
-  	let name = i;
-  	if(name == 0 || name<this.amount-1){
-  		return this.assignments[i].symbol;
-  	}else{
-  		return name;
-  	}
+  getValue(i, symbol){
+  	let name = 0;
+    if(i==0 || i==this.amount-1){
+      name = symbol;
+    }else{
+      name = i;
+    }
+    return name;
+  }
+
+  changeQ(i){
+  	this.assignments[i].title = this.QuestionTitle;
   }
 
 }

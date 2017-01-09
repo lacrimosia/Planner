@@ -1,40 +1,50 @@
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments | keys; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
-        <h2>{{ getValue(i) }}) {{ c.value.title }}</h2>
+        <h2>{{ getValue(i, c.value.symbol) }}) {{ c.value.title }}</h2>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"> Settings </h3>
             </div>
             <div class="panel-body">
-                <div class="input-group" *ngIf="data.value==0">
-                	<span class="input-group-addon">Application title: </span>
-                    <input type="text" class="form-control" placeholder="Enter Planner Title" [(ngModel)]="appTitle" >
-                    <span class="input-group-btn">
+                <!-- Title -->
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==0">
+                    <div class="input-group" *ngIf="data.value==0">
+                        <span class="input-group-addon">Application title: </span>
+                        <input type="text" class="form-control" placeholder="Enter Planner Title" [(ngModel)]="appTitle">
+                        <span class="input-group-btn">
         			<button class="btn btn-default" type="submit" (click)="changeTitle()">Apply</button>
       				</span>
+                    </div>
                 </div>
-				
-				<p></p>
-
-				<!-- Symbol -->
-                <div class="input-group" *ngIf="data.value==0">
-                	<span class="input-group-addon">Symbol: </span>
-                    <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol" >
-                    <span class="input-group-btn">
+                <!-- Symbol -->
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==0">
+                    <div class="input-group">
+                        <span class="input-group-addon">Symbol: </span>
+                        <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol">
+                        <span class="input-group-btn">
         			<button class="btn btn-default" type="submit" (click)="changeSymbol(i)">Apply</button>
       				</span>
+                    </div>
                 </div>
-
+                <!-- Question Title -->
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <p></p>
+                    <div class="input-group">
+                        <span class="input-group-addon">Assignment title: </span>
+                        <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle">
+                        <span class="input-group-btn">
+        			<button class="btn btn-default" type="submit" (click)="changeQ(i)">Apply</button>
+      				</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" [ngClass]="{'active': n==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ i }}</button>
+        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ getValue(i, n.value.symbol) }}</button>
     </div>
     <p></p>
     <p></p>
