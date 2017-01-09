@@ -42,7 +42,6 @@ export class ToolbarComponent implements OnInit {
     let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
     let getColors = tinycolor('#' + userColor).monochromatic();
     this.analoColors = getColors.map(function(t) { return t.toHexString(); });
-   // console.log(monoColors);
     this.ui.colors.first = this.analoColors[1];
     this.ui.colors.second = this.analoColors[0];
     this.ui.colors.third = tinycolor(this.analoColors[3]).darken(10).toString();
@@ -52,6 +51,22 @@ export class ToolbarComponent implements OnInit {
     this.ui.symbol.color = tinycolor(this.analoColors[0]).lighten(100).toString();
     this.ui.text.color = tinycolor(this.analoColors[4]).greyscale().toString();
     this.ui.subheadings.color = tinycolor(this.analoColors[4]).darken(50).toString();
+  }
+
+  getIndividualColors(num, obj){
+    let color = (<HTMLInputElement>document.getElementById(obj)).value;
+    switch(num){
+      case 'bar':
+        this.ui.colors.first = '#' + color;
+        break;
+      case 'buttons':
+        this.ui.buttons.color = '#' + color;
+        break;
+      case 'hover':
+        this.ui.buttons.hover = '#' + color;
+        this.ui.colors.third = '#' + color;
+        break;
+    }
   }
 
   changeTextColor(obj){

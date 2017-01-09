@@ -32,7 +32,7 @@
 <div class="panel panel-default">
 <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
 <div class="panel-body">
-<p><strong>Monochromatic Color Palette</strong></p>
+<!--<p><strong>Monochromatic Color Palette</strong></p>
 <div class="input-group">
       <span class="input-group-addon" id="basic-addon1">HEX #</span>
       <input type="text" class="firstColor jscolor form-control" value="FFFFFF" id="userColor">
@@ -40,7 +40,7 @@
         <button class="btn btn-default" type="button" (click)="getMonoColorPalette('userColor')">Apply</button>
       </span>
 </div>
-<p></p>
+<p></p>-->
 
 <div class="input-group" *ngFor="let p of monoColors | keys; let i = index">
      <input type="text" class="jscolor form-control" value="{{monoColors[i]}}" id="m{{i}}" [ngStyle]="{'background': monoColors[i]}">
@@ -51,9 +51,9 @@
 
 <p></p>
 
-<p><strong>Analogous Color Palette</strong></p>
+<p><strong>Generate Theme Colors</strong></p>
 <div class="input-group">
-      <span class="input-group-addon" id="basic-addon1">HEX #</span>
+      <span class="input-group-addon" id="basic-addon1">Main Color</span>
       <input type="text" class="analoColor jscolor form-control" value="FFFFFF" id="analoColor">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getAnalogousColorPalette('analoColor')">Apply</button>
@@ -61,12 +61,42 @@
 </div>
 <p></p>
 
-<div class="input-group" *ngFor="let a of analoColors | keys; let i = index">
+<hr />
+
+<div class="colorsList animated fadeIn">
+<p><strong>Edit Custom Colors</strong></p>
+<div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Main</span>
+      <input type="text" class="analoColor1 jscolor form-control" value="{{analoColors[1]}}" id="analoColor1" [ngStyle]="{'background': analoColors[1]}">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="getIndividualColors('bar', 'analoColor1')">Apply</button>
+      </span>
+</div>
+
+<div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Buttons</span>
+      <input type="text" class="analoColor2 jscolor form-control" value="{{analoColors[0]}}" id="analoColor2" [ngStyle]="{'background': analoColors[0]}">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="getIndividualColors('buttons', 'analoColor2')">Apply</button>
+      </span>
+</div>
+
+<div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Hover</span>
+      <input type="text" class="analoColor3 jscolor form-control" value="{{analoColors[3]}}" id="analoColor3" [ngStyle]="{'background': analoColors[3]}">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="getIndividualColors('hover', 'analoColor3')">Apply</button>
+      </span>
+</div>
+
+</div>
+
+<!--<div class="input-group" *ngFor="let a of analoColors | keys; let i = index">
      <input type="text" class="jscolor form-control" value="{{analoColors[i]}}" id="a{{i}}" [ngStyle]="{'background': analoColors[i]}">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
       </span>
-</div>
+</div>-->
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 <!-- the printed area -->
 
 <li *ngFor="let d of assignments | keys; let i = index">
-      <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<amount-1" [ngStyle]="{'color': ui?.colors?.fourth}"><button class="smallcircle" (click)="goTo(i)" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color, 'border-style': 'solid'}">{{ i }}</button>  {{ d.value.title }}</h2>
+      <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<amount-1" [ngStyle]="{'color': ui?.colors?.fourth}"><button class="smallcircle" (click)="goTo(i)" [ngStyle]="{'background': ui?.colors?.third, 'border-color': ui?.colors?.third, 'border-style': 'solid'}">{{ i }}</button>  {{ d.value.title }}</h2>
 
 <!-- one choice -->
       <div class="one col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='one'">
