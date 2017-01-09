@@ -17,6 +17,7 @@ export class ToolbarComponent implements OnInit {
   analoColors: any = [];
   @Input() assignments;
   @Input() data;
+  @Input() amount;
 
   constructor(private dataService: DataService) {
    }

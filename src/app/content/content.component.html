@@ -1,9 +1,9 @@
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments | keys; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
-        <h2>{{i}}) {{ c.value.title }}</h2>
+        <h2>{{ getValue(i) }}) {{ c.value.title }}</h2>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"> Edit {{ c.value.title }} </h3>
+                <h3 class="panel-title"> Settings </h3>
             </div>
             <div class="panel-body">
                 <div class="input-group" *ngIf="data.value==0">
@@ -13,6 +13,18 @@
         			<button class="btn btn-default" type="submit" (click)="changeTitle()">Apply</button>
       				</span>
                 </div>
+				
+				<p></p>
+
+				<!-- Symbol -->
+                <div class="input-group" *ngIf="data.value==0">
+                	<span class="input-group-addon">Symbol: </span>
+                    <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol" >
+                    <span class="input-group-btn">
+        			<button class="btn btn-default" type="submit" (click)="changeSymbol(i)">Apply</button>
+      				</span>
+                </div>
+
             </div>
         </div>
     </div>
@@ -22,7 +34,7 @@
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" [ngClass]="{'active': n==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments | keys; let i = index" (click)="goToQ(i)">{{ i+1 }}</button>
+        <button type="button" [ngClass]="{'active': n==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ i }}</button>
     </div>
     <p></p>
     <p></p>
