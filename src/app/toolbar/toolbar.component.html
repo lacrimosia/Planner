@@ -1,6 +1,7 @@
 <div class="leftMenu">
     <div class="container-fluid">
         <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
         <h2><strong>Planner Custom Editor</strong></h2>
             <!-- close button -->
             <!--<button class="btn btn-primary btn-md"><i class="fa fa-times"></i></button> -->
@@ -107,9 +108,10 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="content">
-                    
+                    <app-content [ui]="ui" [assignments]="assignments" [data]="data"></app-content>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
+            </div>
             </div>
         </div>
     </div>

@@ -15,6 +15,8 @@ export class ToolbarComponent implements OnInit {
   error:boolean = false;
   monoColors: any = [];
   analoColors: any = [];
+  @Input() assignments;
+  @Input() data;
 
   constructor(private dataService: DataService) {
    }
