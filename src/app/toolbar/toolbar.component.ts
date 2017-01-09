@@ -16,9 +16,11 @@ export class ToolbarComponent implements OnInit {
   monoColors: any = [];
   analoColors: any = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+   }
 
   ngOnInit() {
+
   }
 
 
