@@ -31,6 +31,7 @@ import { CustomComponent } from './custom/custom.component';
 import { CustomDateComponent } from './custom-date/custom-date.component';
 import { ProgressComponent } from './progress/progress.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     CustomComponent,
     CustomDateComponent,
     ProgressComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

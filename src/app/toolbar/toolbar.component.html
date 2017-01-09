@@ -1,21 +1,23 @@
 <div class="leftMenu">
-    <div class="container Menu">
+    <div class="container-fluid">
         <div class="row">
+        <h2><strong>Planner Custom Editor</strong></h2>
             <!-- close button -->
             <!--<button class="btn btn-primary btn-md"><i class="fa fa-times"></i></button> -->
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#Image" aria-controls="Image" role="tab" data-toggle="tab">Background Image</a></li>
-                <li role="presentation"><a href="#colors" aria-controls="colors" role="tab" data-toggle="tab">Theme Colors</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation" class="active"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a></li>
+                <li role="presentation"><a href="#content" aria-controls="content" role="tab" data-toggle="tab">Edit Content</a></li>
                 <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="Image">
-                    <h2>Edit Background</h2>
+                <div role="tabpanel" class="tab-pane fade in active" id="theme">
+                <div class="col-md-6 col-lg-6">
+                <p></p>
                     <div class="panel panel-default">
                         <div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
                         <div class="panel-body">
+                        
                             <p><strong>From Web</strong></p>
                             <div class="input-group">
                                 <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
@@ -37,10 +39,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="colors">
+</div>
                     <!-- colors -->
-                    <h2>Edit Background</h2>
+                    <div class="col-md-6 col-lg-6">
+                    <p></p>
                     <div class="panel panel-default">
                         <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
                         <div class="panel-body">
@@ -102,8 +104,11 @@
 </div>-->
                         </div>
                     </div>
+                    </div>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="content">
+                    
+                </div>
                 <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
             </div>
         </div>
