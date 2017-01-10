@@ -15,6 +15,8 @@ appTitle: string;
 Symbol: string;
 QuestionTitle: string;
 Instructions: string;
+tasksAmount: number = 0;
+OneTaskTitle: string;
 
   constructor() { }
 
@@ -54,6 +56,18 @@ Instructions: string;
 
   addInstructions(){
     this.assignments[0].instructions = this.Instructions;
+  }
+
+  getTask(task, taskA){
+    if(task == 1){
+      this.addTask(taskA);
+    }else{
+
+    }
+  }
+
+  addTask(taskA){
+    
   }
 
 }

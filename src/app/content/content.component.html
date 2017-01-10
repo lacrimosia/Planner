@@ -12,8 +12,8 @@
                         <span class="input-group-addon">Application title: </span>
                         <input type="text" class="form-control" placeholder="Enter Planner Title" [(ngModel)]="appTitle">
                         <span class="input-group-btn">
-        			<button class="btn btn-default" type="submit" (click)="changeTitle()">Apply</button>
-      				</span>
+                    <button class="btn btn-default" type="submit" (click)="changeTitle()">Apply</button>
+                    </span>
                     </div>
                 </div>
                 <!-- Symbol -->
@@ -22,13 +22,13 @@
                         <span class="input-group-addon">Symbol: </span>
                         <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol">
                         <span class="input-group-btn">
-        			<button class="btn btn-default" type="submit" (click)="changeSymbol(i)">Apply</button>
-      				</span>
+                    <button class="btn btn-default" type="submit" (click)="changeSymbol(i)">Apply</button>
+                    </span>
                     </div>
                 </div>
-                 <!-- Instructions -->
+                <!-- Instructions -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==0">
-                <p></p>
+                    <p></p>
                     <div class="input-group">
                         <span class="input-group-addon">Instructions: </span>
                         <textarea type="text" class="form-control" placeholder="Enter Instructions" [(ngModel)]="Instructions" maxlength="300"></textarea>
@@ -37,25 +37,46 @@
                     </span>
                     </div>
                 </div>
-
                 <!-- Question Title -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <p></p>
+                    <p></p>
                     <div class="input-group">
                         <span class="input-group-addon">Assignment title: </span>
-                        <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle">
+                        <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle" value="QuestionTitle">
                         <span class="input-group-btn">
-        			<button class="btn btn-default" type="submit" (click)="changeQ(i)">Apply</button>
-      				</span>
+                    <button class="btn btn-default" type="submit" (click)="changeQ(i)">Apply</button>
+                    </span>
                     </div>
                 </div>
+                <!-- Tasks -->
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>0">
+                    <p></p>
+                    <p></p>
+                    <h4>Select the number of tasks for this assignment.</h4>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" (click)="getTask(1, c.value.taskA)">1</button>
+                        <button type="button" class="btn btn-default" (click)="getTask(2, c.value.taskA)">2+</button>
+                    </div>
+                </div>
+                
+                <!-- One Task -->
+                <div class="well well-sm">
+                    <div class="input-group">
+                        <span class="input-group-addon">Task Title: </span>
+                        <input type="text" class="form-control" placeholder="Enter Title" [(ngModel)]="OneTaskTitle" value="OneTaskTitle">
+                        <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" (click)="addTask(i)">Apply</button>
+                    </span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-    <div class="btn-group btn-block" role="group" aria-label="...">
+    <div class="btn-group" role="group" aria-label="...">
         <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ getValue(i, n.value.symbol) }}</button>
     </div>
     <p></p>

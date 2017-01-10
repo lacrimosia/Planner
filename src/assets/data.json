@@ -83,13 +83,15 @@
             }
         ],
         "selected": 0,
-        "taskA": {
-            "name": "Bacon ipsum dolor",
-            "title": "Assignment Title 1",
-            "information": "Tri-tip doner t-bone, prosciutto shoulder turducken pork alcatra swine shankle ball tip andouille tail pig. Jerky pastrami tri-tip, landjaeger short loin corned beef ham hock. Leberkas porchetta turkey meatball, strip steak ham landjaeger boudin pork belly cupim tail. Ham fatback pork loin swine ham hock.",
-            "selectA": true,
-            "symbol": 1
-        }
+        "tasks": [
+            {
+                "name": "Kielbasa shankle2",
+                "title": "Assignment Title 1",
+                "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
+                "select": false,
+                "symbol": 2
+            }
+        ]
     }, {
         "type": "two",
         "title": "Assignment 2 Title",
@@ -165,13 +167,15 @@
             }
         ],
         "selected": 0,
-        "taskA": {
-            "name": "Bacon ipsum dolor",
-            "title": "Assignment Title 1",
-            "information": "Tri-tip doner t-bone, prosciutto shoulder turducken pork alcatra swine shankle ball tip andouille tail pig. Jerky pastrami tri-tip, landjaeger short loin corned beef ham hock. Leberkas porchetta turkey meatball, strip steak ham landjaeger boudin pork belly cupim tail. Ham fatback pork loin swine ham hock.",
-            "selectA": true,
-            "symbol": 1
-        }
+        "tasks": [
+            {
+                "name": "Kielbasa shankle3",
+                "title": "Assignment Title 3232",
+                "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
+                "select": false,
+                "symbol": 2
+            }
+        ]
     },
 {
         "type": "two",
