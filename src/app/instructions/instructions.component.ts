@@ -15,6 +15,7 @@ export class InstructionsComponent implements OnInit {
   @Input() data;
   @Input() instructions;
   @Input() ui;
+  @Input() assignments;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 

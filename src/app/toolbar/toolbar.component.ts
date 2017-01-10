@@ -71,6 +71,9 @@ export class ToolbarComponent implements OnInit {
         this.ui.buttons.hover = '#' + color;
         this.ui.colors.third = '#' + color;
         break;
+      case 'heading':
+        this.ui.colors.fourth = '#' + color;
+        break;
     }
   }
 

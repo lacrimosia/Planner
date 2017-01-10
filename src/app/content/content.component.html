@@ -26,6 +26,18 @@
       				</span>
                     </div>
                 </div>
+                 <!-- Instructions -->
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==0">
+                <p></p>
+                    <div class="input-group">
+                        <span class="input-group-addon">Instructions: </span>
+                        <textarea type="text" class="form-control" placeholder="Enter Instructions" [(ngModel)]="Instructions" maxlength="300"></textarea>
+                        <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" (click)="addInstructions()">Apply</button>
+                    </span>
+                    </div>
+                </div>
+
                 <!-- Question Title -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <p></p>
@@ -43,7 +55,7 @@
 </div>
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-    <div class="btn-group" role="group" aria-label="...">
+    <div class="btn-group btn-block" role="group" aria-label="...">
         <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ getValue(i, n.value.symbol) }}</button>
     </div>
     <p></p>

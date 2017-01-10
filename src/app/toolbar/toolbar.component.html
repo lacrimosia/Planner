@@ -83,6 +83,13 @@
       </span>
                                 </div>
                                 <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Heading</span>
+                                    <input type="text" class="Headings jscolor form-control" value="{{analoColors[3]}}" id="Headings" [ngStyle]="{'background': analoColors[3]}">
+                                    <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="getIndividualColors('heading', 'Headings')">Apply</button>
+      </span>
+                                </div>
+                                <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Buttons</span>
                                     <input type="text" class="analoColor2 jscolor form-control" value="{{analoColors[0]}}" id="analoColor2" [ngStyle]="{'background': analoColors[0]}">
                                     <span class="input-group-btn">

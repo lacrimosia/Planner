@@ -14,6 +14,7 @@ export class ContentComponent implements OnInit {
 appTitle: string;
 Symbol: string;
 QuestionTitle: string;
+Instructions: string;
 
   constructor() { }
 
@@ -49,6 +50,10 @@ QuestionTitle: string;
 
   changeQ(i){
   	this.assignments[i].title = this.QuestionTitle;
+  }
+
+  addInstructions(){
+    this.assignments[0].instructions = this.Instructions;
   }
 
 }
