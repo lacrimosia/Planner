@@ -25,7 +25,7 @@ public value: number;
         let options = new RequestOptions({ headers: headers });
 
         return this.http.post(url, encoded_data).map(
-            (res: Response) => res.json() || {}
+            (res: Response) => res.json()
         );
   }
 
