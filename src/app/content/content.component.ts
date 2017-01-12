@@ -1,9 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Http, Response, Headers, RequestOptions} from '@angular/http';
+import { DataService} from '../data.service';
+import { Observable } from 'rxjs/Rx';
+import {KeysPipe} from '../keys.pipe';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.scss'],
+  providers: [DataService]
 })
 export class ContentComponent implements OnInit {
 
@@ -17,8 +23,9 @@ QuestionTitle: string;
 Instructions: string;
 tasksAmount: number = 0;
 OneTaskTitle: string;
+name:any = "Name here";
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }
@@ -60,14 +67,31 @@ OneTaskTitle: string;
 
   getTask(task, taskA){
     if(task == 1){
-      this.addTask(taskA);
+      //this.addTask(taskA);
     }else{
 
     }
   }
 
-  addTask(taskA){
-    
+  addTask(){
+   this.dataService.sendData(this.data)
+     .subscribe(
+         data => {
+           console.log('the data', data);
+         },
+         (err) => console.log('Error: ', err),
+         () => console.log("data success!!")
+       );
+
+     this.dataService.getDBData()
+       .subscribe(
+         data => {
+           this.name = data;
+           console.log('db', data);
+         },
+         (err) => console.log('Response Error: ', err),
+         () => console.log("data retrieved!!")
+       );
   }
 
 }

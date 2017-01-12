@@ -78,6 +78,8 @@
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class="btn-group" role="group" aria-label="...">
         <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ getValue(i, n.value.symbol) }}</button>
+        <button type="button" class="btn btn-default btn-lg" (click)="addTask()">d</button>
+        {{ name }}
     </div>
     <p></p>
     <p></p>

@@ -1,11 +1,13 @@
 <?php
  
 
- //header("Access-Control-Allow-Origin: *");
- //header("Content-Type: application/json; charset=UTF-8");
+ header("Access-Control-Allow-Origin: *");
+ header("Content-Type: application/json; charset=UTF-8");
 
-//$postdata = file_get_contents("php://input");
-//$request = json_decode($postdata, true);
+$postdata = file_get_contents('php://input');
+$request = json_decode($postdata);
 
-$data = json_decode(file_get_contents("php://input"));
-var_dump($data->test);
+$post = json_encode($request->data->course_title);
+
+echo $post;
+
