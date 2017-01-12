@@ -10,8 +10,24 @@
 
   <!-- menu -->
   <div class="buttonMenu col-lg-4 col-md-4 col-sm-4 col-xs-4">
-  <button class="circle pull-right buttonSpace"  (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-bar-chart"></i></button>
+  <button class="circle pull-right buttonSpace"  (click)="open(content)" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-bar-chart"></i></button>
     <button class="circle pull-right buttonSpace" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}" (click)="reload()"><i class="fa fa-refresh"></i></button>
     <button class="circle pull-right buttonSpace"  (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-question"></i></button>
   </div>
 <div>
+
+
+<template #content let-c="close" let-d="dismiss" ngbModalContainer>
+  <div class="modal-header">
+    <h2 class="modal-title">URST 301: Competencies/Objectives</h2>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default btn-lg" (click)="c('Close click')"><i class="fa fa-times"></i> Close</button>
+  </div>
+</template>
