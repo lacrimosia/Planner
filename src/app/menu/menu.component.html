@@ -10,7 +10,8 @@
 
   <!-- menu -->
   <div class="buttonMenu col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <button class="circle pull-right" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}" (click)="reload()"><i class="fa fa-refresh"></i></button>
+  <button class="circle pull-right buttonSpace"  (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-bar-chart"></i></button>
+    <button class="circle pull-right buttonSpace" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}" (click)="reload()"><i class="fa fa-refresh"></i></button>
     <button class="circle pull-right buttonSpace"  (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-question"></i></button>
   </div>
 <div>
