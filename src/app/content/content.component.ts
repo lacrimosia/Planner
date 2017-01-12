@@ -83,7 +83,7 @@ name:any = "Name here";
          () => console.log("data success!!")
        );
 
-     this.dataService.getDBData()
+   /*  this.dataService.getDBData()
        .subscribe(
          data => {
            this.name = data;
@@ -91,7 +91,7 @@ name:any = "Name here";
          },
          (err) => console.log('Response Error: ', err),
          () => console.log("data retrieved!!")
-       );
+       );*/
   }
 
 }

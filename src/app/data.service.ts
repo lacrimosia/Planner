@@ -18,8 +18,8 @@ public value: number;
   }
 
   sendData(data): Observable<Object>{
-  	 let url = "http://localhost/testingPHP/test.php";
-  	 let encoded_data = JSON.stringify({data});
+  	 let url = "http://localhost/customPlanner/testingPHP/test.php";
+  	 let encoded_data = JSON.stringify(data);
   	  // console.log('encoded', encoded_data);
         let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' });
         let options = new RequestOptions({ headers: headers });
