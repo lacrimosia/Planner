@@ -16,7 +16,7 @@
     <div>
         <template #content let-c="close" let-d="dismiss" ngbModalContainer>
             <div class="modal-header">
-                <h2 class="modal-title">URST 301: Competencies/Objectives</h2>
+                <h2 class="modal-title"><i class="fa fa-bar-chart"></i> URST 301: Competencies/Objectives</h2>
                 <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -39,10 +39,11 @@
                     </div>
                     <div class="row">
                         <div class="comp col-md-12 col-lg-12 col-xs-12 col-sm-12" *ngFor="let c of data.competencies | keys; let j = index">
-                            <div class="circle col-md-2 col-lg-2 col-sm-2 col-xs-2" [ngStyle]="{'background': colorType(c.value.type), 'border-color': colorType(c.value.type)}">{{ c.value.letter }}</div>
+                            <div class="circleComp col-md-2 col-lg-2 col-sm-2 col-xs-2" [ngStyle]="{'background': colorType(c.value.type), 'border-color': colorType(c.value.type)}">{{ c.value.letter }}</div>
                             <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
                                 <p>{{ c.value.text }}</p>
                             </div>
+                            <p></p>
                         </div>
                     </div>
                 </div>

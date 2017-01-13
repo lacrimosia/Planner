@@ -77,7 +77,7 @@
                                 <p><strong>Edit Custom Colors</strong></p>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Main</span>
-                                    <input type="text" class="analoColor1 jscolor form-control" value="{{analoColors[1]}}" id="analoColor1" [ngStyle]="{'background': analoColors[1]}">
+                                    <input type="text" class="analoColor1 jscolor form-control" value="{{darkColor}}" id="analoColor1" [ngStyle]="{'background': darkColor}">
                                     <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getIndividualColors('bar', 'analoColor1')">Apply</button>
       </span>
@@ -91,14 +91,14 @@
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Buttons</span>
-                                    <input type="text" class="analoColor2 jscolor form-control" value="{{analoColors[0]}}" id="analoColor2" [ngStyle]="{'background': analoColors[0]}">
+                                    <input type="text" class="analoColor2 jscolor form-control" value="{{lightenColor}}" id="analoColor2" [ngStyle]="{'background': lightenColor}">
                                     <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getIndividualColors('buttons', 'analoColor2')">Apply</button>
       </span>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Hover</span>
-                                    <input type="text" class="analoColor3 jscolor form-control" value="{{analoColors[3]}}" id="analoColor3" [ngStyle]="{'background': analoColors[3]}">
+                                    <input type="text" class="analoColor3 jscolor form-control" value="{{oppositeColor}}" id="analoColor3" [ngStyle]="{'background': oppositeColor}">
                                     <span class="input-group-btn">
         <button class="btn btn-default" type="button" (click)="getIndividualColors('hover', 'analoColor3')">Apply</button>
       </span>

@@ -15,6 +15,10 @@ export class ToolbarComponent implements OnInit {
   error:boolean = false;
   monoColors: any = [];
   analoColors: any = [];
+  darkColor: string;
+  compColor: string;
+  oppositeColor: string;
+  lightenColor: string;
   @Input() assignments;
   @Input() data;
   @Input() amount;
@@ -46,13 +50,19 @@ export class ToolbarComponent implements OnInit {
   getAnalogousColorPalette(obj){
     let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
     let getColors = tinycolor('#' + userColor).monochromatic();
+
     this.analoColors = getColors.map(function(t) { return t.toHexString(); });
-    this.ui.colors.first = this.analoColors[1];
+    this.darkColor = tinycolor(this.analoColors[1]).lighten(15).toString();
+    this.oppositeColor = tinycolor(this.analoColors[4]).complement().toHexString();
+    this.compColor = tinycolor(this.analoColors[3]).complement().toHexString();
+    this.lightenColor = tinycolor(this.oppositeColor).complement().toHexString();
+
+    this.ui.colors.first = this.darkColor;
     this.ui.colors.second = this.analoColors[0];
     this.ui.colors.third = tinycolor(this.analoColors[3]).darken(10).toString();
     this.ui.colors.fourth = this.analoColors[3];
-    this.ui.buttons.color = this.analoColors[4];
-    this.ui.buttons.hover = tinycolor(this.analoColors[3]).darken(10).toString();
+    this.ui.buttons.color =  this.lightenColor;
+    this.ui.buttons.hover = this.oppositeColor;
     this.ui.symbol.color = tinycolor(this.analoColors[0]).lighten(100).toString();
     this.ui.text.color = tinycolor(this.analoColors[4]).greyscale().toString();
     this.ui.subheadings.color = tinycolor(this.analoColors[4]).darken(50).toString();
