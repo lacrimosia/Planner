@@ -47,6 +47,33 @@
             "dark": "#607D8B"
         }
     },
+    "competencies":[
+        {
+            "letter": "C",
+            "type": "urban",
+            "text": "Identify characteristics of a resilent organization or community."
+        },
+        {
+            "letter": "C",
+            "type": "professional",
+            "text": "Compare and contrast information sources."
+        },
+        {
+            "letter": "J",
+            "type": "professional",
+            "text": "Research multiple perspectives of a public issue."
+        },
+        {
+            "letter": "B",
+            "type": "collaborative",
+            "text": "Identify multiple perspectives of a public issue."
+        },
+        {
+            "letter": "C",
+            "type": "collaborative",
+            "text": "Demonstrate awareness of ethical issues embedded in public problems."
+        }
+    ],
     "review_instructions": "Please review your selected tasks. Click the print button to save your custom planner.",
     "q": true,
     "assignments": [{

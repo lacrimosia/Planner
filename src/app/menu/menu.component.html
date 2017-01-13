@@ -4,30 +4,50 @@
 -->
 <!-- course name -->
 <div class="heading col-lg-12 col-md-12 col-sm-12 col-xs-12" [ngStyle]="{'background': ui?.colors?.first}">
-  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-    <h1 class="courseTitle" [ngStyle]="{'color': ui?.heading?.color}">{{ courseName }}</h1>
-  </div>
-
-  <!-- menu -->
-  <div class="buttonMenu col-lg-4 col-md-4 col-sm-4 col-xs-4">
-  <button class="circle pull-right buttonSpace"  (click)="open(content)" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-bar-chart"></i></button>
-    <button class="circle pull-right buttonSpace" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}" (click)="reload()"><i class="fa fa-refresh"></i></button>
-    <button class="circle pull-right buttonSpace"  (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-question"></i></button>
-  </div>
-<div>
-
-
-<template #content let-c="close" let-d="dismiss" ngbModalContainer>
-  <div class="modal-header">
-    <h2 class="modal-title">URST 301: Competencies/Objectives</h2>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p>One fine body&hellip;</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default btn-lg" (click)="c('Close click')"><i class="fa fa-times"></i> Close</button>
-  </div>
-</template>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <h1 class="courseTitle" [ngStyle]="{'color': ui?.heading?.color}">{{ courseName }}</h1>
+    </div>
+    <!-- menu -->
+    <div class="buttonMenu col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <button class="circle pull-right buttonSpace" (click)="open(content)" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-bar-chart"></i></button>
+        <button class="circle pull-right buttonSpace" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}" (click)="reload()"><i class="fa fa-refresh"></i></button>
+        <button class="circle pull-right buttonSpace" (click)="help();" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}"><i class="fa fa-question"></i></button>
+    </div>
+    <div>
+        <template #content let-c="close" let-d="dismiss" ngbModalContainer>
+            <div class="modal-header">
+                <h2 class="modal-title">URST 301: Competencies/Objectives</h2>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>Core Competencies</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="legend">
+                                        <span class="legend"><i class="fa fa-circle" [ngStyle]="{'color': ui?.colors?.third}"></i> Urban Solutions</span>
+                                        <span class="legend"><i class="fa fa-circle" [ngStyle]="{'color': ui?.colors?.second}"></i> Professional Skills</span>
+                                        <span class="legend"><i class="fa fa-circle" [ngStyle]="{'color': ui?.colors?.first}"></i> Collaborative Skills</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="comp col-md-12 col-lg-12 col-xs-12 col-sm-12" *ngFor="let c of data.competencies | keys; let j = index">
+                            <div class="circle col-md-2 col-lg-2 col-sm-2 col-xs-2" [ngStyle]="{'background': colorType(c.value.type), 'border-color': colorType(c.value.type)}">{{ c.value.letter }}</div>
+                            <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
+                                <p>{{ c.value.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-lg" (click)="c('Close click')"><i class="fa fa-times"></i> Close</button>
+            </div>
+        </template>
