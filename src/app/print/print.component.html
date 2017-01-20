@@ -1,29 +1,13 @@
 <!-- the printed area -->
-
 <li *ngFor="let d of assignments | keys; let i = index">
-      <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<amount-1" [ngStyle]="{'color': ui?.colors?.fourth}"><button class="smallcircle" (click)="goTo(i)" [ngStyle]="{'background': ui?.colors?.third, 'border-color': ui?.colors?.third, 'border-style': 'solid'}">{{ i }}</button>  {{ d.value.title }}</h2>
-
-<!-- one choice -->
-      <div class="one col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='one'">
-        <!--<img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" />-->
+    <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<amount-1" [ngStyle]="{'color': ui?.colors?.fourth}"><button class="smallcircle" (click)="goTo(i)" [ngStyle]="{'background': ui?.colors?.third, 'border-color': ui?.colors?.third, 'border-style': 'solid'}">{{ i }}</button>  {{ d.value.title }}</h2>
+    <!-- choices -->
+    <div class="two col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='task'">
+        <!-- <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" /> -->
         <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
-        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" [ngStyle]="{'color': ui?.text?.color}"><b>{{ d.value.taskA.name }}</b>: {{ d.value.taskA.information }}</p>
-      </div>
-
-    <!-- multiple choices -->
-      <div class="two col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='two'">
-       <!-- <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" /> -->
-       <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
         <div *ngFor="let t of d.value.tasks | keys">
-        <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="t.value.select==true" [ngStyle]="{'color': ui?.text?.color}"><b>{{ t.value.name }}</b>: {{ t.value.information }}</p>
+            <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="t.value.select==true" [ngStyle]="{'color': ui?.text?.color}"><b>{{ t.value.name }}</b>: {{ t.value.information }}</p>
+            <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="d.value.tasks.length==1" [ngStyle]="{'color': ui?.text?.color}"><b>{{ t.value.name }}</b>: {{ t.value.information }}</p>
         </div>
-      <!--  <p class="text" *ngIf="d.value.taskA.selectA==false && d.value.taskB.selectB==false">Please select an assignment.</p>-->
-      </div>
-
-      <div class="custom col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.value.type=='custom'">
-        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-          <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
-          <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngFor="let t of d.value.tasks | keys" [ngStyle]="{'color': ui?.text?.color}"><b>{{ t.value.name }}</b>: {{ t.value.information }}</p>
-        </div>
-      </div>
-    </li>
+    </div>
+</li>

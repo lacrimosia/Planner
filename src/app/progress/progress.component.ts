@@ -30,32 +30,17 @@ export class ProgressComponent implements OnInit {
 // keeps track of progress
   progress(){
     this.counter = this.data.progress;
-    // if type one task or custom task, automatically increment the progress
-   if(this.assignments[this.data.value].selected == 1){
-        this.counter++;
-        console.log("process amount", this.data.progress);
-      }else{
-        this.counter++;
-      }
-    return Math.round(this.counter * 14.28);
-  }
 
-// shows the colors for the progress bar
- /* colors(){
-    // red zone
-    if(this.progress() >= 0 && this.progress() < 15){
-      return "progress-bar-danger animated fadeInLeft";
+    for(var i=1; i<this.amount-1; i++)
+    {
+      if(this.assignments[i].tasks.length == 1)
+      {
+          
+          this.counter++;
+      }
     }
-    else if(this.progress() > 15 && this.progress() < 30){
-      return "progress-bar-danger";
-      // yellow zone
-    }else if(this.progress() > 30 && this.progress() < 70){
-      return "progress-bar-warning";
-    }else if(this.progress() > 70){
-      return "progress-bar-success";
-    }
-    return "glow";
-  }*/
-  
+    console.log("running", this.counter);
+    return Math.round(this.counter * 14.28);
+  }  
 }
 

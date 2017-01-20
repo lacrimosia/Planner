@@ -115,7 +115,7 @@
                 "name": "Kielbasa shankle2",
                 "title": "Assignment Title 1",
                 "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
-                "select": false,
+                "select": true,
                 "symbol": 2
             }
         ]
@@ -382,14 +382,9 @@
         "selected": 0,
         "tasks": [
             {
-                "name": "Ribeye t-bone boudin",
+                "name": "Ribeye t-bone Chicken Fish",
                 "information": "Bacon ipsum dolor amet pork loin flank prosciutto beef filet mignon pork chop turkey pancetta pig shoulder fatback. Kielbasa meatloaf turducken pastrami alcatra ball tip hamburger. Jerky short loin meatloaf ribeye fatback spare ribs alcatra brisket pig porchetta pork belly shoulder t-bone turducken. Venison meatloaf frankfurter shoulder.",
-                "select": false
-            },
-            {
-                "name": "Assignment 10",
-                "information": "Chuck meatball picanha brisket fatback boudin cow leberkas venison pig landjaeger cupim alcatra pork loin. Venison tenderloin alcatra ribeye chicken ground round pork loin cow filet mignon. Landjaeger tail biltong tri-tip sausage rump pastrami ham filet mignon salami. Pork belly cow fatback rump boudin leberkas.",
-                "select": false
+                "select": true
             }
         ]
     },{
