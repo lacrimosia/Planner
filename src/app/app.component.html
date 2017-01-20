@@ -75,10 +75,10 @@
                         <!-- next button -->
                         <app-next [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-next>
                     </div>
-                    <!-- one task -->
+                    <!-- one task 
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <app-one-task [data]="data" *ngIf="data.value>0" [assignments]="assignments" [ui]="ui"></app-one-task>
-                    </div>
+                    </div> -->
 
                     <!-- Multi tasks -->
                     <app-multi-tasks [data]="data" [ui]="ui" *ngIf="data.value>0" [assignments]="assignments"></app-multi-tasks>

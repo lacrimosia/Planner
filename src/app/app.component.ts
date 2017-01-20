@@ -59,8 +59,8 @@ export class AppComponent implements OnInit{
 
   getTotal(){
     this.total = this.taskLimit;
-    for(var i=0; i<this.amount-1; i++){
-      if(this.assignments[i].type=="two"){
+    for(var i=1; i<this.amount-1; i++){
+      if(this.assignments[i].tasks.length > 1){
         this.total += 1;
       }
     }
