@@ -58,14 +58,14 @@ export class AppComponent implements OnInit{
  }
 
   getTotal(){
-    this.total = this.taskLimit;
+    this.total = 0;
     for(var i=1; i<this.amount-1; i++){
       if(this.assignments[i].tasks.length > 1){
-        this.total += 1;
+        this.total++;
       }
     }
    // console.log("total", this.total);
-    return this.total;
+    return this.total + 2;
   }
 
   getData() {
