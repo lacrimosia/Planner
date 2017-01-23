@@ -24,18 +24,22 @@ Instructions: string;
 tasksAmount: number = 0;
 OneTaskTitle: string;
 name:any = "Name here";
+asstInformation: string;
+Month: number;
+Day: number;
+Percentage: number;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }
 
-  changeTitle(){
-  	this.data.course_title = this.appTitle;
-  }
 
-  changeSymbol(i){
-  	this.assignments[i].symbol = this.Symbol;
+  changeIntroduction(i){
+      this.data.course_title = this.appTitle;
+      this.assignments[i].symbol = this.Symbol;
+      this.assignments[i].title = this.QuestionTitle;
+      this.assignments[0].instructions = this.Instructions;
   }
 
   goToQ(n){
@@ -57,14 +61,6 @@ name:any = "Name here";
     return name;
   }
 
-  changeQ(i){
-  	this.assignments[i].title = this.QuestionTitle;
-  }
-
-  addInstructions(){
-    this.assignments[0].instructions = this.Instructions;
-  }
-
   getTask(task, taskA){
     if(task == 1){
       //this.addTask(taskA);
@@ -82,6 +78,16 @@ name:any = "Name here";
          (err) => console.log('Error: ', err),
          () => console.log("data success!!")
        );
+  }
+
+  addInfo(i){
+    this.assignments[i].instructions = this.asstInformation;
+  }
+
+  getDate(i){
+    this.assignments[i].due_date[0].month = this.Month;
+    this.assignments[i].due_date[0].day = this.Day;
+    this.assignments[i].due_date[0].percentage = this.Percentage;
   }
 
 }
