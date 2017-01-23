@@ -18,7 +18,6 @@ export class MultiTasksComponent implements OnChanges, OnInit, DoCheck {
   @Input() ui;
   @Input() t;
   @Input() index;
-  arr: any;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private _add: AddTaskService) { }
 

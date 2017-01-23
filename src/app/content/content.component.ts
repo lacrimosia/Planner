@@ -87,15 +87,15 @@ Percentage: number;
 
   addTasksToPlanner(i){
     let data = {
-                name: "Kielbasa shankle2555",
-                title: "Assignment Title 15615",
+                name: "Mock Assignment",
+                title: "Assignment",
                 information: "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
                 select: false,
                 symbol: i
               };
 
      this.data.assignments[i].tasks.push(data);
-     console.log("tasks", this.data.assignments[i]);
+     //console.log("tasks", this.data.assignments[i]);
   }
 
   addInfo(i){

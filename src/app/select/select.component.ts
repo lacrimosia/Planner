@@ -26,7 +26,7 @@ export class SelectComponent implements OnInit {
   ngOnInit() {
     // select A for the option A task
     this._hotkeysService.add(new Hotkey('a', (event: KeyboardEvent): boolean => {
-        if(this.d.value.type=="two"){
+        if(this.d.type=="two"){
             this.selectionClick();
             return;
         }
@@ -38,16 +38,16 @@ export class SelectComponent implements OnInit {
   // d is the outer loop
   // t is the inner loop
   selectionClick(){
-    this.d.value.selected++;
-    for(var i=0; i<this.d.value.tasks.length; i++){   
+    this.d.selected++;
+    for(var i=0; i<this.d.tasks.length; i++){   
       if(i==this.index){
-        this.d.value.tasks[i].select = true;
+        this.d.tasks[i].select = true;
       }else{
-        this.d.value.tasks[i].select = false;
+        this.d.tasks[i].select = false;
       }
     }
 
-    if(this.d.value.selected == 1){
+    if(this.d.selected == 1){
       this.data.progress++;
     }
     return;

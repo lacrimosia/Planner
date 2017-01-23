@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChartModule } from 'angular2-highcharts';
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
@@ -68,7 +69,8 @@ import { ContentComponent } from './content/content.component';
     HttpModule,
     HotkeyModule,
     NgbModule.forRoot(),
-    JsonpModule
+    JsonpModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

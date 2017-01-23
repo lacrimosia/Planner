@@ -1,1 +1,1 @@
-<button class="select" (click)="selectionClick()" [ngStyle]="{'background': buttonColor(t.value.select)}"><i class="fa fa-times" *ngIf="!t.value.select"></i> <i class="fa fa-check" *ngIf="t.value.select"></i> {{ t.value.select ? "Selected" : "Unselected" }}</button>
+<button class="select" (click)="selectionClick()" [ngStyle]="{'background': buttonColor(t.select)}"><i class="fa fa-times" *ngIf="!t.select"></i> <i class="fa fa-check" *ngIf="t.select"></i> {{ t.select ? "Selected" : "Unselected" }}</button>
