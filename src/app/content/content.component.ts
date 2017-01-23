@@ -98,6 +98,46 @@ Percentage: number;
      //console.log("tasks", this.data.assignments[i]);
   }
 
+  addNewSlide(i){
+    let data = {
+        "type": "task",
+        "title": "Salami turducken meatball",
+        "symbol": 1,
+        "q": true,
+        "t": true,
+        "show": false,
+        "sub_title": "Salami ham landjaeger",
+        "tooltip": {
+            "left": 82
+        },
+        "printTop": 0,
+        "instructions": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
+        "due_date": [
+            {
+                "image": "10.jpg",
+                "month": "December",
+                "day": 5,
+                "percentage": 10,
+                "points": 0,
+                "alert": false
+            }
+        ],
+        "selected": 0,
+        "tasks": [
+            {
+                "name": "Kielbasa shankle2",
+                "title": "Assignment Title 1",
+                "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
+                "select": true,
+                "symbol": 2
+            }
+        ]
+    };
+
+     this.data.assignments.splice(this.amount-1, 0, data);
+     //console.log("tasks", this.data.assignments[i]);
+  }
+
   addInfo(i){
     this.assignments[i].instructions = this.asstInformation;
   }

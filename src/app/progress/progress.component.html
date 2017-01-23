@@ -1,5 +1,5 @@
 <!-- progress bar on each question -->
-<div class="progression" *ngFor="let d of assignments | keys; let i = index">
+<div class="progression" *ngFor="let d of assignments; let i = index">
 <div class="progress" *ngIf="i==data.value">
 		<div class="progress-bar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount" [ngStyle]="{'width': progress()+'%', 'background': ui?.colors?.first}" >
 		</div>

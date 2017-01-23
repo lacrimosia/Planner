@@ -1,7 +1,7 @@
 <div class="tasks">
-<div *ngFor="let d of assignments | keys; let i = index">
-  <div *ngFor="let o of d.value.tasks | keys; let p = index">
-  <app-tasks class="taskOne" *ngIf="d.value.type=='one' && i==data.value" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="o.value.name" [information]="o.value.information" [d]="d" [ui]="ui"></app-tasks>
+<div *ngFor="let d of assignments; let i = index">
+  <div *ngFor="let o of d.tasks; let p = index">
+  <app-tasks class="taskOne" *ngIf="d.type=='one' && i==data.value" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="o.name" [information]="o.information" [d]="d" [ui]="ui"></app-tasks>
   </div>
 </div>
 </div>

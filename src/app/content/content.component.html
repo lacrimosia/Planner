@@ -1,6 +1,6 @@
-<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments | keys; let i = index">
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
-        <h2>{{ getValue(i, c.value.symbol) }}) {{ c.value.title }}</h2>
+        <h2>{{ getValue(i, c.symbol) }}) {{ c.title }}</h2>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"> Settings </h3>
@@ -19,7 +19,7 @@
 
                     <div class="input-group">
                         <span class="input-group-addon">Symbol Letter: </span>
-                        <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol" [value]="Symbol" (ngModelChange)="c.value.symbol = $event" required>
+                        <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol" [value]="Symbol" (ngModelChange)="c.symbol = $event" required>
                     </div>
                 </div>
                 
@@ -39,12 +39,12 @@
 
                     <div class="input-group">
                         <span class="input-group-addon">Assignment title: </span>
-                        <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle" [value]="QuestionTitle" (ngModelChange)="c.value.title = $event" required>
+                        <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle" [value]="QuestionTitle" (ngModelChange)="c.title = $event" required>
                     </div>
 
                     <div class="input-group" *ngIf="data.value>0">
                         <span class="input-group-addon">Assignment Information: </span>
-                        <textarea type="text" class="form-control" placeholder="Enter Assignment Information" [(ngModel)]="asstInformation" [value]="asstInformation" maxlength="300" (ngModelChange)="c.value.instructions = $event" required></textarea>
+                        <textarea type="text" class="form-control" placeholder="Enter Assignment Information" [(ngModel)]="asstInformation" [value]="asstInformation" maxlength="300" (ngModelChange)="c.instructions = $event" required></textarea>
                     </div>
 
                     <p></p>
@@ -58,17 +58,17 @@
 
                     <div class="input-group" *ngIf="data.value>0">
                         <span class="input-group-addon">Month: </span>
-                        <input type="text" class="form-control" placeholder="Enter Month" [(ngModel)]="Month" [value]="Month" (ngModelChange)="c.value.due_date[0].month = $event">
+                        <input type="text" class="form-control" placeholder="Enter Month" [(ngModel)]="Month" [value]="Month" (ngModelChange)="c.due_date[0].month = $event">
                     </div>
 
                     <div class="input-group" *ngIf="data.value>0">
                         <span class="input-group-addon">Day: </span>
-                        <input type="text" class="form-control" placeholder="Enter Day" [(ngModel)]="Day" [value]="Day" (ngModelChange)="c.value.due_date[0].day = $event">
+                        <input type="text" class="form-control" placeholder="Enter Day" [(ngModel)]="Day" [value]="Day" (ngModelChange)="c.due_date[0].day = $event">
                     </div>
 
                     <div class="input-group" *ngIf="data.value>0">
                         <span class="input-group-addon">Percentage: </span>
-                        <input type="text" class="form-control" placeholder="Enter Assignment Percentage" [(ngModel)]="Percentage" [value]="Percentage" (ngModelChange)="c.value.due_date[0].percentage = $event">
+                        <input type="text" class="form-control" placeholder="Enter Assignment Percentage" [(ngModel)]="Percentage" [value]="Percentage" (ngModelChange)="c.due_date[0].percentage = $event">
                     </div>
                     <p></p>
 
@@ -87,10 +87,10 @@
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments| keys; let i = index" (click)="goToQ(i)">{{ getValue(i, n.value.symbol) }}</button>
+        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ getValue(i, n.symbol) }}</button>
     </div>
-    <button type="button" class="btn btn-warning btn-lg" (click)="addTask()"><i class="fa fa-plus"></i> Add Assignment</button>
-    <button type="button" class="btn btn-primary btn-lg" (click)="addTask()">Save &amp; Generate</button>
+    <button type="button" class="btn btn-warning btn-lg" (click)="addNewSlide()" *ngIf="data.value>0"><i class="fa fa-plus"></i> New Slide</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="addTask()" *ngIf="data.value>0">Save &amp; Generate</button>
     <p></p>
     <p></p>
 </div>
