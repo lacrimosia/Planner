@@ -31,7 +31,7 @@ export class ToolbarComponent implements OnInit {
   }
 
 
-  getMonoColorPalette(obj){
+ /* getMonoColorPalette(obj){
     let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
     let getColors = tinycolor('#' + userColor).monochromatic();
     this.monoColors = getColors.map(function(t) { return t.toHexString(); });
@@ -45,17 +45,17 @@ export class ToolbarComponent implements OnInit {
     this.ui.symbol.color = tinycolor(this.monoColors[0]).lighten(100).toString();
     this.ui.text.color = tinycolor(this.monoColors[4]).greyscale().toString();
     this.ui.subheadings.color = tinycolor(this.monoColors[4]).darken(50).toString();
-  }
+  }*/
 
   getAnalogousColorPalette(obj){
     let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
     let getColors = tinycolor('#' + userColor).monochromatic();
 
     this.analoColors = getColors.map(function(t) { return t.toHexString(); });
-    this.darkColor = tinycolor(this.analoColors[1]).lighten(15).toString();
-    this.oppositeColor = tinycolor(this.analoColors[4]).complement().toHexString();
-    this.compColor = tinycolor(this.analoColors[3]).complement().toHexString();
-    this.lightenColor = tinycolor(this.oppositeColor).complement().toHexString();
+    this.darkColor = this.analoColors[1];
+    this.oppositeColor = this.analoColors[4];
+    this.compColor = this.analoColors[3];
+    this.lightenColor = this.analoColors[2];
 
     this.ui.colors.first = this.darkColor;
     this.ui.colors.second = this.analoColors[0];

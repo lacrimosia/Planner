@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, DoCheck} from '@angular/core';
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { DataService} from '../data.service';
+import { AddTaskService } from '../add-task.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import 'rxjs/add/operator/map';
@@ -9,9 +10,9 @@ import 'rxjs/add/operator/map';
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
-  providers: [DataService]
+  providers: [DataService, AddTaskService]
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent implements OnInit, DoCheck {
 
 @Input() ui;
 @Input() assignments;
@@ -29,9 +30,13 @@ Month: number;
 Day: number;
 Percentage: number;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private _add: AddTaskService) { }
 
   ngOnInit() {
+  }
+
+  ngDoCheck() {
+
   }
 
 
@@ -78,6 +83,19 @@ Percentage: number;
          (err) => console.log('Error: ', err),
          () => console.log("data success!!")
        );
+  }
+
+  addTasksToPlanner(i){
+    let data = {
+                name: "Kielbasa shankle2555",
+                title: "Assignment Title 15615",
+                information: "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
+                select: false,
+                symbol: i
+              };
+
+     this.data.assignments[i].tasks.push(data);
+     console.log("tasks", this.data.assignments[i]);
   }
 
   addInfo(i){

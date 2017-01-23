@@ -20,10 +20,11 @@ export class TasksComponent implements OnInit {
   @Input() d;
   @Input() ui;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { 
+
+  }
 
   ngOnInit() {
-  
   }
 
 
