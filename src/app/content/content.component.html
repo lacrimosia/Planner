@@ -8,6 +8,9 @@
             <div class="panel-body">
                 <!-- Title and symbol -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==0">
+
+                <h2 *ngIf="data.value==0"><i class="fa fa-file-text"></i> Planner Information</h2>
+                <p *ngIf="data.value==0"></p>
                     <div class="input-group" *ngIf="data.value==0">
                         <span class="input-group-addon">Planner Title: </span>
                         <input type="text" class="form-control" placeholder="Enter Planner Title"
@@ -22,6 +25,13 @@
                 
                 <!-- Instructions and assignments -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+
+                <h2 *ngIf="data.value>0"><i class="fa fa-file-text"></i> Assignment Information</h2>
+                <p *ngIf="data.value>0"></p>
+
+                <h2 *ngIf="data.value==0"><i class="fa fa-file-text"></i> Title and Instructions</h2>
+                <p *ngIf="data.value==0"></p>
+
                     <div class="input-group" *ngIf="data.value==0">
                         <span class="input-group-addon">Instructions: </span>
                         <textarea type="text" class="form-control" placeholder="Enter Instructions" [(ngModel)]="Instructions" maxlength="300" [value]="Instructions" (ngModelChange)="assignments[0].instructions = $event" required></textarea>
@@ -34,7 +44,7 @@
 
                     <div class="input-group" *ngIf="data.value>0">
                         <span class="input-group-addon">Assignment Information: </span>
-                        <input type="text" class="form-control" placeholder="Enter Assignment Information" [(ngModel)]="asstInformation" [value]="asstInformation" (ngModelChange)="c.value.instructions = $event" required>
+                        <textarea type="text" class="form-control" placeholder="Enter Assignment Information" [(ngModel)]="asstInformation" [value]="asstInformation" maxlength="300" (ngModelChange)="c.value.instructions = $event" required></textarea>
                     </div>
 
                     <p></p>
@@ -43,6 +53,9 @@
 
                 <!-- Date and Percentage -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <h2 *ngIf="data.value>0"><i class="fa fa-pie-chart"></i> Date and Percentage</h2>
+                <p *ngIf="data.value>0"></p>
+
                     <div class="input-group" *ngIf="data.value>0">
                         <span class="input-group-addon">Month: </span>
                         <input type="text" class="form-control" placeholder="Enter Month" [(ngModel)]="Month" [value]="Month" (ngModelChange)="c.value.due_date[0].month = $event">
