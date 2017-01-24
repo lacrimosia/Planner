@@ -1,6 +1,6 @@
 <!-- the printed area -->
 <li *ngFor="let d of assignments; let i = index">
-    <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<amount-1" [ngStyle]="{'color': ui?.colors?.fourth}"><button class="smallcircle" (click)="goTo(i)" [ngStyle]="{'background': ui?.colors?.third, 'border-color': ui?.colors?.third, 'border-style': 'solid'}">{{ i }}</button>  {{ d.title }}</h2>
+    <h2 class="printTitle col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="i>0 && i<amount" [ngStyle]="{'color': ui?.colors?.fourth}"><button class="smallcircle" (click)="goTo(i)" [ngStyle]="{'background': ui?.colors?.third, 'border-color': ui?.colors?.third, 'border-style': 'solid'}">{{ i }}</button>  {{ d.title }}</h2>
     <!-- choices -->
     <div class="two col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.type=='task'">
         <!-- <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" /> -->

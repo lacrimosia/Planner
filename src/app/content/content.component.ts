@@ -66,14 +66,6 @@ Percentage: number;
     return name;
   }
 
-  getTask(task, taskA){
-    if(task == 1){
-      //this.addTask(taskA);
-    }else{
-
-    }
-  }
-
   addTask(){
    this.dataService.sendData(this.data)
      .subscribe(
@@ -98,10 +90,10 @@ Percentage: number;
      //console.log("tasks", this.data.assignments[i]);
   }
 
-  addNewSlide(i){
+  addNewSlide(){
     let data = {
         "type": "task",
-        "title": "Salami turducken meatball",
+        "title": "Assignment Text",
         "symbol": 1,
         "q": true,
         "t": true,
@@ -125,7 +117,7 @@ Percentage: number;
         "selected": 0,
         "tasks": [
             {
-                "name": "Kielbasa shankle2",
+                "name": "This Assignment",
                 "title": "Assignment Title 1",
                 "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
                 "select": true,
@@ -134,8 +126,8 @@ Percentage: number;
         ]
     };
 
-     this.data.assignments.splice(this.amount-1, 0, data);
-     //console.log("tasks", this.data.assignments[i]);
+     this.data.assignments.splice(this.amount-2, 0, data);
+     //console.log("pos", this.amount-2);
   }
 
   addInfo(i){

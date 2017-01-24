@@ -28,7 +28,7 @@ export class PrintComponent implements OnInit {
 
   goTo(index){
     this.data.value = index;
-    if(this.data.value == this.assignments.length-1){
+    if(this.data.value == this.amount-1){
       this.printContent();
     }else{
       this.hidePrintContent();
@@ -43,7 +43,7 @@ export class PrintComponent implements OnInit {
     // It only checks types that have two answers
     for(let x=1; x<=this.data.assignments.length-2; x++){
       // check if category type is the two choices
-      if(this.data.assignments[x].type=="two"){
+      if(this.data.assignments[x].type=="task"){
         // then check if both selectA and selectB is false
         // this ensures they actually select something
         if(this.data.assignments[x].taskA.selectA == false && this.data.assignments[x].taskB.selectB==false){

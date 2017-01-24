@@ -87,7 +87,7 @@
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ getValue(i, n.symbol) }}</button>
+        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ i }}</button>
     </div>
     <button type="button" class="btn btn-warning btn-lg" (click)="addNewSlide()" *ngIf="data.value>0"><i class="fa fa-plus"></i> New Slide</button>
     <button type="button" class="btn btn-primary btn-lg" (click)="addTask()" *ngIf="data.value>0">Save &amp; Generate</button>
