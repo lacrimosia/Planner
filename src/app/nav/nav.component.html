@@ -7,6 +7,11 @@
     <button type="button" class="numButtons circle" id={{i}} (click)="goTo(i)" [ngStyle]="{'background': currentColor(i), 'border-color': currentColor(i)}">
           {{ navOutput(i, d.symbol) }}
       </button>
-      <div id="line" class="hidden-xs hidden-sm" *ngIf="i<assignments.length-1"></div>
+      <div id="line" class="hidden-xs hidden-sm" *ngIf="i<=assignments.length"></div>
+  </li>
+  <li class="list">
+    <button type="button" class="numButtons circle" id="r" [ngStyle]="{'background': ui?.buttons?.color, 'border-color': ui?.buttons?.color}">
+          R
+      </button>
   </li>
 </ul>

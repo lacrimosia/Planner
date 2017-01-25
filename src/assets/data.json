@@ -12,6 +12,7 @@
     "totalTasks": 0,
     "review": false,
     "print": false,
+    "reviewArea": false,
     "alert": false,
     "error": {
       "open": false,
@@ -119,7 +120,8 @@
                 "symbol": 2
             }
         ]
-    },{
+    }],
+    "review":{
         "type": "review",
         "title": "Review",
         "symbol": "R",
@@ -130,5 +132,5 @@
             "left": 948
         },
         "printTop": 1800
-    }]
+    }
 }

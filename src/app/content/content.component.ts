@@ -103,7 +103,7 @@ Percentage: number;
             "left": 82
         },
         "printTop": 0,
-        "instructions": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
+        "instructions": "Red Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
         "due_date": [
             {
                 "image": "10.jpg",
@@ -126,8 +126,7 @@ Percentage: number;
         ]
     };
 
-     this.data.assignments.splice(this.amount-2, 0, data);
-     //console.log("pos", this.amount-2);
+     this.data.assignments.push(data);
   }
 
   addInfo(i){

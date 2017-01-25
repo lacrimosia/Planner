@@ -45,17 +45,17 @@
                     <h3 class="animated fadeIn activityTitle" *ngIf="data.value==0" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
                     <app-instructions *ngIf="data.value==0" [data]="data" [instructions]="instructions" [ui]="ui" [assignments]="assignments"></app-instructions>
                     <!-- assignment Info title -->
-                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>0 && data.value < amount-1">
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>0 && data.value <= amount">
                         <h2 class="titles pull-left" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
                         <h2 class="titles pull-right" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar"></i> Date &amp; Percentage</h2>
                     </div>
                     <!-- assignment information -->
-                    <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value>0 && data.value < amount-1">
-                        <app-information *ngIf="data.value>0 && data.value < amount-1" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [ui]="ui"></app-information>
+                    <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value>0 && data.value <= amount">
+                        <app-information *ngIf="data.value>0 && data.value <= amount" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [ui]="ui"></app-information>
                     </div>
 
                     <!-- due date image -->
-                    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>0 && data.value<amount-1">
+                    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>0 && data.value<= amount">
                         <app-custom-date [value]="data.value" [amount]="amount" [assignments]="assignments"></app-custom-date>
                     </div>
 
@@ -87,9 +87,9 @@
                     <app-custom *ngIf="data.value>0" [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-custom>
 
                     <!-- print area -->
-                    <div class="printArea" *ngIf="data.print==true">
+                    <div class="printArea" *ngIf="data.reviewArea == true">
                         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
-                            <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}">Review Information</h2></div>
+                            <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}">Review Information {{data.reviewArea}}</h2></div>
                         <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
                             <app-download [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert" [ui]="ui"></app-download>
                         </div>
