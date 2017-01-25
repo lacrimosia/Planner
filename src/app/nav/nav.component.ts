@@ -73,6 +73,7 @@ export class NavComponent implements OnInit {
   // go to link onclick
   goTo(i){
   	this.data.value = i;
+    console.log("value", this.data.value);
     if(this.data.value == this.assignments.length-1){
       this.printContent();
     }else{
@@ -137,4 +138,25 @@ currentColor(i){
     return this.ui.buttons.color;
   }
 }
+
+getCurrentColor(color, hover)
+{
+if(this.data.value == -1)
+{
+  return hover;
+}else{
+  return color;
+}
+}
+
+showReview()
+{
+  this.data.reviewArea = true;
+}
+
+goToStart()
+{
+  this.data.value = -1;
+}
+
 }

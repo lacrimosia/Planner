@@ -1,3 +1,44 @@
+<!--instructions -->
+<!-- Title and symbol -->
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value == -1">
+    <h2>{{ data?.instructions?.symbol }}) {{ data?.instructions?.title }}</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Settings </h3>
+        </div>
+        <div class="panel-body">
+
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==-1">
+                <h2 *ngIf="data.value==-1"><i class="fa fa-file-text"></i> Planner Information</h2>
+                <p *ngIf="data.value==-1"></p>
+
+                <div class="input-group" *ngIf="data.value==-1">
+                    <span class="input-group-addon">Planner Title: </span>
+                    <input type="text" class="form-control" placeholder="Enter Planner Title" [value]="appTitle" [(ngModel)]="appTitle" (ngModelChange)="data.course_title = $event" required>
+                </div>
+                <!--   <div class="input-group">
+                        <span class="input-group-addon">Symbol Letter: </span>
+                        <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol" [value]="Symbol" (ngModelChange)="c.symbol = $event" required>
+                    </div> -->
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==-1">
+                <h2 *ngIf="data.value==-1"><i class="fa fa-file-text"></i> Title and Instructions</h2>
+                    <p *ngIf="data.value==-1"></p>
+                    <div class="input-group">
+                        <span class="input-group-addon">Assignment title: </span>
+                        <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle" [value]="QuestionTitle" (ngModelChange)="data.instructions.title = $event" required>
+                    </div>
+                    <div class="input-group" *ngIf="data.value==-1">
+                        <span class="input-group-addon">Instructions: </span>
+                        <textarea type="text" class="form-control" placeholder="Enter Instructions" [(ngModel)]="Instructions" maxlength="300" [value]="Instructions" (ngModelChange)="data.instructions.instructions = $event" required></textarea>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- assignments -->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
         <h2>{{ getValue(i, c.symbol) }}) {{ c.title }}</h2>
@@ -6,76 +47,41 @@
                 <h3 class="panel-title"> Settings </h3>
             </div>
             <div class="panel-body">
-                <!-- Title and symbol -->
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" *ngIf="data.value==0">
-
-                <h2 *ngIf="data.value==0"><i class="fa fa-file-text"></i> Planner Information</h2>
-                <p *ngIf="data.value==0"></p>
-                    <div class="input-group" *ngIf="data.value==0">
-                        <span class="input-group-addon">Planner Title: </span>
-                        <input type="text" class="form-control" placeholder="Enter Planner Title"
-                         [value]="appTitle" [(ngModel)]="appTitle" (ngModelChange)="data.course_title = $event" required>
-                    </div>
-
-                    <div class="input-group">
-                        <span class="input-group-addon">Symbol Letter: </span>
-                        <input type="text" class="form-control" placeholder="Enter Symbol Here..." [(ngModel)]="Symbol" [value]="Symbol" (ngModelChange)="c.symbol = $event" required>
-                    </div>
-                </div>
-                
                 <!-- Instructions and assignments -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-
-                <h2 *ngIf="data.value>0"><i class="fa fa-file-text"></i> Assignment Information</h2>
-                <p *ngIf="data.value>0"></p>
-
-                <h2 *ngIf="data.value==0"><i class="fa fa-file-text"></i> Title and Instructions</h2>
-                <p *ngIf="data.value==0"></p>
-
-                    <div class="input-group" *ngIf="data.value==0">
-                        <span class="input-group-addon">Instructions: </span>
-                        <textarea type="text" class="form-control" placeholder="Enter Instructions" [(ngModel)]="Instructions" maxlength="300" [value]="Instructions" (ngModelChange)="assignments[0].instructions = $event" required></textarea>
-                    </div>
-
+                    <h2 *ngIf="data.value>=0"><i class="fa fa-file-text"></i> Assignment Information</h2>
+                    <p *ngIf="data.value>=0"></p>
+                    
                     <div class="input-group">
                         <span class="input-group-addon">Assignment title: </span>
                         <input type="text" class="form-control" placeholder="Enter Assignment Title" [(ngModel)]="QuestionTitle" [value]="QuestionTitle" (ngModelChange)="c.title = $event" required>
                     </div>
-
-                    <div class="input-group" *ngIf="data.value>0">
+                    <div class="input-group" *ngIf="data.value>=0">
                         <span class="input-group-addon">Assignment Information: </span>
                         <textarea type="text" class="form-control" placeholder="Enter Assignment Information" [(ngModel)]="asstInformation" [value]="asstInformation" maxlength="300" (ngModelChange)="c.instructions = $event" required></textarea>
                     </div>
-
                     <p></p>
-                    
                 </div>
-
                 <!-- Date and Percentage -->
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <h2 *ngIf="data.value>0"><i class="fa fa-pie-chart"></i> Date and Percentage</h2>
-                <p *ngIf="data.value>0"></p>
-
-                    <div class="input-group" *ngIf="data.value>0">
+                    <h2 *ngIf="data.value>=0"><i class="fa fa-pie-chart"></i> Date and Percentage</h2>
+                    <p *ngIf="data.value>=0"></p>
+                    <div class="input-group" *ngIf="data.value>=0">
                         <span class="input-group-addon">Month: </span>
                         <input type="text" class="form-control" placeholder="Enter Month" [(ngModel)]="Month" [value]="Month" (ngModelChange)="c.due_date[0].month = $event">
                     </div>
-
-                    <div class="input-group" *ngIf="data.value>0">
+                    <div class="input-group" *ngIf="data.value>=0">
                         <span class="input-group-addon">Day: </span>
                         <input type="text" class="form-control" placeholder="Enter Day" [(ngModel)]="Day" [value]="Day" (ngModelChange)="c.due_date[0].day = $event">
                     </div>
-
-                    <div class="input-group" *ngIf="data.value>0">
+                    <div class="input-group" *ngIf="data.value>=0">
                         <span class="input-group-addon">Percentage: </span>
                         <input type="text" class="form-control" placeholder="Enter Assignment Percentage" [(ngModel)]="Percentage" [value]="Percentage" (ngModelChange)="c.due_date[0].percentage = $event">
                     </div>
                     <p></p>
-
                 </div>
-
                 <!-- Add Task Area -->
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>0">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
                     <h2><i class="fa fa-tasks"></i> Add/Remove Tasks</h2>
                     <p></p>
                     <button class="btn btn-primary btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add Task</button>
@@ -87,9 +93,12 @@
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class="btn-group" role="group" aria-label="...">
+        <button type="button" [ngClass]="{'active': data.value == -1}" class="btn btn-default btn-lg" (click)="goToStart()">S</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="...">
         <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ i }}</button>
     </div>
-    <button type="button" class="btn btn-warning btn-lg" (click)="addNewSlide()" *ngIf="data.value>0 && data.value<=amount"><i class="fa fa-plus"></i> New Slide</button>
+    <button type="button" class="btn btn-warning btn-lg" (click)="addNewSlide()" *ngIf="data.value>=0"><i class="fa fa-plus"></i> New Slide</button>
     <button type="button" class="btn btn-primary btn-lg" (click)="addTask()" *ngIf="data.value>0">Save &amp; Generate</button>
     <p></p>
     <p></p>

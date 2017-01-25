@@ -35,6 +35,7 @@ Percentage: number;
   ngOnInit() {
   }
 
+
   ngDoCheck() {
 
   }
@@ -137,6 +138,11 @@ Percentage: number;
     this.assignments[i].due_date[0].month = this.Month;
     this.assignments[i].due_date[0].day = this.Day;
     this.assignments[i].due_date[0].percentage = this.Percentage;
+  }
+
+  goToStart()
+  {
+    this.data.value = -1;
   }
 
 }
