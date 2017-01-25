@@ -23,7 +23,7 @@ export class PreviousComponent implements OnInit {
 
   // Prev button
   prev(){
-    if(this.data.value > 0){
+    if(this.data.value >= -1){
       this.data.value--;
     }
 

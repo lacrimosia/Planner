@@ -82,9 +82,11 @@
                 </div>
                 <!-- Add Task Area -->
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
-                    <h2><i class="fa fa-tasks"></i> Add/Remove Tasks</h2>
+                    <h2><i class="fa fa-tasks"></i> New Slide/Tasks</h2>
                     <p></p>
-                    <button class="btn btn-primary btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add Task</button>
+                    <button type="button" class="btn btn-default btn-lg" (click)="addNewSlide()" *ngIf="data.value>=0"><i class="fa fa-plus"></i> New Assignment</button>
+                    <button class="btn btn-default btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add Task</button>
+                    <button type="button" class="btn btn-default btn-lg" (click)="removeSlide(data?.value)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
                 </div>
             </div>
         </div>
@@ -96,9 +98,9 @@
         <button type="button" [ngClass]="{'active': data.value == -1}" class="btn btn-default btn-lg" (click)="goToStart()">S</button>
     </div>
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ i }}</button>
+        <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">Task {{ i+1 }}</button>
     </div>
-    <button type="button" class="btn btn-warning btn-lg" (click)="addNewSlide()" *ngIf="data.value>=0"><i class="fa fa-plus"></i> New Slide</button>
+    
     <button type="button" class="btn btn-primary btn-lg" (click)="addTask()" *ngIf="data.value>0">Save &amp; Generate</button>
     <p></p>
     <p></p>

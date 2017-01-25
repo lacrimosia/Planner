@@ -130,6 +130,17 @@ Percentage: number;
      this.data.assignments.push(data);
   }
 
+  removeSlide(i)
+  {  
+        if(i==this.data.assignments.length-1)
+        {
+          // this.data.assignments.pop();
+        }else
+        {
+          this.data.assignments.splice(i, 1);
+        }
+  }
+
   addInfo(i){
     this.assignments[i].instructions = this.asstInformation;
   }
