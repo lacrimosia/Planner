@@ -26,9 +26,9 @@ tasksAmount: number = 0;
 OneTaskTitle: string;
 name:any = "Name here";
 asstInformation: string;
-Month: number;
-Day: number;
-Percentage: number;
+Month: any;
+Day: any;
+Percentage: any;
 
   constructor(private dataService: DataService, private _add: AddTaskService) { }
 
@@ -50,6 +50,7 @@ Percentage: number;
 
   goToQ(n){
   	this.data.value = n;
+    this.clearFields();
   	if(n==this.amount-1){
   		this.data.print = true;
   	}else{
@@ -134,7 +135,10 @@ Percentage: number;
   {  
         if(i==this.data.assignments.length-1)
         {
-          // this.data.assignments.pop();
+          if(this.data.assignments[i] == undefined)
+          {
+            this.data.assignments.splice(i, 1);
+          }
         }else
         {
           this.data.assignments.splice(i, 1);
@@ -154,6 +158,17 @@ Percentage: number;
   goToStart()
   {
     this.data.value = -1;
+  }
+
+  clearFields()
+  {
+    this.appTitle = " ";
+    this.QuestionTitle = " ";
+    this.Instructions = "";
+    this.asstInformation = "";
+    this.Month = "";
+    this.Day = " ";
+    this.Percentage = "";
   }
 
 }

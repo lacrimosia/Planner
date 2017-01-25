@@ -42,5 +42,16 @@ export class ProgressComponent implements OnInit {
     console.log("running", this.counter);
     return Math.round(this.counter * 14.28);
   }  
+
+ getTotal(arr){
+    this.total = 0;
+    for(var i=0; i<arr.length-1; i++){
+      if(arr[i].tasks.length > 1){
+        this.total++;
+      }
+    }
+   // console.log("total", this.total);
+    return this.total;
+  }
 }
 
