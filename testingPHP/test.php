@@ -18,7 +18,7 @@ $title = json_encode($request->course_title);
 $query = "CREATE TABLE IF NOT EXISTS plannerTitle (id INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(50) NOT NULL, date DATETIME)";
 
 // insert the names into the the table
-$insertName = "INSERT INTO plannerTitle (title) VALUES ($title)";
+$insertName = "UPDATE plannerTitle SET title=$title WHERE id=6";
 
 // Perform queries
 // check if query was successful

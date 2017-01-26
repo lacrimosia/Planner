@@ -69,7 +69,7 @@ Percentage: any;
   }
 
   addTask(){
-   this.dataService.sendData(this.data)
+  this.dataService.sendData(this.data)
      .subscribe(
          data => {
            console.log('the data', data);
@@ -95,7 +95,7 @@ Percentage: any;
   addNewSlide(){
     let data = {
         "type": "task",
-        "title": "Assignment Text",
+        "title": "Assignment Title",
         "symbol": 1,
         "q": true,
         "t": true,
@@ -119,8 +119,8 @@ Percentage: any;
         "selected": 0,
         "tasks": [
             {
-                "name": "This Assignment",
-                "title": "Assignment Title 1",
+                "name": "Task",
+                "title": "Assignment Title",
                 "information": "Burgdoggen ribeye picanha ham hock, pastrami strip steak shank shankle doner filet mignon pork. Jowl strip steak porchetta pastrami. Beef short ribs tenderloin turkey. Pancetta ham hock frankfurter pork pastrami.",
                 "select": true,
                 "symbol": 2

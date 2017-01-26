@@ -30,7 +30,7 @@ public value: number;
   }
 
   getDBData(){
-  	let url = "http://localhost/testingPHP/test.php";
+  	let url = "http://localhost/customPlanner/testingPHP/get.php";
   	return this.http.get(url)
   	       .map((res:Response) => res.json());
   }
