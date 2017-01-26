@@ -35,7 +35,7 @@ export class MenuComponent implements OnInit {
             return false; // Prevent bubbling
     }));
 
-   this.getTitle();
+   // this.getTitle();
   }
 
   // reload function
