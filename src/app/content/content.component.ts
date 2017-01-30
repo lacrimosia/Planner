@@ -68,7 +68,8 @@ Percentage: any;
     return name;
   }
 
-  addTask(){
+// Save all data and overwrite json file
+  saveToFile(){
   this.dataService.sendData(this.data)
      .subscribe(
          data => {

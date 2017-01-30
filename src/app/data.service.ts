@@ -18,7 +18,7 @@ public value: number;
   }
 
   sendData(data): Observable<Object>{
-  	 let url = "http://localhost/customPlanner/testingPHP/test.php";
+  	 let url = "http://localhost/customPlanner/server/update.php";
   	 let encoded_data = JSON.stringify(data);
   	  // console.log('encoded', encoded_data);
         let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' });
