@@ -13,4 +13,4 @@ $data = json_decode($dataFromForm);
 $json = json_encode($data);
 
 // write this updated data into a file
-file_put_contents('../src/assets/data.json', $json);
+file_put_contents('../assets/data.json', $json);
