@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChartModule } from 'angular2-highcharts';
+import { PlannerRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
@@ -33,6 +34,8 @@ import { CustomDateComponent } from './custom-date/custom-date.component';
 import { ProgressComponent } from './progress/progress.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
+import { AdminComponent } from './admin/admin.component';
+import { LiveComponent } from './live/live.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +64,9 @@ import { ContentComponent } from './content/content.component';
     CustomDateComponent,
     ProgressComponent,
     ToolbarComponent,
-    ContentComponent
+    ContentComponent,
+    AdminComponent,
+    LiveComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +74,7 @@ import { ContentComponent } from './content/content.component';
     HttpModule,
     HotkeyModule,
     NgbModule.forRoot(),
+    PlannerRoutingModule,
     JsonpModule,
     ChartModule
   ],

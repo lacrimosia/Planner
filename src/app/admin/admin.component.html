@@ -1,0 +1,118 @@
+<app-toolbar [ui]="ui" [assignments]="assignments" [data]="data" [amount]="amount"></app-toolbar>
+
+
+<!-- main app component -->
+<div class="container">
+    <div class="row">
+    
+    <!-- testing the post request 
+    <button class="btn btn-primary btn-lg" (click)="postData()">Post Title</button>
+    <h1> Output: {{ postRequest }}</h1> -->
+        <!-- top menu -->
+
+        <div class="container">
+            <div class="row">
+                <app-menu [data]="data" [courseName]="data.course_title" [ui]="ui"></app-menu>
+            </div>
+        </div>
+        <!-- heading with symbol and title -->
+        <div class="titleArea container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 topHeadingArea">
+                    <app-heading [data]="data" [assignments]="assignments" [value]="value" [amount]="amount" [ui]="ui"></app-heading>
+                </div>
+            </div>
+        </div>
+        <!--error message-->
+        <app-error [data]="data" [assignments]="assignments" [amount]="amount"></app-error>
+        <!--	<app-title [data]="data" [assignments]="assignments" [amount]="amount"></app-title>-->
+        <!-- save button -->
+        <!-- when print is saved -->
+        <app-saved [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-saved>
+        <!-- the tasks  and instructions Area -->
+        <div class="workArea container" [ngStyle]="{'background-image': 'url(' + ui?.image?.url + ')'}">
+            <!-- title of the interactive -->
+            <div class="row">
+                <!-- added to center div-->
+                <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
+                    <!-- previous button -->
+                    <app-previous [data]="data" [assignments]="assignments" [ui]="ui"></app-previous>
+                </div>
+                <div class="animated fadeIn box col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                    <!--instructions -->
+                    <h3 class="animated fadeIn activityTitle" *ngIf="data.value==-1" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
+                    <app-instructions *ngIf="data.value==-1" [data]="data" [instructions]="instructions" [ui]="ui" [assignments]="assignments"></app-instructions>
+                    <!-- assignment Info title -->
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>=0">
+                        <h2 class="titles pull-left" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
+                        <h2 class="titles pull-right" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar"></i> Date &amp; Percentage</h2>
+                    </div>
+                    <!-- assignment information -->
+                    <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value>=0">
+                        <app-information [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [ui]="ui"></app-information>
+                    </div>
+
+                    <!-- due date image -->
+                    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>=0">
+                        <app-custom-date [value]="data.value" [amount]="amount" [assignments]="assignments"></app-custom-date>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
+                    	<h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-pie-chart"></i> Assignment Progress</h2>
+                    	<p><app-progress [data]="data" [value]="value" [amount]="amount" [assignments]="assignments" [ui]="ui" ></app-progress></p>
+                    </div>
+
+                    <!-- calendar button
+						<div class="col-md-3 visible-md visible-lg col-lg-3 " *ngIf="data.value>0 && data.value < amount-1">
+							<button class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal"> <i class="fa fa-calendar"></i> Add to Calendar</button>
+						</div> -->
+                    <div class="col-sm-3 col-xs-3 visible-sm visible-xs" *ngIf="data.value>=0">
+                        <!-- previous button -->
+                        <app-previous [data]="data" [assignments]="assignments" [ui]="ui"></app-previous>
+                        <!-- next button -->
+                        <app-next [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-next>
+                    </div>
+                    <!-- one task 
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <app-one-task [data]="data" *ngIf="data.value>0" [assignments]="assignments" [ui]="ui"></app-one-task>
+                    </div> -->
+
+                    <!-- Multi tasks -->
+                    <app-multi-tasks [data]="data" [ui]="ui" *ngIf="data.value>=0" [assignments]="assignments"></app-multi-tasks>
+
+                    <!-- custom tasks -->
+                    <app-custom *ngIf="data.value>=0" [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-custom>
+
+                    <!-- print area 
+                    <div class="printArea" *ngIf="data.value == amount+1">
+                        <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                            <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}">Review Information {{data.reviewArea}}</h2></div>
+                        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+                            <app-download [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert" [ui]="ui"></app-download>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" [ngStyle]="{'color': ui?.text?.color}">
+                            <p> {{ data.review_instructions }} </p>
+                        </div>
+                        <hr/>
+                        <ul class="print col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <app-print [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-print>
+                        </ul>
+                    </div>-->
+                </div>
+                <div class="col-md-1 col-lg-1 hidden-sm hidden-xs">
+                    <!-- next button -->
+                    <app-next [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-next>
+                </div>
+            </div>
+        </div>
+        <!-- bottom nav bar and tooltips -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 navArea" [ngStyle]="{'background': ui?.colors?.first}">
+                    <app-nav [d]="d" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [ui]="ui" (valueChanged)="value = $event"></app-nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
