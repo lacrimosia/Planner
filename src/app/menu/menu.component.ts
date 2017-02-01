@@ -18,7 +18,6 @@ export class MenuComponent implements OnInit {
   @Input() courseName;
   @Input() ui;
   closeResult: string;
-  title: string;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private modalService: NgbModal) { }
 
@@ -75,19 +74,6 @@ export class MenuComponent implements OnInit {
     }else if(type=="collaborative"){
       return this.ui.colors.first;
     }
-  }
-
-  getTitle()
-  {
-    this.dataService.getDBData()
-    .subscribe(
-      data => {
-        this.title = data;
-      },
-      err => console.log("Error in get: " + err),
-      () => console.log("Received data successfully")
-    );
-
   }
 
 }

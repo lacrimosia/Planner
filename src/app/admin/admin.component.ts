@@ -34,7 +34,7 @@ export class AdminComponent implements OnInit {
 
  ngOnInit() {
 
-   this.data = this.dataService.getData()
+   this.data = this.dataService.getData('assets/admin.json')
      .subscribe(
         data => {
          this.data = data;

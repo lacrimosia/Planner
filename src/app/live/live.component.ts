@@ -33,7 +33,7 @@ export class LiveComponent implements OnInit {
 
  ngOnInit() {
 
-   this.data = this.dataService.getData()
+   this.data = this.dataService.getData('assets/live.json')
      .subscribe(
         data => {
          this.data = data;
@@ -44,6 +44,7 @@ export class LiveComponent implements OnInit {
          this.showCalendar = this.data.showCalendar;
          this.taskLimit = this.data.totalTasks;
          this.ui = this.data.style;
+         this.data.value = -1; // set live version to instructions
          // console.log("the data alert", this.ui.image.url);
         },
         err => console.error(err),

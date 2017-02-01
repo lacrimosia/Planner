@@ -12,14 +12,14 @@ public value: number;
     this.value = 0;
   }
 
-  getData() {
-  	 return this.http.get('assets/data.json')
+  getData(data) {
+  	 return this.http.get(data)
   	       .map((res:Response) => res.json());
   }
 
   sendData(data): Observable<Object>{
-    // let url = "http://localhost/customPlanner/server/update.php";
-  	 let url = "http://courses.online.unlv.edu/courses/URST/planner/server/update.php";
+     let url = "http://localhost/customPlanner/server/update.php";
+  	// let url = "http://courses.online.unlv.edu/courses/URST/planner/server/update.php";
   	 let encoded_data = JSON.stringify(data);
   	  // console.log('encoded', encoded_data);
         let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' });
@@ -28,12 +28,6 @@ public value: number;
         return this.http.post(url, encoded_data).map(
             (res: Response) => res.json()
         );
-  }
-
-  getDBData(){
-  	let url = "http://localhost/customPlanner/testingPHP/get.php";
-  	return this.http.get(url)
-  	       .map((res:Response) => res.json());
   }
 
 }
