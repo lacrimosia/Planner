@@ -497,8 +497,9 @@ ul li{
 	font-family: subHeadings !important;
 }
 
-.day h2, .percent h2{
+.day h2, .circ h2{
 	font-family: Headings !important;
+	color: $white !important;
 }
 
 // progress bar

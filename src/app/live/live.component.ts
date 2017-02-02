@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { DataService} from '../data.service';
 import { RequestService} from '../request.service';
@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./live.component.scss'],
   providers: [DataService, HotkeysService, RequestService]
 })
-export class LiveComponent implements OnInit {
+export class LiveComponent implements OnInit, OnChanges {
  data:any;
  amount:number;
  assignments: any;
@@ -29,6 +29,11 @@ export class LiveComponent implements OnInit {
  ui: any;
 
  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private http: Http, private requestService: RequestService){
+ }
+
+ ngOnChanges()
+ {
+   this.reloadPage();
  }
 
  ngOnInit() {
@@ -73,6 +78,11 @@ export class LiveComponent implements OnInit {
         error => console.log('There is an error: ' + error),
         () => console.log("Completed Post Request!")
       );
+  }
+
+  reloadPage()
+  {
+    location.reload();
   }
 
 }

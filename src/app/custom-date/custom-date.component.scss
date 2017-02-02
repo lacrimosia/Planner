@@ -1,65 +1,37 @@
-.dateArea{
-  width: 100%;
+.circ
+{
+  border-radius: 50%;
+  width: 100px;
   height: 100px;
-  position: relative;
-}
-
-.imageSize{
-	width: 100%;
-	height: auto;
-  position: relative;
-  top: 0px;
-  left: 0px;
-	//top: -40px;
-}
-
-.month{
-  position: absolute;
-  width: 39%;
-  height: 25px;
-  padding: 0px;
-  z-index: 40;
-  top: -13px;
-}
-
-.month h3{
+  background: linear-gradient(#655 40%, yellowgreen 0);
+  color: transparent;
   text-align: center;
-  font-size: 100%;
-  font-weight: bold !important;
-  color: #ffffff;
 }
 
-.day{
+@keyframes spin {
+  to { transform: rotate(.5turn); }
+}
+@keyframes bg {
+  50% { background: #655; }
+}
+
+.circ::before
+{
+  content: '';
   position: absolute;
-  width: 34%;
-  height: 50px;
-  padding: 0px;
-  z-index: 40;
-  top: 26px;
-  left: 8px;
+  top: 0; left: 50%;
+  width: 50%; height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+  animation: spin 50s linear infinite,
+             bg 100s step-end infinite;
+  animation-play-state: paused;
+  animation-delay: inherit;
 }
 
-.day h2{
+.circ h2
+{
   text-align: center;
-  font-size: 300%;
-  color: #ffffff;
-  margin-top: 2px;
-}
-
-.percent{
-  position: absolute;
-  width: 37%;
-  height: 50px;
-  padding: 0px;
-  z-index: 40;
-  top: 45px;
-  left: 100px;
- // border: 1px solid red;
-}
-
-.percent h2{
-  text-align: center;
-  font-size: 230%;
-  color: #ffffff;
-  margin-top: 2px;
+  padding: 33% 30% 30% 20%;
 }

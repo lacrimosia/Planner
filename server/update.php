@@ -9,8 +9,8 @@ $dataFromAdmin = file_get_contents("php://input");
 // decode it
 $data = json_decode($dataFromAdmin);
 
-//$file = "../assets/live.json";  // server version
-$file = "../src/assets/live.json"; // localhost version
+$file = "../assets/live.json";  // server version
+//$file = "../src/assets/live.json"; // localhost version
 
 $fp = fopen($file, 'w') or die("cannot open file");
 $json = json_encode($data); // encode the settings into json

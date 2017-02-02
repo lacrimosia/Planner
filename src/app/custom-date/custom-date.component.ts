@@ -15,7 +15,7 @@ export class CustomDateComponent implements OnInit {
   @Input() value;
   @Input() amount;
   @Input() assignments;
-  // @Input() d;
+  @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
   }
