@@ -53,11 +53,8 @@ printPdf()
 
   doc.setFontSize(20);
   doc.text(20, 50, this.data.course_title);
-  let p = 0;
-while(p<21)
-{
     // each entry for page
-   for(x=p; x<amount-(p+1); x++){
+   for(x=0; x<amount-1; x++){
       doc.setFontSize(16);
       let startingPointVal = ((x+1)*start);
 
@@ -97,11 +94,7 @@ while(p<21)
     doc.setTextColor(77,77,77);
     doc.text(60, (startingPointVal + 40), splitTitle);
     } 
-    p+=5;
-    doc.addPage();
-  }
-
-    doc.save('Course_Planner.pdf');
+    //doc.save('Course_Planner.pdf');
   }
   
 }
