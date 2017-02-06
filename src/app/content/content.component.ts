@@ -68,18 +68,6 @@ Percentage: any;
     return name;
   }
 
-// Save all data and overwrite json file
-  saveToFile(){
-  this.dataService.sendData(this.data)
-     .subscribe(
-         data => {
-           console.log('the data', data);
-         },
-         (err) => console.log('Error: ', err),
-         () => console.log("data success!!")
-       );
-  }
-
   addTasksToPlanner(i){
     let data = {
                 name: "Mock Assignment",
@@ -129,7 +117,7 @@ Percentage: any;
         ]
     };
 
-     this.data.assignments.push(data);
+     this.assignments.splice(this.amount-2, 0, data);
   }
 
   removeSlide(i)
@@ -170,6 +158,17 @@ Percentage: any;
     this.Month = "";
     this.Day = " ";
     this.Percentage = "";
+  }
+
+  changeName(i)
+  {
+    if(i==this.amount-1)
+    {
+      return 'Review';
+    }else
+    {
+      return "Task " + parseInt(i+1);
+    }
   }
 
 }

@@ -1,8 +1,3 @@
-<!-- save button -->
-<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-    <p></p>
-    <button type="button" class="btn btn-default btn-lg pull-right" (click)="saveToFile()" *ngIf="data.value>=-1">Save &amp; Generate</button>
-</div>
 <!--instructions -->
 <!-- Title and symbol -->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value == -1">
@@ -40,6 +35,7 @@
     </div>
 </div>
 <!-- assignments -->
+<div *ngIf="data.value<amount-1">
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
         <h2>{{ i+1 }}) {{ c.title }}</h2>
@@ -91,6 +87,7 @@
             </div>
         </div>
     </div>
+    </div>
 </div>
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -100,10 +97,7 @@
                 <button type="button" [ngClass]="{'active': data.value == -1}" class="btn btn-default btn-lg" (click)="goToStart()">Starting Page</button>
             </div>
             <div class="btn-group" role="group" aria-label="...">
-                <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">Task {{ i+1 }}</button>
-            </div>
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" [ngClass]="{'active': data.value == -1}" class="btn btn-default btn-lg" (click)="goToStart()">Review Page</button>
+                <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ changeName(i) }}</button>
             </div>
         </div>
     </div>

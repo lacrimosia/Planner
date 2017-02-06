@@ -30,23 +30,6 @@ export class ToolbarComponent implements OnInit {
 
   }
 
-
- /* getMonoColorPalette(obj){
-    let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
-    let getColors = tinycolor('#' + userColor).monochromatic();
-    this.monoColors = getColors.map(function(t) { return t.toHexString(); });
-   // console.log(monoColors);
-    this.ui.colors.first = this.monoColors[1];
-    this.ui.colors.second = this.monoColors[0];
-    this.ui.colors.third = this.monoColors[4];
-    this.ui.colors.fourth = this.monoColors[3];
-    this.ui.buttons.color = this.monoColors[4];
-    this.ui.buttons.hover = tinycolor(this.monoColors[3]).darken(3).toString();
-    this.ui.symbol.color = tinycolor(this.monoColors[0]).lighten(100).toString();
-    this.ui.text.color = tinycolor(this.monoColors[4]).greyscale().toString();
-    this.ui.subheadings.color = tinycolor(this.monoColors[4]).darken(50).toString();
-  }*/
-
   getAnalogousColorPalette(obj){
     let userColor = (<HTMLInputElement>document.getElementById(obj)).value;
     let getColors = tinycolor('#' + userColor).monochromatic();
@@ -121,5 +104,17 @@ export class ToolbarComponent implements OnInit {
   changeHeadingsColor(obj){
     let headingColor = (<HTMLInputElement>document.getElementById(obj)).value;
     this.ui.heading.color = "#" + headingColor;
+  }
+
+  // Save all data and overwrite json file
+  saveToFile(){
+  this.dataService.sendData(this.data)
+     .subscribe(
+         data => {
+           console.log('the data', data);
+         },
+         (err) => console.log('Error: ', err),
+         () => console.log("data success!!")
+       );
   }
 }

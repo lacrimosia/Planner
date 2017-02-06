@@ -149,10 +149,16 @@ if(this.data.value == -1)
 }
 }
 
-showReview()
+changeName(i)
 {
-  this.data.reviewArea = true;
-}
+    if(i==this.amount-1)
+    {
+      return 'R';
+    }else
+    {
+      return i+1;
+    }
+ }
 
 goToStart()
 {
