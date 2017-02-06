@@ -37,22 +37,27 @@ export class DownloadComponent implements OnInit {
     }));
   }
 
-printPdf(){
-    let doc = new jsPDF('portrait','pt','a4');
-    let data = this.assignments;
-    let info = this.data;
-    let amount = this.amount;
-    // let start = 130;
-    let start = 100;
-    let textWidth = 700;
-    let imageThumb = 40;
-    let splitTitle, optionName;
+printPdf()
+{
+  let doc = new jsPDF('portrait','pt','a4');
+  let data = this.assignments;
+  let info = this.data;
+  let amount = this.amount;
+  // let start = 130;
+  let pageHeight = doc.internal.pageSize.height;
+  let start = 100;
+  let textWidth = 700;
+  let imageThumb = 40;
+  let splitTitle, optionName;
+  let x = 0;
 
-    doc.setFontSize(20);
-    doc.text(20, 50, this.data.course_title);
-
-  // pages
-   for(let x=0; x<amount-1; x++){
+  doc.setFontSize(20);
+  doc.text(20, 50, this.data.course_title);
+  let p = 0;
+while(p<21)
+{
+    // each entry for page
+   for(x=p; x<amount-(p+1); x++){
       doc.setFontSize(16);
       let startingPointVal = ((x+1)*start);
 
@@ -91,15 +96,12 @@ printPdf(){
     doc.setFontSize(10);
     doc.setTextColor(77,77,77);
     doc.text(60, (startingPointVal + 40), splitTitle);
+    } 
+    p+=5;
+    doc.addPage();
+  }
 
-    if(x % 5 == 0)
-    {
-      doc.addPage();
-    }
-
-    }
-    
     doc.save('Course_Planner.pdf');
-}
-
+  }
+  
 }
