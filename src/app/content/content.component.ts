@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, DoCheck} from '@angular/core';
+import { Component, OnInit, Input, Output, AfterViewChecked} from '@angular/core';
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { DataService} from '../data.service';
 import { AddTaskService } from '../add-task.service';
@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./content.component.scss'],
   providers: [DataService, AddTaskService]
 })
-export class ContentComponent implements OnInit, DoCheck {
+export class ContentComponent implements OnInit, AfterViewChecked{
 
 @Input() ui;
 @Input() assignments;
@@ -29,17 +29,22 @@ asstInformation: string;
 Month: any;
 Day: any;
 Percentage: any;
+MAX: number = 15;
+showAdd: boolean = true;
 
   constructor(private dataService: DataService, private _add: AddTaskService) { }
 
   ngOnInit() {
+   
   }
 
-
-  ngDoCheck() {
-
+  ngAfterViewChecked()
+  {
+    if(this.amount-2 == this.MAX)
+    {
+      this.showAdd = false;
+    }
   }
-
 
   changeIntroduction(i){
       this.data.course_title = this.appTitle;
@@ -81,7 +86,7 @@ Percentage: any;
      //console.log("tasks", this.data.assignments[i]);
   }
 
-  addNewSlide(){
+addNewSlide(i){
     let data = {
         "type": "task",
         "title": "Assignment Title",
@@ -117,21 +122,12 @@ Percentage: any;
         ]
     };
 
-     this.assignments.splice(this.amount-2, 0, data);
+    this.assignments.splice(i, 0, data); 
   }
 
   removeSlide(i)
   {  
-        if(i==this.data.assignments.length-1)
-        {
-          if(this.data.assignments[i] == undefined)
-          {
-            this.data.assignments.splice(i, 1);
-          }
-        }else
-        {
-          this.data.assignments.splice(i, 1);
-        }
+    this.assignments.splice(i, 1);
   }
 
   addInfo(i){

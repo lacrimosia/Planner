@@ -80,9 +80,9 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
                     <h2><i class="fa fa-tasks"></i> New Slide/Tasks</h2>
                     <p></p>
-                    <button type="button" class="btn btn-default btn-lg" (click)="addNewSlide()" *ngIf="data.value>=0"><i class="fa fa-plus"></i> New Assignment</button>
+                    <button type="button" class="btn btn-default btn-lg" (click)="addNewSlide(i)" *ngIf="data.value>=0 && showAdd == true"><i class="fa fa-plus"></i> New Assignment</button>
                     <button class="btn btn-default btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add Task</button>
-                    <button type="button" class="btn btn-default btn-lg" (click)="removeSlide(data?.value)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
+                    <button type="button" class="btn btn-default btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
                 </div>
             </div>
         </div>

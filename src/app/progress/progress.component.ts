@@ -30,26 +30,37 @@ export class ProgressComponent implements OnInit {
 // keeps track of progress
   progress(){
     this.counter = this.data.progress;
-
-    for(var i=1; i<this.amount-1; i++)
+    if(this.assignments[i])
     {
-      if(this.assignments[i].tasks.length == 1)
+    if(this.assignments[i].tasks)
+    {
+      for(var i=1; i<this.amount-1; i++)
       {
-          
+        if(this.assignments[i].tasks.length == 1)
+        {
           this.counter++;
-      }
+        }
+      
     }
+  }
     console.log("running", this.counter);
     return Math.round(this.counter * 14.28);
-  }  
+  } 
+ } 
 
- getTotal(arr){
-    this.total = 0;
+getTotal(arr){
+ this.total = 0;
+if(arr[i])
+{
+  if(arr[i].tasks)
+  {  
     for(var i=0; i<arr.length-1; i++){
       if(arr[i].tasks.length > 1){
         this.total++;
       }
     }
+  }
+}
    // console.log("total", this.total);
     return this.total;
   }
