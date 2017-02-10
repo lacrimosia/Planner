@@ -4,5 +4,5 @@
 		<div class="progress-bar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount" [ngStyle]="{'width': progress()+'%', 'background': ui?.colors?.first}" >
 		</div>
 </div>
-<span class="circleArea" [ngStyle]="{'left': ((progress()/2.6)+ 5)+'%', 'transition': 'left 0.3s', 'background': ui?.buttons?.hover}" *ngIf="i==data.value"> {{ counter }}  / {{ getTotal(data?.assignments) }} </span>
+<span class="circleArea" [ngStyle]="{'left': ((progress()/2.6)+ 5)+'%', 'transition': 'left 0.3s', 'background': ui?.buttons?.hover}" *ngIf="i==data.value"> {{ counter }}  / {{ total }} </span>
 </div>

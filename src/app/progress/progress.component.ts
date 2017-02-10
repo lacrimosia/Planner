@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
@@ -12,8 +12,8 @@ import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 })
 export class ProgressComponent implements OnInit {
 
-	@Input() data;
-	@Input() assignments;
+	  @Input() data;
+	  @Input() assignments;
   	@Input() amount;
   	@Input() value;
   	@Input() total;
@@ -25,6 +25,11 @@ export class ProgressComponent implements OnInit {
 
   ngOnInit() {
   	// this.getTotal();
+  }
+
+  ngAfterViewChecked()
+  {
+    this.total = this.amount-1;
   }
 
 // keeps track of progress
@@ -43,26 +48,9 @@ export class ProgressComponent implements OnInit {
       
     }
   }
-    console.log("running", this.counter);
-    return Math.round(this.counter * 14.28);
+   // console.log("running", this.counter);
+    return Math.round(this.counter * 20);
   } 
  } 
-
-getTotal(arr){
- this.total = 0;
-if(arr[i])
-{
-  if(arr[i].tasks)
-  {  
-    for(var i=0; i<arr.length-1; i++){
-      if(arr[i].tasks.length > 1){
-        this.total++;
-      }
-    }
-  }
-}
-   // console.log("total", this.total);
-    return this.total;
-  }
 }
 
