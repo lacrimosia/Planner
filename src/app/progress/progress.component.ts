@@ -22,7 +22,6 @@ export class ProgressComponent implements OnInit {
     @Input() ui;
 
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
-
   ngOnInit() {
   	// this.getTotal();
   }
@@ -45,7 +44,6 @@ export class ProgressComponent implements OnInit {
         {
           this.counter++;
         }
-      
     }
   }
    // console.log("running", this.counter);
