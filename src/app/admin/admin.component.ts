@@ -38,8 +38,8 @@ export class AdminComponent implements OnInit {
      .subscribe(
         data => {
          this.data = data;
-         this.amount = this.data.assignments.length;
          this.assignments = this.data.assignments;
+         this.amount = this.data.assignments.length;
          this.alert = this.data.alert;
          this.instructions = this.assignments[0].instructions;
          this.showCalendar = this.data.showCalendar;
