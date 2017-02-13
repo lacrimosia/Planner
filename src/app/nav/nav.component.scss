@@ -4,17 +4,19 @@ b {
 }
 
 .list{
-  text-align: center;
+  // text-align: center;
 }
 
 .buttonList{
-  padding: 1%;
+  width: 100%;
+ // border: 1px solid red;
+  text-align: center;
 }
 
 .numButtons {
    // float: left;
    display: inline;
-    margin-right: 5%;
+    // margin-right: 5%;
     z-index: 1000;
    // margin: 7px 15px 0px 0px;
 }
@@ -51,7 +53,7 @@ b {
 
 
 button{
-	float: right;
+//	float: right;
 //	margin: 7px 15px 0px 0px;
 }
 
