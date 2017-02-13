@@ -151,7 +151,7 @@ if(this.data.value == -1)
 
 changeName(i)
 {
-    if(i==this.amount-1)
+    if(i==this.data.assignments.length-1)
     {
       return 'R';
     }else

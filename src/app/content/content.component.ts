@@ -65,7 +65,7 @@ showAdd: boolean = true;
 
   getValue(i, symbol){
   	let name = 0;
-    if(i==0 || i==this.amount-1){
+    if(i==0 || i==this.data.assignments.length-1){
       name = symbol;
     }else{
       name = i;
@@ -158,7 +158,7 @@ addNewSlide(i){
 
   changeName(i)
   {
-    if(i==this.amount-1)
+    if(i==this.data.assignments.length-1)
     {
       return 'Review';
     }else
