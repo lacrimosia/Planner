@@ -1,8 +1,8 @@
 <!-- progress bar on each question -->
 <div class="progression" *ngFor="let d of assignments; let i = index">
 <div class="progress" *ngIf="i==data.value">
-		<div class="progress-bar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount-2" [ngStyle]="{'width': progress()+'%', 'background': ui?.colors?.first}" >
+		<div class="progress-bar" aria-valuenow="progress()" aria-valuemin="0" aria-valuemax="amount-2" [ngStyle]="{'width': Math.round((data.progress/getTotal())*100+5)+'%', 'background': ui?.colors?.first}" >
 		</div>
 </div>
-<span class="circleArea" [ngStyle]="{'left': progress()+'%', 'transition': 'left 0.3s', 'background': ui?.buttons?.hover}" *ngIf="i==data.value"> {{ counter }}  / {{ total }} </span>
+<span class="circleArea" [ngStyle]="{'left': Math.round(((data.progress/getTotal())*100)/2)+'%', 'transition': 'left 0.3s', 'background': ui?.buttons?.hover}" *ngIf="i==data.value"> {{ Math.round((data.progress/getTotal())*100) }}% </span>
 </div>

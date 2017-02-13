@@ -10,7 +10,7 @@ import {HotkeysService, Hotkey} from 'angular2-hotkeys';
   styleUrls: ['./progress.component.scss'],
   providers: [DataService, HotkeysService]
 })
-export class ProgressComponent implements OnInit {
+export class ProgressComponent implements OnInit, AfterViewChecked {
 
 	  @Input() data;
 	  @Input() assignments;
@@ -18,22 +18,31 @@ export class ProgressComponent implements OnInit {
   	@Input() value;
   	@Input() total;
   	count:number = 0;
-  	counter:number = 0;
     @Input() ui;
+    Math:any;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) {
+    this.Math = Math;
+   }
+
   ngOnInit() {
   	// this.getTotal();
+
   }
 
   ngAfterViewChecked()
   {
-    this.total = this.amount-1;
+   // this.total = this.amount-1;
+  }
+
+  getTotal()
+  {
+    this.total = this.assignments.length - 1;
+    return this.total;
   }
 
 // keeps track of progress
   progress(){
-    this.counter = this.data.progress;
     if(this.assignments[i])
     {
     if(this.assignments[i].tasks)
@@ -42,12 +51,13 @@ export class ProgressComponent implements OnInit {
       {
         if(this.assignments[i].tasks.length == 1)
         {
-          this.counter++;
+          this.data.progress++;
         }
     }
+    return this.data.progress;
   }
    // console.log("running", this.counter);
-    return Math.round(this.counter * 20);
+    
   } 
  } 
 }
