@@ -92,6 +92,10 @@
                     <button class="btn btn-default btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add New Task</button>
                     <button type="button" class="btn btn-default btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
                 </div>
+                <!-- add and edit task area -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <app-input-tasks [c]="c" [i]="i" [data]="data" [arr]="c.tasks"></app-input-tasks>
+                </div>
             </div>
         </div>
     </div>

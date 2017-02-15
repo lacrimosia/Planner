@@ -37,6 +37,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
 import { AdminComponent } from './admin/admin.component';
 import { LiveComponent } from './live/live.component';
+import { InputTasksComponent } from './input-tasks/input-tasks.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { LiveComponent } from './live/live.component';
     ToolbarComponent,
     ContentComponent,
     AdminComponent,
-    LiveComponent
+    LiveComponent,
+    InputTasksComponent
   ],
   imports: [
     BrowserModule,
