@@ -1,4 +1,4 @@
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 comp" *ngFor="let z of data?.competencies; let r = index"> 
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 comp" *ngFor="let z of data?.competencies; let r = index"> 
   <div class="checkbox">
     <label>
       <input type="checkbox" [(ngModel)]="z.selected" (ngModelChange)="!z.selected = $event"> <strong>{{ z.letter }}</strong> 

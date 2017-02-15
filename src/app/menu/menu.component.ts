@@ -4,7 +4,6 @@ import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
 import {HotkeysService, Hotkey} from 'angular2-hotkeys';
 import { CourseNameComponent } from '../course-name/course-name.component';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-menu',
@@ -19,7 +18,7 @@ export class MenuComponent implements OnInit {
   @Input() ui;
   closeResult: string;
 
-  constructor(private dataService: DataService, private _hotkeysService: HotkeysService, private modalService: NgbModal) { }
+  constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
     // help keyboard shortcut
@@ -47,24 +46,6 @@ export class MenuComponent implements OnInit {
       this.data.value = 0;
       this.data.print = false;
     }
-
-open(content) {
-    this.modalService.open(content).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
 
   colorType(type){
     if(type == "urban"){

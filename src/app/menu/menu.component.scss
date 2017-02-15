@@ -1,3 +1,7 @@
 .legend{
 	margin-right: 10px;
 }
+
+.modal, .modal-backdrop{
+	z-index: 40000000000 !important;
+}
