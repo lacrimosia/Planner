@@ -36,13 +36,16 @@
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="theme">
-                <div class="col-md-6 col-lg-6">
-                <p></p>
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><strong><i class="fa fa-picture-o"></i> Background Image</strong></div>
+                    <!-- colors -->
+                    <div class="col-md-12 col-lg-12">
+                    <p></p>
+         <div class="panel panel-default">
+
+                        <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Styles</strong></div>
+
                         <div class="panel-body">
-                        
-                            <p><strong>From Web</strong></p>
+                            <p></p>
+                            <p><strong>Background Image URL</strong></p>
                             <div class="input-group">
                                 <input type="text" class="form-control" aria-label="..." placeholder="Url goes here... jpg, png, svg, etc" id="urlArea">
                                 <span class="input-group-btn">
@@ -51,26 +54,7 @@
       </span>
                             </div>
                             <p></p>
-                            <!-- alert if there is an error -->
-                            <div class="alert alert-danger alert-dismissible animated fadeIn" role="alert" *ngIf="error==true">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <strong>ERROR:</strong> Please enter a valid URL.
-                            </div>
-                            <p></p>
-                            <p><strong>File Upload</strong></p>
-                            <div class="form-group">
-                                <input type="file" id="fileUpload" (change)="openBrowse($event)">
-                            </div>
-                        </div>
-                    </div>
-</div>
-                    <!-- colors -->
-                    <div class="col-md-6 col-lg-6">
-                    <p></p>
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><strong><i class="fa fa-paint-brush"></i> Theme Colors</strong></div>
-                        <div class="panel-body">
-                            <p></p>
+
                             <p><strong>Generate Theme Colors</strong></p>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1">Main Color</span>
@@ -90,6 +74,7 @@
         <button class="btn btn-default" type="button" (click)="getIndividualColors('bar', 'analoColor1')">Apply</button>
       </span>
                                 </div>
+
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Heading</span>
                                     <input type="text" class="Headings jscolor form-control" value="{{analoColors[3]}}" id="Headings" [ngStyle]="{'background': analoColors[3]}">
@@ -97,6 +82,7 @@
         <button class="btn btn-default" type="button" (click)="getIndividualColors('heading', 'Headings')">Apply</button>
       </span>
                                 </div>
+
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Buttons</span>
                                     <input type="text" class="analoColor2 jscolor form-control" value="{{lightenColor}}" id="analoColor2" [ngStyle]="{'background': lightenColor}">
@@ -104,6 +90,7 @@
         <button class="btn btn-default" type="button" (click)="getIndividualColors('buttons', 'analoColor2')">Apply</button>
       </span>
                                 </div>
+
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Hover</span>
                                     <input type="text" class="analoColor3 jscolor form-control" value="{{oppositeColor}}" id="analoColor3" [ngStyle]="{'background': oppositeColor}">
@@ -112,25 +99,23 @@
       </span>
                                 </div>
                             </div>
-                            <!--<div class="input-group" *ngFor="let a of analoColors | keys; let i = index">
-     <input type="text" class="jscolor form-control" value="{{analoColors[i]}}" id="a{{i}}" [ngStyle]="{'background': analoColors[i]}">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" (click)="editColors(i)">Apply</button>
-      </span>
-</div>-->
+
                         </div>
                     </div>
                     </div>
-                </div>
+</div> 
                 <div role="tabpanel" class="tab-pane fade" id="content">
                     <app-content [ui]="ui" [assignments]="assignments" [data]="data" [amount]="amount"></app-content>
                 </div>
+
                 <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
-            </div>
-            </div>
+
+           
         </div>
+
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
         <h2 class="text-center"><i class="fa fa-lightbulb-o"></i> Planner Preview </h2>
     </div>
+
     </div>
 </div>
