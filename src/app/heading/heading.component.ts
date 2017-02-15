@@ -40,4 +40,15 @@ export class HeadingComponent implements OnInit {
     return name;
   }
 
+  colorType(type){
+    if(type == "urban"){
+      return this.ui.colors.third;
+    }else if(type=="professional"){
+      return this.ui.colors.second;
+    }else if(type=="collaborative"){
+      return this.ui.colors.first;
+    }
+  }
+
+  
 }

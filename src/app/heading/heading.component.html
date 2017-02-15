@@ -31,3 +31,33 @@
       <h1 class="sub col-xs-9 visible-xs"  [ngStyle]="{'color': ui?.subheading?.color}">{{ data?.instructions?.title }}</h1>
       <h1 class="subForLarge col-xs-9 visible-xs" [ngStyle]="{'color': ui?.subheading?.color}">{{ data?.instructions?.title }}</h1>
     </div>
+
+    <!-- comptencies -->
+    <div class="pull-right" *ngFor="let h of data?.competencies; let v = index">
+          <div class="circleComp" *ngIf="h.selected == true" [ngStyle]="{'background': colorType(h.type)}" data-toggle="modal" data-target="#myModal"> <h3>{{ h.letter }}</h3>
+          </div>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Course Competencies</h4>
+      </div>
+      <div class="modal-body">
+        <div *ngFor="let h of data?.competencies; let v = index">
+          
+            <div class="circleComp" [ngStyle]="{'background': colorType(h.type)}" *ngIf="h.selected==true"><h3>{{ h.letter }}</h3>
+            </div>
+            <p *ngIf="h.selected==true"> {{h.text}} </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

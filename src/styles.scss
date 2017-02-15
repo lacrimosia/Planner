@@ -51,6 +51,15 @@ input{
 	color: $white;
 }
 
+// special buttons styles
+@mixin customButtonStyles($w, $h, $radius, $font){
+	width: $w;
+	height: $h;
+	border-radius: $radius;
+	font-family: $font;
+	color: $white;
+}
+
 // large main titles
 h1{
 	@include titles(Headings, 1.5em, 2px);
@@ -89,12 +98,13 @@ p, span, ul li{
 }
 
 .circleComp{
-	@include buttonStyles(50px, 50px,  100px, subHeadings);
+	@include customButtonStyles(50px, 50px,  100px, subHeadings);
 	cursor: pointer;
 	text-align: center;
-	font-size: 2.2em;
+	font-size: 2.2em !important;
 	font-weight: lighter;
-	border-style: solid;
+	margin-right: 2px;
+	// border-style: solid;
 }
 
 .specialCircle{
@@ -109,6 +119,13 @@ p, span, ul li{
 	@include buttonStyles(40px, 40px, 200px,  subHeadings);
 	text-align: center;
 	font-size: 1.3em !important;
+}
+
+// competencies
+.compCircle{
+	@include buttonStyles(40px, 40px, 200px,  subHeadings);
+	text-align: center;
+	// font-size: 1.5em !important;
 }
 
 // circle symbol
