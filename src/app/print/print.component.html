@@ -4,7 +4,7 @@
     <!-- choices -->
     <div class="two col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="d.type=='task' && i<data?.assignments?.length-1">
         <!-- <img [src]="imageSrc(d.value.due_date)" class="img-responsive imageSize col-md-3 col-lg-3 col-sm-12 col-xs-12" /> -->
-        <app-custom-date [value]="i" [amount]="amount" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
+        <app-custom-date [value]="i" [amount]="data?.assignments?.length" [assignments]="assignments" class="col-md-3 col-lg-3 hidden-sm hidden-xs"></app-custom-date>
         <div *ngFor="let t of d.tasks">
             <p class="text col-md-9 col-lg-9 col-sm-12 col-xs-12" *ngIf="t.select==true || d.tasks.length==1" [ngStyle]="{'color': ui?.text?.color}"><b>{{ t.name }}</b>: {{ t.information }}</p>
         </div>
