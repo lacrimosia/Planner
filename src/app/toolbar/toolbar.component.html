@@ -32,7 +32,7 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">Theme</a></li>
                 <li role="presentation"><a href="#content" aria-controls="content" role="tab" data-toggle="tab">Edit Content</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Competencies</a></li>
+                <li role="presentation"><a href="#competencies" aria-controls="settings" role="tab" data-toggle="tab">Competencies</a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="theme">
@@ -108,11 +108,10 @@
                     <app-content [ui]="ui" [assignments]="assignments" [data]="data" [amount]="amount"></app-content>
                 </div>
 
-                <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
-
-           
+                <div role="tabpanel" class="tab-pane fade" id="competencies">
+                    <app-competencies [data]="data"></app-competencies>
+                </div>  
         </div>
-
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
         <h2 class="text-center"><i class="fa fa-lightbulb-o"></i> Planner Preview </h2>
     </div>

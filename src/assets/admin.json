@@ -46,14 +46,74 @@
    },
    "competencies":[
       {
+         "letter":"A",
+         "type":"urban",
+         "text":"Identify characteristics of a resilent organization or community.",
+         "selected": false
+      },
+      {
+         "letter":"B",
+         "type":"urban",
+         "text":"Identify and describe a healthy business environment.",
+         "selected": false
+      },
+      {
          "letter":"C",
          "type":"urban",
-         "text":"Identify characteristics of a resilent organization or community."
+         "text":"Identify role of government in society and consequences of public policy processes.",
+         "selected": false
+      },
+      {
+         "letter":"D",
+         "type":"urban",
+         "text":"Identify role and impact of nonprofit organizations in society.",
+         "selected": false
+      },
+      {
+         "letter":"E",
+         "type":"urban",
+         "text":"Assess community resources and opportunities to develop skills at the household level.",
+         "selected": false
+      },
+      {
+         "letter":"F",
+         "type":"urban",
+         "text":"Evaluate urban infrastructure and environmental conditions.",
+         "selected": false
+      },
+      {
+         "letter":"A",
+         "type":"professional",
+         "text":"Demonstrate information literacy and numeracy.",
+         "communication": "Identify tools, skills and procedures for negotiation and mediation in communities and organizations."
+      },
+      {
+         "letter":"B",
+         "type":"professional",
+         "text":"Apply strategies that guide selection of appropriate methods for identifying and answering questions.",
+         "communication": "Demonstrate ability to interpret or report findings to multiple audiences."
       },
       {
          "letter":"C",
          "type":"professional",
-         "text":"Compare and contrast information sources."
+         "text":"Compare and contrast information sources.",
+         "communication": "Produce a policy brief about a community issue."
+      },
+      {
+         "letter":"D",
+         "type":"professional",
+         "text":"Judge best information sources and/or data to use for analyses.",
+         "communication": "Research multiple perspectives of a public issue."
+      },
+      {
+         "letter":"E",
+         "type":"professional",
+         "text":"To Identify and describe multiple interdisciplinary approaches such as information literacy, numeracy, spatial thinking, and systems thinking."
+      },
+      {
+         "letter":"F",
+         "type":"professional",
+         "text":"Charactericize global economic technological and societal trends to develop policy responses."
       },
       {
          "letter":"J",
