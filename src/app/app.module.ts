@@ -38,6 +38,7 @@ import { ContentComponent } from './content/content.component';
 import { AdminComponent } from './admin/admin.component';
 import { LiveComponent } from './live/live.component';
 import { InputTasksComponent } from './input-tasks/input-tasks.component';
+import { CompetenciesComponent } from './competencies/competencies.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { InputTasksComponent } from './input-tasks/input-tasks.component';
     ContentComponent,
     AdminComponent,
     LiveComponent,
-    InputTasksComponent
+    InputTasksComponent,
+    CompetenciesComponent
   ],
   imports: [
     BrowserModule,

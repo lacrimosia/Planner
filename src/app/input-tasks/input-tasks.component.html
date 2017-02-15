@@ -6,15 +6,16 @@
 	<p *ngIf="data.value>=0"><strong> Title </strong></p>
     <p *ngIf="data.value>=0"></p>
     <div class="form-group" *ngIf="data.value>=0">
-       <input type="text" class="form-control" [(ngModel)]="x.name" [value]="Titlesb" (ngModelChange)="x.name = $event" name="Titles" placeholder="{{x.name}}">
+       <input type="text" class="form-control" [(ngModel)]="x.name" [value]="Titlesb" (ngModelChange)="x.name = $event" name="Titles">
    </div>
 
    <p *ngIf="data.value>=0"><strong> Description</strong></p>
     <p *ngIf="data.value>=0"></p>
     <div class="form-group" *ngIf="data.value>=0">
-       <input type="text" class="form-control" [(ngModel)]="x.information" [value]="Informationb" (ngModelChange)="x.information = $event" name="Information" placeholder="{{x.information}}">
+       <input type="text" class="form-control" [(ngModel)]="x.information" [value]="Informationb" (ngModelChange)="x.information = $event" name="Information">
    </div>
 
-   <button class="btn btn-danger btn-lg" *ngIf="arr?.length > 1" (click)="removeTask(x)"><i class="fa fa-times"></i> Remove Task</button>
+   <button class="btn btn-danger btn-md" *ngIf="arr?.length > 1" (click)="removeTask(x)"><i class="fa fa-times"></i> Remove Task</button>
 </form>
+<p></p>
 </div>
