@@ -20,6 +20,9 @@ export class InputTasksComponent implements OnInit {
 
   }
 
-
+  removeTask(i)
+  {
+  	this.arr.splice(i, 1);
+  }
 
 }
