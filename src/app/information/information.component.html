@@ -1,5 +1,5 @@
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
-<div class="infos" *ngFor="let d of assignments; let i = index">
+<div class="infos" *ngFor="let d of data?.assignments; let i = index">
 	<!-- <img [src]="imageSrc(d.due_date)" class="taskImage1" /> -->
 	<p *ngIf="i==data.value" [ngStyle]="{'color': ui?.text?.color}"> {{ d.instructions }} </p>
 </div>

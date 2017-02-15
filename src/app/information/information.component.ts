@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked } from '@angular/core';
 import { DataService} from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import {KeysPipe} from '../keys.pipe';
@@ -23,6 +23,10 @@ export class InformationComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewChecked()
+  {
+    
+  }
 
 
 }

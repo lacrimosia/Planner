@@ -40,10 +40,7 @@ showAdd: boolean = true;
 
   ngAfterViewChecked()
   {
-    if(this.amount-2 == this.MAX)
-    {
-      this.showAdd = false;
-    }
+    
   }
 
   changeIntroduction(i){
@@ -122,22 +119,22 @@ addNewSlide(i){
         ]
     };
 
-    this.assignments.splice(i, 0, data); 
+    this.data.assignments.splice(i, 0, data); 
   }
 
   removeSlide(i)
   {  
-    this.assignments.splice(i, 1);
+    this.data.assignments.splice(i, 1);
   }
 
   addInfo(i){
-    this.assignments[i].instructions = this.asstInformation;
+    this.data.assignments[i].instructions = this.asstInformation;
   }
 
   getDate(i){
-    this.assignments[i].due_date[0].month = this.Month;
-    this.assignments[i].due_date[0].day = this.Day;
-    this.assignments[i].due_date[0].percentage = this.Percentage;
+    this.data.assignments[i].due_date[0].month = this.Month;
+    this.data.assignments[i].due_date[0].day = this.Day;
+    this.data.assignments[i].due_date[0].percentage = this.Percentage;
   }
 
   goToStart()

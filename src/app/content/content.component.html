@@ -35,8 +35,8 @@
     </div>
 </div>
 <!-- assignments -->
-<div *ngIf="data.value<amount-1">
-<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of assignments; let i = index">
+<div *ngIf="data.value<data?.assignments?.length-1">
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of data?.assignments; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
         <h2>{{ i+1 }}) {{ c.title }}</h2>
         <div class="panel panel-default">
@@ -80,7 +80,7 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
                     <h2><i class="fa fa-tasks"></i> New Slide/Tasks</h2>
                     <p></p>
-                    <button type="button" class="btn btn-default btn-lg" (click)="addNewSlide(i)" *ngIf="data.value>=0 && showAdd == true"><i class="fa fa-plus"></i> New Assignment</button>
+                    <button type="button" class="btn btn-default btn-lg" (click)="addNewSlide(i)" *ngIf="data.value>=0 && data?.assignments?.length-2 < MAX"><i class="fa fa-plus"></i> New Assignment</button>
                     <button class="btn btn-default btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add Task</button>
                     <button type="button" class="btn btn-default btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
                 </div>
@@ -97,7 +97,7 @@
                 <button type="button" [ngClass]="{'active': data.value == -1}" class="btn btn-default btn-lg" (click)="goToStart()">Starting Page</button>
             </div>
             <div class="btn-group" role="group" aria-label="...">
-                <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of assignments; let i = index" (click)="goToQ(i)">{{ changeName(i) }}</button>
+                <button type="button" [ngClass]="{'active': i==data.value}" class="btn btn-default btn-lg" *ngFor="let n of data?.assignments; let i = index" (click)="goToQ(i)">{{ changeName(i) }}</button>
             </div>
         </div>
     </div>
