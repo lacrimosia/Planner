@@ -1,9 +1,9 @@
-<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 comp" *ngFor="let z of data?.competencies; let r = index"> 
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 comp" *ngFor="let z of data?.competencies; let r = index"> 
   <div class="checkbox">
     <label>
-      <input type="checkbox" [(ngModel)]="z.selected"> <strong>{{ z.letter }}</strong> 
-      <p> {{z.text}}</p>
-      <p> {{ z.type }} competency </p>
+      <input type="checkbox" [(ngModel)]="z.selected" (ngModelChange)="!z.selected = $event"> <strong>{{ z.letter }}</strong> 
+      <p [ngClass]="{'texts': z.selected==true}"> {{z.text}}</p>
+      <p><b> {{ z.type }} competency </b></p>
     </label>
   </div>
  </div>
