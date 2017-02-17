@@ -48,12 +48,12 @@
                         <h2 class="titles pull-right" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar"></i> Date &amp; Percentage</h2>
                     </div>
                     <!-- assignment information -->
-                    <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value<data?.assignments?.length-1">
+                    <div class="col-md-8 col-sm-8 col-xs-8 col-lg-8" *ngIf="data.value<data?.assignments?.length-1">
                         <app-information [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [ui]="ui"></app-information>
                     </div>
 
                     <!-- due date image -->
-                    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>-1 && data.value<data?.assignments?.length-1">
+                    <div class="col-md-4 col-lg-4 hidden-sm hidden-xs" *ngIf="data.value>-1 && data.value<data?.assignments?.length-1">
                         <app-custom-date [value]="data.value" [amount]="amount" [assignments]="assignments" [ui]="ui"></app-custom-date>
                     </div>
 
