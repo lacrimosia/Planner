@@ -24,10 +24,10 @@ export class NextComponent implements OnInit {
 
   // next button
   next(){
-  	if(this.data.value <= this.assignments.length-1){
+  	if(this.data.value <= this.data.assignments.length-1){
       this.data.value++;
     }
-    if(this.data.value == this.assignments.length-1){
+    if(this.data.value == this.data.assignments.length-1){
       this.printContent();
     }else{
       this.hidePrintContent();
