@@ -1,7 +1,8 @@
 <!--instructions -->
 <!-- Title and symbol -->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value == -1">
-    <h2>{{ data?.instructions?.symbol }}) Starting Page</h2>
+    <h2>Starting Page</h2>
+    <p> This is your starting page. You can edit the Planner title, Starting page title, and the instructions here. </p>
     <div class="panel panel-default">
         <div class="panel-heading">
             <strong> Settings </strong>
@@ -41,7 +42,8 @@
 <div *ngIf="data.value<data?.assignments?.length-1">
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngFor="let c of data?.assignments; let i = index">
     <div class="contentArea" *ngIf="i==data.value">
-        <h2>{{ i+1 }}) {{ c.title }}</h2>
+        <h2> Task {{ i+1 }}</h2>
+        <p> These are the various task that you can create and modify. Please enter the information for each task. You can also add and remove tasks and assignments.</p>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <strong>Assignment Settings</strong>
