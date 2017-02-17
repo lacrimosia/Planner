@@ -27,7 +27,7 @@
         <!-- when print is saved -->
         <app-saved [data]="data" [assignments]="assignments" [amount]="amount" [alert]="alert"></app-saved>
         <!-- the tasks  and instructions Area -->
-        <div class="workArea container" [ngStyle]="{'background-image': 'url(' + ui?.image?.url + ')'}">
+        <div class="workArea container" [ngStyle]="{'background-image': 'url(' + ui?.image?.url + ')', 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
             <!-- title of the interactive -->
             <div class="row">
                 <!-- added to center div-->
@@ -40,22 +40,22 @@
                     <h3 class="animated fadeIn activityTitle" *ngIf="data.value==-1" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar-o"></i> {{ data.activity }} </h3>
                     <app-instructions *ngIf="data.value==-1" [data]="data" [instructions]="instructions" [ui]="ui" [assignments]="assignments"></app-instructions>
                     <!-- assignment Info title -->
-                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>=0 && data.value<amount-1">
+                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" *ngIf="data.value>=0 && data.value<data?.assignments?.length-1">
                         <h2 class="titles pull-left" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-file-text-o"></i> Assignment Information</h2>
                         <h2 class="titles pull-right" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-calendar"></i> Date &amp; Percentage</h2>
                     </div>
                     <!-- assignment information -->
-                    <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value<amount-1">
+                    <div class="col-md-9 col-sm-8 col-xs-8 col-lg-9" *ngIf="data.value<data?.assignments?.length-1">
                         <app-information [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [ui]="ui"></app-information>
                     </div>
 
                     <!-- due date image -->
-                    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>-1 && data.value<amount-1">
+                    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs" *ngIf="data.value>-1 && data.value<data?.assignments?.length-1">
                         <app-custom-date [value]="data.value" [amount]="amount" [assignments]="assignments" [ui]="ui"></app-custom-date>
                     </div>
 
                     <!-- Progress bar -->
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value<amount-1">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value > -1 &&  data.value<data?.assignments?.length-1">
                         <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}"><i class="fa fa-pie-chart"></i> Assignment Progress</h2>
                         <p><app-progress [data]="data" [value]="value" [amount]="amount" [assignments]="assignments" [ui]="ui" ></app-progress></p>
                     </div>
@@ -76,13 +76,13 @@
                     </div> -->
 
                     <!-- Multi tasks -->
-                    <app-multi-tasks [data]="data" [ui]="ui" *ngIf="data.value<amount-1" [assignments]="assignments"></app-multi-tasks>
+                    <app-multi-tasks [data]="data" [ui]="ui" *ngIf="data.value<data?.assignments?.length-1" [assignments]="assignments"></app-multi-tasks>
 
                     <!-- custom tasks -->
                     <app-custom *ngIf="data.value<amount-1" [data]="data" [assignments]="assignments" [amount]="amount" [ui]="ui"></app-custom>
 
                     <!--print area -->
-                    <div class="printArea" *ngIf="data.value == amount-1">
+                    <div class="printArea" *ngIf="data.value == data?.assignments?.length-1">
                         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
                             <h2 class="titles" [ngStyle]="{'color': ui?.subheadings?.color}">Review Information {{data.reviewArea}}</h2></div>
                         <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
