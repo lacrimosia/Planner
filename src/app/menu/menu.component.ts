@@ -43,7 +43,7 @@ export class MenuComponent implements OnInit {
 
   // help button
     help(){
-      this.data.value = 0;
+      this.data.value = -1;
       this.data.print = false;
     }
 }
