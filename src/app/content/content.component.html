@@ -90,9 +90,9 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
                 <p *ngIf="data.value>=0"><strong> Assignment Options </strong></p>
                 <p *ngIf="data.value>=0"></p>
-                    <button type="button" class="btn btn-default btn-lg" (click)="addNewSlide(i)" *ngIf="data.value>=0 && data?.assignments?.length-2 < MAX"><i class="fa fa-plus"></i> Add New Assignment</button>
-                    <button class="btn btn-default btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add New Task</button>
-                    <button type="button" class="btn btn-default btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
+                    <button type="button" class="btn btn-success btn-lg" (click)="addNewSlide(i)" *ngIf="data.value>=0 && data?.assignments?.length-2 < MAX"><i class="fa fa-plus"></i> Add New Assignment</button>
+                    <button class="btn btn-success btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add New Task</button>
+                    <button type="button" class="btn btn-danger btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
                 </div>
                 <p></p>
                 <p></p>
@@ -108,6 +108,8 @@
 </div>
 <!--navigation-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+    <h2 *ngIf="data?.value == data?.assignments?.length-1"> Review Area </h2>
+        <p *ngIf="data?.value == data?.assignments?.length-1"> This is a preview of your review area. This is where students will review their selections and print their planner. </p>
     <div class="panel panel-default">
     <div class="panel-heading">
             <strong> Assignnment Navigation </strong>
