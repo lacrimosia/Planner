@@ -1,12 +1,20 @@
 <div *ngFor="let d of data?.assignments; let i = index">
     <div class="twoTasks" *ngIf="d.type=='task' && i==data.value">
         <div *ngFor="let t of d.tasks; let k = index" class="taskA">
-            <!-- multiple tasks -->
-            <div class="multipleTasks" *ngIf="d.tasks.length>1" class="col-sm-12 col-xs-12 col-lg-6 col-md-6">
+            <!-- multiple tasks even-->
+            <div class="multipleTasks" *ngIf="d.tasks.length>1 && d.tasks.length % 3 != 0" class="col-sm-12 col-xs-12 col-lg-6 col-md-6">
                 <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount"  [title]="t.name" [ui]="ui" [information]="t.information"></app-tasks>
 
                 <app-select [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [t]="t" [d]="d" [index]="k" [ui]="ui"></app-select>
             </div>
+
+            <!-- odd multiple tasks -->
+            <div class="multipleTasks" *ngIf="d.tasks.length>1 && d.tasks.length % 3 == 0" class="col-sm-12 col-xs-12 col-lg-4 col-md-4">
+                <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount"  [title]="t.name" [ui]="ui" [information]="t.information"></app-tasks>
+
+                <app-select [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [t]="t" [d]="d" [index]="k" [ui]="ui"></app-select>
+            </div>
+
             <!-- one task -->
           <div class="oneTasks" *ngIf="d.tasks.length==1" class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
                 <app-tasks class="tasks" [data]="data" [assignments]="assignments" [amount]="amount" [value]="value" [title]="t.name" [ui]="ui" [information]="t.information"></app-tasks>
