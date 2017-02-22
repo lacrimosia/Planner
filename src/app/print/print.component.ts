@@ -20,6 +20,7 @@ export class PrintComponent implements OnInit {
   constructor(private dataService: DataService, private _hotkeysService: HotkeysService) { }
 
   ngOnInit() {
+    this.defaultSelection();
   }
 
   imageSrc(pic){
@@ -60,5 +61,21 @@ export class PrintComponent implements OnInit {
   // hide the print area
   hidePrintContent(){
     this.data.print = false;
+  }
+
+// go through both arrays and if one task is in the list
+// set first task to true
+  defaultSelection()
+  {
+    for(var i=0; i<this.data.assignments.length-1; i++)
+    {
+      for(var j=0; j<this.data.assignments[i].tasks.length; j++)
+      {
+        if(this.data.assignments[i].tasks.length == 1)
+        {
+          this.data.assignments[i].tasks[0].select = true;
+        }
+      }
+    }
   }
 }
