@@ -1,1 +1,1 @@
-<button class="selections saveDoc" [ngClass]="{'animated bounce': downloaded==true}" *ngIf="data.print==true" (click)="printPdf()" [ngStyle]="{'background': ui?.buttons?.color}"><i class="fa fa-print"></i> Print</button>
+<a role="button" class="selections saveDoc" [ngClass]="{'animated bounce': downloaded==true}" *ngIf="data.value==data?.assignments.length-1" href="//pdfcrowd.com/url_to_pdf/" [ngStyle]="{'background': ui?.buttons?.color}"><i class="fa fa-print"></i> Print</a>

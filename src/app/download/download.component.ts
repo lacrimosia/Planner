@@ -39,6 +39,7 @@ export class DownloadComponent implements OnInit {
 
 printPdf()
 {
+  /*
   let doc = new jsPDF('portrait','pt','a4');
   let data = this.assignments;
   let info = this.data;
@@ -54,7 +55,7 @@ printPdf()
   doc.setFontSize(20);
   doc.text(20, 50, this.data.course_title);
     // each entry for page
-   for(x=0; x<amount-1; x++){
+   for(x=0; x<this.data.assignments.length-1; x++){
       doc.setFontSize(16);
       let startingPointVal = ((x+1)*start);
 
@@ -94,7 +95,10 @@ printPdf()
     doc.setTextColor(77,77,77);
     doc.text(60, (startingPointVal + 40), splitTitle);
     } 
-    //doc.save('Course_Planner.pdf');
+    doc.save('Course_Planner.pdf');
+    */
+
+
   }
   
 }
