@@ -90,9 +90,9 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" *ngIf="data.value>=0">
                 <p *ngIf="data.value>=0"><strong> Assignment Options </strong></p>
                 <p *ngIf="data.value>=0"></p>
-                    <button type="button" class="btn btn-success btn-lg" (click)="addNewSlide(i)" *ngIf="data.value>=0 && data?.assignments?.length-2 < MAX"><i class="fa fa-plus"></i> Add New Assignment</button>
-                    <button class="btn btn-success btn-lg" (click)="addTasksToPlanner(i)"><i class="fa fa-plus"></i> Add New Task</button>
-                    <button type="button" class="btn btn-danger btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=1"><i class="fa fa-times"></i> Remove Assignment</button>
+                    <button type="button" class="btn btn-success btn-lg" (click)="addNewSlide(i)" [disabled]="data?.assignments?.length-2 >= MAX" *ngIf="data.value>=0"><i class="fa fa-plus"></i> Add New Assignment</button>
+                    <button class="btn btn-success btn-lg" (click)="addTasksToPlanner(i)" [disabled]="c.tasks.length >= 4"><i class="fa fa-plus"></i> Add New Task</button>
+                    <button type="button" class="btn btn-danger btn-lg" (click)="removeSlide(i)" *ngIf="data.value>=0" [disabled]="data?.assignments?.length-1 == 1"><i class="fa fa-times"></i> Remove Assignment</button>
                 </div>
                 <p></p>
                 <p></p>

@@ -15,7 +15,7 @@
        <input type="text" class="form-control" [(ngModel)]="x.information" [value]="Informationb" (ngModelChange)="x.information = $event" name="Information">
    </div>
 
-   <button class="btn btn-danger btn-md" *ngIf="arr?.length > 1" (click)="removeTask(x)"><i class="fa fa-times"></i> Remove Task</button>
+   <button class="btn btn-danger btn-md" [disabled]="arr?.length == 1" (click)="removeTask(x)"><i class="fa fa-times"></i> Remove Task</button>
 </form>
 <p></p>
 </div>
