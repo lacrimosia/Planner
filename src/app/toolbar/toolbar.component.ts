@@ -117,4 +117,13 @@ export class ToolbarComponent implements OnInit {
          () => console.log("data success!!")
        );
   }
+
+  // Clear all selections
+  clearAll()
+  {
+    for(var i=0; i<this.data.competencies.length; i++)
+    {
+      this.data.competencies[i].selected = false;
+    }
+  }
 }

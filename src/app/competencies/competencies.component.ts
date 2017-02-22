@@ -15,5 +15,4 @@ export class CompetenciesComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

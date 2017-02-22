@@ -111,8 +111,12 @@
                 </div>
 
                 <div role="tabpanel" class="tab-pane fade" id="competencies">
-                <h2> Course Competencies</h2>
-                <p>Select the compenticies for your course.</p>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><h2> Course Competencies</h2>
+                <p>Select the compenticies for your course.</p></div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                  <button class="btn btn-success btn-lg pull-right" (click)="clearAll()"> Clear Selections</button>
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"></div>
                     <app-competencies [data]="data"></app-competencies>
                 </div>  
         </div>
